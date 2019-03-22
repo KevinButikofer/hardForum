@@ -1,11 +1,13 @@
 pipeline{
 	agent any
 	stages {
-		stage('Build'){			
-			echo 'Build'
-			docker
-			{
-				image 'maven:3-alpine'
+		stage('Build'){		
+			agent
+			{	
+				docker
+				{
+					image 'maven:3-alpine'
+				}
 			}
 			steps{
 				sh '(mvn clean package)'
