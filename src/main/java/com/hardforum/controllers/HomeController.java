@@ -23,11 +23,6 @@ public class HomeController {
         return "index";
     }
     
-    @GetMapping("/test")
-    public String test() {
-        return "index";
-    }
-    
     @GetMapping("/add")
     public String add(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
     	
