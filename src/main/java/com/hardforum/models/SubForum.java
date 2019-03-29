@@ -9,7 +9,7 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotEmpty;
 
 @Entity
-@Table(name = "post")
+@Table(name = "subforum")
 public class SubForum {
 	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
