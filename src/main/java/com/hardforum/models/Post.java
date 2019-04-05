@@ -5,8 +5,12 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotEmpty;
+
+import org.hibernate.annotations.ManyToAny;
 
 @Entity
 @Table(name = "post")
@@ -23,7 +27,21 @@ public class Post {
 	private String title;
 	@Column(name="score")
 	private int score = 0;
+		
+	 @ManyToOne
+	 @JoinColumn(name="topic_id")
+	 private Topic topic;
 	
+	 @ManyToOne
+	 @JoinColumn(name="user_id")
+	 private User author;
+	 
+	public Topic getTopic() {
+		return topic;
+	}
+	public void setTopic(Topic topic) {
+		this.topic = topic;
+	}
 	public String getTitle() {
 		return title;
 	}
