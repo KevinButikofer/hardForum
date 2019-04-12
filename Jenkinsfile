@@ -24,8 +24,8 @@ pipeline{
 			}
 			steps{
 				unstash "app"
-				sh 'cd HolygramSpring; mvn clean test'
-				sh 'cd HolygramSpring; mvn sonar:sonar \
+				sh 'mvn clean test'
+				sh 'mvn sonar:sonar \
 					-Dsonar.projectKey=KevinButikofer_hardForum \
 					-Dsonar.organization=kevinbutikofer-github \
 					-Dsonar.host.url=https://sonarcloud.io \
