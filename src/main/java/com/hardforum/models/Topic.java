@@ -21,7 +21,7 @@ import javax.validation.constraints.NotEmpty;
 public class Topic {
 	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name="post_id")
+	@Column(name="topic_id")
 	private int id;
 	@Column(name="message")
 	@NotEmpty(message = "*Please provide a message")
