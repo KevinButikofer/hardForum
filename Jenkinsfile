@@ -31,13 +31,6 @@ pipeline{
 					-Dsonar.login=b992d342e64ce7a123ec996eb153c298deab1051'
 			}
 		}
-		stage('IntegrationTest') {
-			agent { 
-				docker { }
-				}
-			}
-			steps {
-			}
 		stage('Deploy'){
 			steps{
 				echo 'Deploying'
