@@ -33,7 +33,7 @@ pipeline{
 		}
 		stage('IntegrationTest') {
 			agent { 
-				docker { 
+				docker { }
 				}
 			}
 			steps {
