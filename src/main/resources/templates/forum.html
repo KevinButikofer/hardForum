@@ -10,6 +10,22 @@
     <div th:insert="fragments/header :: header"></div>
     <div class="container">
     	<H1>Welcome to the forum</H1>
+    	<h2>All subforums</h2>
+    	<div th:each="subforum: ${subforums}">
+    		<a th:href="${subforum.name}"><div th:text="${subforum.name}" /></a>
+    		<div th:text="${subforum.description}" />
+    		
+    	</div>
+    	<div sec:authorize="hasAuthority('ADMIN')">
+    	<h3>Create a category</h3>
+    	<form th:action="@{/addSubforum}" th:object="${subforum}" method="post">
+    	<p>Category <input type="text" th:field="*{name}" /></p>
+    	<p th:text="${error}"></p>
+        <p>Description<input type="text" th:field="*{description}" /></p>
+        		
+        <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+    </form>
+		</div>
     </div>
     <div th:insert="fragments/footer :: footer"></div>
 </body>
