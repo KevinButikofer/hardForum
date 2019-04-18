@@ -10,6 +10,8 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotEmpty;
 
+import net.bytebuddy.implementation.bind.annotation.Empty;
+
 @Entity
 @Table(name = "subforum")
 public class SubForum {

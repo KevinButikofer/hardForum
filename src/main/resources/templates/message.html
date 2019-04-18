@@ -16,21 +16,7 @@
 				  <div class="card-header">	
 				  </div>
 				  <div class="card-body">
-				    <form action="#" th:action="@{/myprofile}" th:object="${user}" method="post">
-					     <div class="form-group">
-					    	<label for="name"" >Age</label>
-					    	<input type="number" th:field="*{age}" class="form-control" id="age" placeholder="age">
-					    </div>
-					    
-					    <div class="form-group">
-					    	<label for="bio" >Bio</label>
-					    	<textarea th:field="*{bio}" class="form-control" id="bio" placeholder="Bio"></textarea>
-					    </div>				    
-					   
-						  
-					   <button type="submit" class="btn btn-primary">Submit</button>
-					   <p th:text="${successMessage}"></p>
-						  
+					   <p th:utext="${message}"></p>
 					</form>
 
 				</div>

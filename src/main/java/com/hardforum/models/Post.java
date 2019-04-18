@@ -12,6 +12,8 @@ import javax.validation.constraints.NotEmpty;
 
 import org.hibernate.annotations.ManyToAny;
 
+import net.bytebuddy.implementation.bind.annotation.Default;
+
 @Entity
 @Table(name = "post")
 public class Post {

@@ -32,6 +32,10 @@ public class UserServiceImpl implements UserService{
 	public User findUserByName(String name) {
 		return userRepository.findByName(name);
 	}
+	@Override
+	public User findUserById(int id) {
+		return userRepository.findById(id);
+	}
 
 	@Override
 	public void saveUser(User user) {

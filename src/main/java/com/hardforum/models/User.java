@@ -26,7 +26,7 @@ public class User {
     @Column(name = "name")
     @NotEmpty(message = "*Please provide a name")
     private String name;
-    
+        
     @Column(name = "password")
     @NotEmpty(message = "*Please provide your password")
     private String password;
@@ -40,6 +40,29 @@ public class User {
 	@ManyToMany(cascade = CascadeType.ALL)
 	@JoinTable(name = "user_role", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "role_id"))
 	private Set<Role> roles;
+	
+    @Column(name = "bio")
+    private String  Bio;
+    
+    public String getBio() {
+		return Bio;
+	}
+
+	public void setBio(String bio) {
+		Bio = bio;
+	}
+
+	@Column(name = "age")
+    private int Age;
+
+
+	public int getAge() {
+		return Age;
+	}
+
+	public void setAge(int age) {
+		Age = age;
+	}
 
 	public Integer getId() {
 		return id;
