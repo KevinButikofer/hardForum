@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<h3>Advanced topic search</h3>
+	<form th:action="@{/addSubforum}" method="post">
+        <p>Topic name <input type="text" th:value="*{topicName}" name="topicName" /></p>
+    	<p>Author name <input type="text" th:value="*{authorName}" name="authorName" /></p>
+        <p>
+        	Subforum 
+        	<select name="subforums">
+        		<option th:each="subforum : ${subforums}" th:value="${subforum.id}" th:text=${subforum.name}/>
+        	</select>
+        </p>
+        		
+        <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+    </form>
+
+</body>
+</html>

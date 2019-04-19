@@ -1,6 +1,8 @@
 package com.hardforum.services;
 
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -27,6 +29,12 @@ public class TopicServiceImpl implements TopicService{
 	@Override
 	public Iterable<Topic> findAll() {
 		return topicRepository.findAll();
+	}
+
+	@Override
+	public List<Topic> findByNameContaining(String name) {
+		
+		return topicRepository.findByNameContaining(name);
 	}
 
 }
