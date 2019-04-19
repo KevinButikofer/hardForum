@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<p th:text="${searchText}"></p>
+    	<div th:each="topic: ${topics}">
+    		<a th:href="${topic.subForum.name/topic/topic.id}"><div th:text="${topic.name}" /></a>
+    		
+    		
+    	</div>
+</body>
+</html>

@@ -69,6 +69,15 @@ public class Topic {
 	public String getName() {
 		return name;
 	}
+	
+	public User getAuthor() {
+		return author;
+	}
+
+	public void setAuthor(User author) {
+		this.author = author;
+	}
+
 	public void setName(String name) {
 		this.name = name;
 	}
