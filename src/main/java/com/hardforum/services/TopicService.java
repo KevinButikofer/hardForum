@@ -9,4 +9,6 @@ public interface TopicService {
 	public void saveTopic(Topic topic);
 	public Iterable<Topic> findAll();
 	public List<Topic> findByNameContaining(String name);
+	public List<Topic> find(String topicName, String authorName, int categoryID);
+
 }

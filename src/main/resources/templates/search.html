@@ -7,7 +7,7 @@
 <body>
 <p th:text="${searchText}"></p>
     	<div th:each="topic: ${topics}">
-    		<a th:href="${topic.subForum.name/topic/topic.id}"><div th:text="${topic.name}" /></a>
+    		<a th:href="@{{category}/topic/{topicID}(category=${topic.name}, topicID =${topic.id})}"><div th:text="${topic.name}" /></a>
     		
     		
     	</div>

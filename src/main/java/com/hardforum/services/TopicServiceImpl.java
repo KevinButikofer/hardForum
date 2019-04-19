@@ -4,6 +4,7 @@ package com.hardforum.services;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Service;
 
 import com.hardforum.models.Topic;
@@ -35,6 +36,12 @@ public class TopicServiceImpl implements TopicService{
 	public List<Topic> findByNameContaining(String name) {
 		
 		return topicRepository.findByNameContaining(name);
+	}
+	
+	@Override
+	public List<Topic> find(String topicName, String authorName, int categoryID) {
+		
+		return topicRepository.find(topicName, authorName, categoryID);
 	}
 
 }
