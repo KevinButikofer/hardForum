@@ -6,6 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotEmpty;
@@ -21,7 +22,7 @@ public class Post {
     @GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name="post_id")
 	private int id;
-	@Column(name="message")
+	@Column(name="message", columnDefinition="LONGTEXT")
 	@NotEmpty(message = "*Please provide a message")
 	private String message;
 	@Column(name="title")
@@ -33,10 +34,18 @@ public class Post {
 	 @ManyToOne
 	 @JoinColumn(name="topic_id")
 	 private Topic topic;
-	
 	 @ManyToOne
 	 @JoinColumn(name="user_id")
 	 private User author;
+	
+	 
+	 public User getAuthor() {
+		return author;
+	}
+	public void setAuthor(User author) {
+		this.author = author;
+	}
+	
 	 
 	public Topic getTopic() {
 		return topic;

@@ -10,7 +10,6 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotEmpty;
 
-import net.bytebuddy.implementation.bind.annotation.Empty;
 
 @Entity
 @Table(name = "subforum")
@@ -50,4 +49,10 @@ public class SubForum {
 	 @ManyToOne
 	 @JoinColumn(name="user_id")
 	 private User subForum_admin;
+	public User getSubForum_admin() {
+		return subForum_admin;
+	}
+	public void setSubForum_admin(User subForum_admin) {
+		this.subForum_admin = subForum_admin;
+	}
 }

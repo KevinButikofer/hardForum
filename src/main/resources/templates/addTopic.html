@@ -14,21 +14,22 @@
     <div th:insert="fragments/header :: header"></div>
     <div class="container">
     <div class="starter-template">
-				<h1 th:text="${topic.name}"></h1>
-				<p th:utext="${topic.message}"></p>
+				<h1>New Topic</h1>
+				
 				<div class="card">
 				  <div class="card-header">	
 				  </div>
 				  <div class="card-body">
 				  <div id="form-container" class="container">
-				    <form th:action="@{/addTopic}" th:object="${post}" method="post">
+				    <form th:action="@{/{categoryName}/addTopic(categoryName=${topic.subForum.name})}" th:object="${topic}" method="post">
 					        <div class="row form-group">
 					        <div class="form-group">
-						    	<label for="title">Title</label>
-						    	<input type="text" required th:field="*{title}" class="form-control" id="title" placeholder="title">
+						    	<label for="name">Title</label>
+						    	<input type="text" required th:field="*{name}" class="form-control" id="name" placeholder="name">
 						    </div>
+                  </select>
 						      <label for="message">Message</label>
-						      <input type="hidden" th:value="${post.message}" name="message" id="message"/>
+						      <input type="hidden" th:value="${topic.message}" name="message" id="message"/>
 						      <div id="editor-container">
 						      </div>
 						    </div>				  
@@ -79,7 +80,9 @@
     	  
     	  
     	  return true;
-    	};   
+    	};
+
+    
     
     </script>
 </body>

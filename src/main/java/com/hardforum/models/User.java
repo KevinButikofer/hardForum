@@ -14,6 +14,8 @@ import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotEmpty;
 
+import org.springframework.beans.factory.annotation.Value;
+
 
 @Entity
 @Table(name = "user")
@@ -42,26 +44,48 @@ public class User {
 	private Set<Role> roles;
 	
     @Column(name = "bio")
-    private String  Bio;
+    private String  bio = "";
     
-    public String getBio() {
-		return Bio;
+    @Column(name = "signature")
+    private String  signature = "";
+    
+    @Column(name = "nb_posted_message")
+    private Integer nbPostedMessage = 0;
+    
+    public Integer getNbPostedMessage() {
+		return nbPostedMessage;
+	}
+
+	public void setNbPostedMessage(Integer nbPostedMessage) {
+		this.nbPostedMessage = nbPostedMessage;
+	}
+
+	public String getSignature() {
+		return signature;
+	}
+
+	public void setSignature(String signature) {
+		this.signature = signature;
+	}
+
+	public String getBio() {
+		return bio;
 	}
 
 	public void setBio(String bio) {
-		Bio = bio;
+		this.bio = bio;
 	}
 
 	@Column(name = "age")
-    private int Age;
+    private Integer age;
 
 
-	public int getAge() {
-		return Age;
+	public Integer getAge() {
+		return age;
 	}
 
-	public void setAge(int age) {
-		Age = age;
+	public void setAge(Integer age) {
+		this.age = age;
 	}
 
 	public Integer getId() {

@@ -54,7 +54,12 @@ public class ForumController {
 		User user = userService.findUserByName(auth.getName());		
 		
 		ModelAndView modelAndView = new ModelAndView();
-        modelAndView.addObject("post", new Post());
+		Post p = new Post();
+		p.setAuthor(user);
+		p.setTopic(topic);
+		
+        modelAndView.addObject("post", p);
+        modelAndView.addObject("topic", topic);
         
         modelAndView.setViewName("topic");
 	   return modelAndView;
@@ -68,6 +73,40 @@ public class ForumController {
         return "message";
         //return "redirect:/test/topic/" + post.getTopic().getId();
     }
+    
+    @GetMapping("/{categoryName}/addTopic")
+    public ModelAndView post(@PathVariable("categoryName") String categoryName, Map<String, Object> model) {
+    	SubForum s = subForumService.findSubForumByName(categoryName);
+    	Iterable<SubForum> subforums = subForumService.findAll();
+    	Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+		User user = userService.findUserByName(auth.getName());	
+		
+		Topic t = new Topic();
+		t.setSubForum(s);
+		
+		ModelAndView modelAndView = new ModelAndView();
+        modelAndView.addObject("topic", t);
+        
+        modelAndView.setViewName("addtopic");
+	   return modelAndView;
+    }
+    @PostMapping(value = "/{categoryName}/addTopic")
+    public String addPost(@Valid @ModelAttribute Topic topic, @PathVariable("categoryName") String categoryName, BindingResult bindingResult,Map<String, Object> model) {    	
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        topicService.saveTopic(topic);
+        
+        return "redirect:/" + categoryName + "/topic/" + topic.getId();
+    }
+    
+    @GetMapping("/users/{username}")
+    public ModelAndView profile(@PathVariable("username") String userName, Map<String, Object> model) {
+		User user = userService.findUserByName(userName);		
+		ModelAndView modelAndView = new ModelAndView();
+        modelAndView.addObject("user", user);
+        modelAndView.setViewName("profile");
+	   return modelAndView;
+    }
+    
     @GetMapping("/myprofile")
     public ModelAndView profile(Map<String, Object> model) {
     	Authentication auth = SecurityContextHolder.getContext().getAuthentication();
