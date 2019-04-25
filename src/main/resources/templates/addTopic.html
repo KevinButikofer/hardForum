@@ -21,15 +21,14 @@
 				  </div>
 				  <div class="card-body">
 				  <div id="form-container" class="container">
-				    <form th:action="@{/{categoryName}/addTopic(categoryName=${topic.subForum.name})}" th:object="${topic}" method="post">
+				    <form  th:object="${topic}" method="post">
 					        <div class="row form-group">
 					        <div class="form-group">
 						    	<label for="name">Title</label>
 						    	<input type="text" required th:field="*{name}" class="form-control" id="name" placeholder="name">
 						    </div>
-                  </select>
 						      <label for="message">Message</label>
-						      <input type="hidden" th:value="${topic.message}" name="message" id="message"/>
+						      <input type="hidden" th:field="*{message}" value="" name="message" id="message"/>
 						      <div id="editor-container">
 						      </div>
 						    </div>				  
@@ -70,19 +69,10 @@
   	  theme: 'snow'
   	});
 
-    	var form = document.querySelector('form');
-    	form.onsubmit = function() {
-    	  // Populate hidden form on submit
+    quill.on('text-change', function() {
     	  var about = document.querySelector('input[name=message]');
-    	  about.value = quill.root.innerHTML;//JSON.stringify(quill.getContents());
-    	  
-    	  console.log("Submitted", $(form).serialize(), $(form).serializeArray());
-    	  
-    	  
-    	  return true;
-    	};
-
-    
+	       about.value = quill.root.innerHTML;
+    	});    
     
     </script>
 </body>

@@ -1,10 +1,13 @@
 package com.hardforum.services;
 
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.hardforum.models.Post;
+import com.hardforum.models.Topic;
 import com.hardforum.repository.PostRepository;
 
 
@@ -27,6 +30,11 @@ public class PostServiceImpl implements PostService{
 	@Override
 	public Iterable<Post> findAll() {
 		return postRepository.findAll();
+	}
+
+	@Override
+	public List<Post> findPostByTopic(Topic topic) {
+		return postRepository.findByTopic(topic);
 	}
 
 }

@@ -2,10 +2,53 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
+<style>
+.table-row{
+cursor:pointer;
+}
+</style>
 <title>My subforum</title>
 </head>
-<body>
-<h1>subforum test</h1>
-<p th:text="${categoryName}"></p>
-</body>
+	<body>
+		<div th:insert="fragments/header :: header"></div>
+		<div  class="container">
+		<h1 th:text="${categoryName}"></h1>
+		<div class="list-group">
+			    <div class="d-flex w-100 justify-content-between  pl-3 pr-3">
+			      <h5>Topic Name</h5><p >Author</p>
+			      <small>Number of Replies</small>
+		    	</div>
+	  	</div>
+	  	
+		 <div class="list-group" th:each="topic: ${topics}">
+  			<a th:href="@{/{subForum}/topic/{id}(subForum=${categoryName}, id=${topic.id})}" class="list-group-item list-group-item-action">
+			    <div class="container">
+			    	<div class="row">
+					      <h5 class="mb-1 col-sm-5" th:text="${topic.name}"></h5><p class="col-sm-3" th:text="${topic.author.name}"></p>
+					      <small class="col-sm-2" th:text="${topic.nbPostedMessage}"></small>
+			      	</div>
+		    	</div>
+	  		</a>
+	  	</div>
+	  
+	  <!--
+		<table class="table table-striped">
+		  <thead>
+		    <tr>
+		      <th scope="col">Name</th>
+		      <th scope="col">Author</th>
+		      <th scope="col">#Message</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr th:each="topic: ${topics}">
+		      <a th:href="@{/{subForum}/topic/{id}(subForum=${categoryName}, id=${topic.id})}"><th th:text="${topic.name}" scope="row"></th>
+		      <td th:text="${topic.author.name}"></td>
+		      <td th:text="${topic.nbPostedMessage}"></td></a>
+		    </tr>
+		  </tbody>
+		</table> -->
+		</div>	
+		<div th:insert="fragments/footer :: footer"></div>
+	</body>
 </html>

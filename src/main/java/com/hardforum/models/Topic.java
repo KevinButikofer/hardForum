@@ -40,21 +40,15 @@ public class Topic {
 	@Nullable
 	private List<Post> posts;	
 	
-	@ManyToOne(fetch=FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name="user_id")
 	private User author;
 	 
-	public User getAuthor() {
-		return author;
-	}
 	public List<Post> getPosts() {
 		return posts;
 	}
 	public void setPosts(List<Post> posts) {
 		this.posts = posts;
-	}
-	public void setAuthor(User author) {
-		this.author = author;
 	}
 	public SubForum getSubForum() {
 		return subForum;
@@ -63,7 +57,7 @@ public class Topic {
 		this.subForum = subForum;
 	}
 	@ManyToOne(fetch=FetchType.LAZY)
-	 @JoinColumn(name="subForum_id")
+	 @JoinColumn(name="sub_forum_id")
 	 private SubForum subForum;
 	
 	public String getName() {

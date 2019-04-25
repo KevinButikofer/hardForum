@@ -6,6 +6,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.hardforum.models.Post;
+import com.hardforum.models.SubForum;
 import com.hardforum.models.Topic;
 import com.hardforum.repository.TopicRepository;
 
@@ -36,5 +38,16 @@ public class TopicServiceImpl implements TopicService{
 		
 		return topicRepository.findByNameContaining(name);
 	}
+
+	@Override
+	public List<Topic> findTopicBySubForum(SubForum subForum) {
+		return topicRepository.findBySubForum(subForum);
+	}
+
+	@Override
+	public Integer findTopicPostNumber() {
+		return topicRepository.findPostNumber();
+	}
+
 
 }

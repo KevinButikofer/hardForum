@@ -2,27 +2,46 @@
 <html>
 <head>
 	<title>Spring Security Tutorial</title>
-  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
 </head>
 <body>
     <div th:insert="fragments/header :: header"></div>
-    <div class="container">
-    <div class="starter-template">
-				<h1 th:text="${user.name}"></h1>
-				
-				<div class="card">
+    <div class="container"> 
+				<div class="card mt-4">
 				  <div class="card-header">	
+				  <h1>Profile of <span th:text="${user?.name}"></span></h1>
 				  </div>
-				  <div class="card-body">
-				    <div>Age :</div><div th:text="${user?.age}"></div>
-				    <div>Bio :</div><div th:text="${user?.bio}"></div>
-					<div>Number of messages posted :</div><div th:text="${user?.nbPostedMessage}"></div>
-				    
+				  <div  class="">
+				  <div class="card-body container">
+				  <div class="list-group">
+					    <div class="row">
+					   <h5 class="col-6 col-sm-3">Age :</h5><h5 class="col-md-auto" th:text="${user?.age}"></h5>
+				    	</div>
+	  			 </div>	  			
+	  			  <div class="list-group">
+	  			  	<div class="row">
+					   <h5 class="col-6 col-sm-3">Signature :</h5><h5 class="col-md-auto" th:text="${user?.signature}"></h5>
+				    	</div>
+				    </div>
+				    <div class="list-group">
+	  			  	<div class="row">
+					   <h5 class="col-6 col-sm-3">Posted Messages :</h5><h5 class="col-md-auto" th:text="${user?.nbPostedMessage}"></h5>
+				    	</div>
+				    </div>
+				     <div class="list-group">
+					    <div class="row">
+					   <h5 class="col-6 col-sm-3">Bio :</h5><h5 class="col-md-auto" th:text="${user?.bio}"></h5>
+				    	</div>
+	  			 </div>
+	  			 </div>
+	  			 
+	  			 </div>
+				   <!--  <ul class="list-group list-group-flush  container">
+					  <li class="list-group-item row"><h5 class="col-sm5">Age :</h5><h5 th:text="${user?.age}"></h5></li>
+					  <li class="list-group-item row"><h5>Bio :</h5><h5 th:text="${user?.bio}"></h5></li>
+					  <li class="list-group-item row"><h5>Number of messages posted :</h5><h5 th:text="${user?.nbPostedMessage}"></h5></li>
+					</ul>		-->		    
 				</div>
 				
-			</div>
 		</div>
 		</div>
     <div th:insert="fragments/footer :: footer"></div>

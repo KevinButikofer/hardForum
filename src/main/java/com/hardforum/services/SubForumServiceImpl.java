@@ -1,18 +1,15 @@
 package com.hardforum.services;
 
-import java.util.Arrays;
-import java.util.HashSet;
+
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import com.hardforum.models.Role;
+import com.hardforum.models.Post;
 import com.hardforum.models.SubForum;
-import com.hardforum.models.User;
-import com.hardforum.repository.RoleRepository;
+import com.hardforum.models.Topic;
 import com.hardforum.repository.SubForumRepository;
-import com.hardforum.repository.UserRepository;
 
 @Service("subForumService")
 public class SubForumServiceImpl implements SubForumService{
@@ -40,7 +37,7 @@ public class SubForumServiceImpl implements SubForumService{
 		subForumRepository.save(subforum);
 		
 	}
-
+	
 }
 
 

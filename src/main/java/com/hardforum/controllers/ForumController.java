@@ -1,6 +1,7 @@
 package com.hardforum.controllers;
 
 
+import java.util.List;
 import java.util.Map;
 
 import javax.validation.Valid;
@@ -49,29 +50,37 @@ public class ForumController {
     @GetMapping("/{categoryName}/topic/{id}")
     public ModelAndView post(@PathVariable("categoryName") String categoryName, @PathVariable("id") int id, Map<String, Object> model) {
     	Topic topic = topicService.findTopicById(id);
-    	
+    	SubForum subForum = subForumService.findSubForumByName(categoryName);
+
     	Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 		User user = userService.findUserByName(auth.getName());		
+
+        List<Post> posts= postService.findPostByTopic(topic);
 		
 		ModelAndView modelAndView = new ModelAndView();
-		Post p = new Post();
-		p.setAuthor(user);
-		p.setTopic(topic);
 		
-        modelAndView.addObject("post", p);
+        modelAndView.addObject("post", new Post());
         modelAndView.addObject("topic", topic);
+        modelAndView.addObject("posts", posts);
         
         modelAndView.setViewName("topic");
 	   return modelAndView;
     }
-    @PostMapping(value = "/addPost")
-    public String addPost(@Valid @ModelAttribute Post post, BindingResult bindingResult,Map<String, Object> model) {    	
+    @PostMapping(value = "/{categoryName}/topic/{id}")
+    public String addPost(@PathVariable("categoryName") String categoryName, @PathVariable("id") int id, @Valid @ModelAttribute Post post, BindingResult bindingResult,Map<String, Object> model) {    	
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-        //postService.savePost(post);
+        User user = userService.findUserByName(auth.getName());		
+        Topic topic = topicService.findTopicById(id);
         
-        model.put("message", post.getMessage());
-        return "message";
-        //return "redirect:/test/topic/" + post.getTopic().getId();
+        post.setAuthor(user);
+        post.setTopic(topic);
+        user.setNbPostedMessage(user.getNbPostedMessage() + 1);
+        topic.setNbPostedMessage(topic.getNbPostedMessage() + 1);
+        postService.savePost(post);
+        topicService.saveTopic(topic);
+        userService.saveUser(user);
+        
+        return "redirect:/"+ categoryName +"/topic/" + post.getTopic().getId();
     }
     
     @GetMapping("/{categoryName}/addTopic")
@@ -82,7 +91,7 @@ public class ForumController {
 		User user = userService.findUserByName(auth.getName());	
 		
 		Topic t = new Topic();
-		t.setSubForum(s);
+		//t.setSubForum(s);
 		
 		ModelAndView modelAndView = new ModelAndView();
         modelAndView.addObject("topic", t);
@@ -91,8 +100,11 @@ public class ForumController {
 	   return modelAndView;
     }
     @PostMapping(value = "/{categoryName}/addTopic")
-    public String addPost(@Valid @ModelAttribute Topic topic, @PathVariable("categoryName") String categoryName, BindingResult bindingResult,Map<String, Object> model) {    	
+    public String addTopic(@Valid @ModelAttribute Topic topic, @PathVariable("categoryName") String categoryName, BindingResult bindingResult,Map<String, Object> model) {    	
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        User user = userService.findUserByName(auth.getName());		
+        topic.setSubForum(subForumService.findSubForumByName(categoryName));
+        topic.setAuthor(user);
         topicService.saveTopic(topic);
         
         return "redirect:/" + categoryName + "/topic/" + topic.getId();
@@ -166,11 +178,12 @@ public class ForumController {
         return modelAndView;
     }
     
-    @RequestMapping(value = "/{name}")
+    @RequestMapping(value = "/forum/{name}")
     public String handleTestRequest (@PathVariable("name") String name, Model model) {
-        
-           model.addAttribute("categoryName", name);
-           return "subForum";
+    	SubForum subForum = subForumService.findSubForumByName(name);
+    	model.addAttribute("topics", topicService.findTopicBySubForum(subForum));
+        model.addAttribute("categoryName", name);
+        return "subForum";
         
     }
 

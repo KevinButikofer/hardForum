@@ -2,11 +2,39 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Advanced Search</title>
 </head>
 <body>
+<div th:insert="fragments/header :: header"></div>
+<div  class="container">
 	<h3>Advanced topic search</h3>
-	<form th:action="@{/addSubforum}" method="post">
+	<form th:action="@{/advancedSearch}" method="post">
+	<div class="form-group row">
+		<label for="authorName" class="col-sm-2 col-form-label">Author name</label>
+	    <div class="col-sm-10">
+	      <input type="text" class="form-control" id="inputEmail3" name="authorName" placeholder="author name"  th:value="*{authorName}">
+	    </div>
+    </div>
+    <div class="form-group row">
+	 	<label for="topicName" class="col-sm-2 col-form-label">Topic name</label>
+	    <div class="col-sm-10">
+	      <input type="text" class="form-control" id="topicName" name="topicName"  placeholder="topic name"  th:value="*{topicName}">
+	    </div>
+    </div>
+     <div class="form-group row">
+	 	<label for="subForum" class="col-sm-2 col-form-label">Subforum</label>
+	    <div class="col-sm-10">
+	    	<select class="form-control" name="subforums">
+        		<option th:each="subforum : ${subforums}" th:value="${subforum.id}" th:text=${subforum.name}/>
+        	</select>
+	    </div>
+    </div>
+    <div class="container">
+    <div class="row justify-content-between">
+    <input type="submit" value="Submit" class="btn btn-primary col-5"/> <input type="reset" value="Reset" class="btn btn-danger col-5"/>
+    </div>
+    </div>
+    <!--  
         <p>Topic name <input type="text" th:value="*{topicName}" name="topicName" /></p>
     	<p>Author name <input type="text" th:value="*{authorName}" name="authorName" /></p>
         <p>
@@ -16,8 +44,10 @@
         	</select>
         </p>
         		
-        <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
-    </form>
+        <p><input type="submit" value="Submit" class="btn btn-primary col-sm-6"/> <input type="reset" value="Reset" class="btn btn-primary col-sm-5"/></p>-->
 
+    </form>
+    </div>
+<div th:insert="fragments/footer :: footer"></div>
 </body>
 </html>

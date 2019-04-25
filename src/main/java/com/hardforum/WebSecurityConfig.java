@@ -56,23 +56,20 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		//RedirectStrategy redirectStrategy = new DefaultRedirectStrategy();		
 		http.
 		authorizeRequests()
-		.antMatchers("/forum").permitAll()
-			.antMatchers("/").permitAll()
-			.antMatchers("/login").permitAll()
-			.antMatchers("/registration").permitAll()
-			.antMatchers("/advancedSearch").permitAll()
-			.antMatchers("/search").permitAll()
-			.antMatchers("/search/**").permitAll()
-			.antMatchers("/admin/**").hasAuthority("ADMIN").anyRequest()
-			.authenticated().and().csrf().disable().formLogin()
-			.loginPage("/login").failureUrl("/login?error=true")
-			.defaultSuccessUrl("/admin/home",true)
-			.usernameParameter("name")
-			.passwordParameter("password")
-			.and().logout()
-			.logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
-			.logoutSuccessUrl("/").and().exceptionHandling()
-			.accessDeniedPage("/access-denied");
+		.antMatchers("**/addTopic").hasAnyRole("USER","ADMIN","MOD")
+		.antMatchers("/").hasAnyRole("USER","ADMIN","MOD")
+		.antMatchers("/*/topic/*", "/forum", "/", "/login", "/registration", 
+				"/advancedSearch", "/search", "/search/*", "/forum/*").permitAll()
+		.antMatchers("/admin/**").hasAuthority("ADMIN").anyRequest()
+		.authenticated().and().csrf().disable().formLogin()
+		.loginPage("/login").failureUrl("/login?error=true")
+		.defaultSuccessUrl("/",true)
+		.usernameParameter("name")
+		.passwordParameter("password")
+		.and().logout()
+		.logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
+		.logoutSuccessUrl("/").and().exceptionHandling()
+		.accessDeniedPage("/access-denied");
 	}
 	
 	

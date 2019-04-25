@@ -2,68 +2,17 @@
 <html>
 <head>
 	<title>Spring Security Tutorial</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  	<!-- Main Quill library -->
-<script src="//cdn.quilljs.com/1.0.0/quill.js"></script>
-<script src="//cdn.quilljs.com/1.0.0/quill.min.js"></script>
-
-<!-- Theme included stylesheets -->
-<link href="//cdn.quilljs.com/1.0.0/quill.snow.css" rel="stylesheet">
-<link href="//cdn.quilljs.com/1.0.0/quill.bubble.css" rel="stylesheet">
-
-<!-- Core build with no theme, formatting, non-essential modules -->
-<link href="//cdn.quilljs.com/1.0.0/quill.core.css" rel="stylesheet">
-<script src="//cdn.quilljs.com/1.0.0/quill.core.js"></script>
+	
+  	
 </head>
 <body>
     <div th:insert="fragments/header :: header"></div>
     <div class="container">
-    	<p>Get your greeting <a href="/admin/home">here</a></p>
+    	<p>Go to forums <a href="/forum">here</a></p>
+    	
     </div>
     <div th:insert="fragments/footer :: footer"></div>
-    
-    <!-- Include Quill stylesheet -->
-<link href="https://cdn.quilljs.com/1.0.0/quill.snow.css" rel="stylesheet">
 
-<!-- Create the toolbar container -->
-<div id="toolbar">
-</div>
 
-<!-- Create the editor container -->
-<form action="" metho="GET">
-	<textarea type="text" name="content" id="editor"></textarea>
-	<input type="submit" value="send">
-</form>
-
-<script>
-
-	var quill = new Quill('#editor', {
-	  modules: {
-		  toolbar: [
-		  ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
-		  ['blockquote', 'code-block'],
-
-		  [{ 'header': 1 }, { 'header': 2 }],               // custom button values
-		  [{ 'list': 'ordered'}, { 'list': 'bullet' }],
-		  [{ 'script': 'sub'}, { 'script': 'super' }],      // superscript/subscript
-		  [{ 'indent': '-1'}, { 'indent': '+1' }],          // outdent/indent
-		  [{ 'direction': 'rtl' }],                         // text direction
-
-		  [{ 'size': ['small', false, 'large', 'huge'] }],  // custom dropdown
-		  [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
-
-		  [{ 'color': [] }, { 'background': [] }],          // dropdown with defaults from theme
-		  [{ 'font': [] }],
-		  [{ 'align': [] }],
-
-		  ['clean'],                                     // remove formatting button
-		  ['image']
-		  ]
-	  },
-	  theme: 'snow'
-	});
-</script>
 </body>
 </html>
