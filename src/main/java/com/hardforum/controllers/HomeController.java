@@ -86,7 +86,7 @@ public class HomeController {
     @PostMapping(value = "/advancedSearch")
     public ModelAndView handleAdvancedSearch (@RequestParam String topicName, @RequestParam String authorName, @RequestParam int subforums, Model model) {
     		ModelAndView modelAndView = new ModelAndView("search");
-    		//select * where topic.name like '%topicName%' 
+    		modelAndView.addObject("topics", topicService.find(topicName, authorName, subforums));
            return modelAndView;      
     }
     

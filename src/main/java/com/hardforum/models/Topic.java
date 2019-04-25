@@ -44,6 +44,12 @@ public class Topic {
 	@JoinColumn(name="user_id")
 	private User author;
 	 
+	public User getAuthor() {
+		return author;
+	}
+	public void setAuthor(User author) {
+		this.author = author;
+	}
 	public List<Post> getPosts() {
 		return posts;
 	}
@@ -64,13 +70,7 @@ public class Topic {
 		return name;
 	}
 	
-	public User getAuthor() {
-		return author;
-	}
 
-	public void setAuthor(User author) {
-		this.author = author;
-	}
 
 	public void setName(String name) {
 		this.name = name;

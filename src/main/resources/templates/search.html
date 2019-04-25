@@ -5,11 +5,32 @@
 <title>Insert title here</title>
 </head>
 <body>
+<div th:insert="fragments/header :: header"></div>
+<div class="container">
 <p th:text="${searchText}"></p>
-    	<div th:each="topic: ${topics}">
-    		<a th:href="@{{subForumName}/topic/{topicId}(subForumName=${topic.subForum.name},topicId=${topic.id})}"><div th:text="${topic.name}" /></a>
+<div class="list-group">
+			     <div class="container">
+			    	<div class="row">
+				      <h5 class="mb-1 col-sm-8">Topic Name</h5><p class="col-sm-3" >Author</p>
+				      <small class="col-sm-1">N Replies</small>
+			      </div>
+		    	</div>
+	  	</div>
+ <div class="list-group" th:each="topic: ${topics}">
+  			<a th:href="@{/{subForum}/topic/{id}(subForum=${categoryName}, id=${topic.id})}" class="list-group-item list-group-item-action pl-0 pr-0 pt-2 pb-2">
+			    <div class="container">
+			    	<div class="row">
+					      <h5 class="mb-1 col-sm-8" th:text="${topic.name}"></h5><p class="col-sm-3" th:text="${topic.author.name}"></p>
+					      <small class="col-sm-1" th:text="${topic.nbPostedMessage}"></small>
+			      	</div>
+		    	</div>
+	  		</a>
+	  	</div>
+    	<!--  <div th:each="topic: ${topics}">
+    		<a th:href="@{{category}/topic/{topicID}(category=${topic.name}, topicID =${topic.id})}"><div th:text="${topic.name}" /></a>
     		
-    		
+    	</div>-->
+    	<div th:insert="fragments/footer :: footer"></div>
     	</div>
 </body>
 </html>

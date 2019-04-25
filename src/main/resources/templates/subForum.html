@@ -14,18 +14,20 @@ cursor:pointer;
 		<div  class="container">
 		<h1 th:text="${categoryName}"></h1>
 		<div class="list-group">
-			    <div class="d-flex w-100 justify-content-between  pl-3 pr-3">
-			      <h5>Topic Name</h5><p >Author</p>
-			      <small>Number of Replies</small>
+			     <div class="container">
+			    	<div class="row">
+				      <h5 class="mb-1 col-sm-8">Topic Name</h5><p class="col-sm-3" >Author</p>
+				      <small class="col-sm-1">N Replies</small>
+			      </div>
 		    	</div>
 	  	</div>
 	  	
 		 <div class="list-group" th:each="topic: ${topics}">
-  			<a th:href="@{/{subForum}/topic/{id}(subForum=${categoryName}, id=${topic.id})}" class="list-group-item list-group-item-action">
+  			<a th:href="@{/{subForum}/topic/{id}(subForum=${categoryName}, id=${topic.id})}" class="list-group-item list-group-item-action pl-0 pr-0 pt-2 pb-2">
 			    <div class="container">
 			    	<div class="row">
-					      <h5 class="mb-1 col-sm-5" th:text="${topic.name}"></h5><p class="col-sm-3" th:text="${topic.author.name}"></p>
-					      <small class="col-sm-2" th:text="${topic.nbPostedMessage}"></small>
+					      <h5 class="mb-1 col-sm-8" th:text="${topic.name}"></h5><p class="col-sm-3" th:text="${topic.author.name}"></p>
+					      <small class="col-sm-1" th:text="${topic.nbPostedMessage}"></small>
 			      	</div>
 		    	</div>
 	  		</a>

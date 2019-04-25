@@ -13,4 +13,6 @@ public interface TopicService {
 	public List<Topic> findByNameContaining(String name);
 	public List<Topic> findTopicBySubForum(SubForum subForum);
 	public Integer findTopicPostNumber();
+	public List<Topic> find(String topicName, String authorName, int categoryID);
+
 }
