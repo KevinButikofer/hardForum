@@ -2,6 +2,9 @@ package com.hardforum.services;
 
 import java.util.List;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+
 import com.hardforum.models.Post;
 import com.hardforum.models.SubForum;
 import com.hardforum.models.Topic;
@@ -14,5 +17,5 @@ public interface TopicService {
 	public List<Topic> findTopicBySubForum(SubForum subForum);
 	public Integer findTopicPostNumber();
 	public List<Topic> find(String topicName, String authorName, int categoryID);
-
+	public Page<Topic> getPaginatedTopicsBySubForum(Pageable pageable, SubForum subForum);
 }

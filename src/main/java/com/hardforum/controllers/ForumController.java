@@ -3,10 +3,14 @@ package com.hardforum.controllers;
 
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
@@ -16,6 +20,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.hardforum.services.PostService;
@@ -47,7 +52,7 @@ public class ForumController {
 		model.put("subforums", subForumService.findAll());
         return "forum";
     }
-    @GetMapping("/{categoryName}/topic/{id}")
+    @GetMapping("/forum/{categoryName}/topic/{id}")
     public ModelAndView post(@PathVariable("categoryName") String categoryName, @PathVariable("id") int id, Map<String, Object> model) {
     	Topic topic = topicService.findTopicById(id);
     	SubForum subForum = subForumService.findSubForumByName(categoryName);
@@ -66,24 +71,64 @@ public class ForumController {
         modelAndView.setViewName("topic");
 	   return modelAndView;
     }
-    @PostMapping(value = "/{categoryName}/topic/{id}")
+    @GetMapping("/forum/{categoryName}/topic/{id}/page/{page}")
+    public ModelAndView postPage(@PathVariable("categoryName") String categoryName, @PathVariable("id") int id, @PathVariable("page") int page, Map<String, Object> model) {
+        System.out.println("test");
+    	Topic topic = topicService.findTopicById(id);
+    	SubForum subForum = subForumService.findSubForumByName(categoryName);
+
+        //List<Post> posts= postService.findPostByTopic(topic);
+		
+		ModelAndView modelAndView = new ModelAndView();
+		PageRequest pageable = PageRequest.of(page - 1, 5);
+		Page<Post> postPage = postService.getPaginatedPostByTopic(pageable, topic);
+        int totalPages = postPage.getTotalPages();
+        if(totalPages > 0) {
+            List<Integer> pageNumbers = IntStream.rangeClosed(1,totalPages).boxed().collect(Collectors.toList());
+            modelAndView.addObject("pageNumbers", pageNumbers);
+        }
+        if(page < totalPages)
+        {
+        	modelAndView.addObject("next", true);
+        }
+        if(page == 1)
+        {
+        	modelAndView.addObject("previous", false);
+        }
+        else
+        {
+        	modelAndView.addObject("previous", true);
+        }				
+		
+        modelAndView.addObject("currentPage", page);
+        modelAndView.addObject("post", new Post());
+        modelAndView.addObject("topic", topic);
+        modelAndView.addObject("posts", postPage.getContent());
+        modelAndView.addObject("subForum", subForum);
+        
+        modelAndView.setViewName("topic");
+	   return modelAndView;
+    }
+    @PostMapping(value = "/forum/{categoryName}/topic/{id}")
     public String addPost(@PathVariable("categoryName") String categoryName, @PathVariable("id") int id, @Valid @ModelAttribute Post post, BindingResult bindingResult,Map<String, Object> model) {    	
-        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-        User user = userService.findUserByName(auth.getName());		
-        Topic topic = topicService.findTopicById(id);
-        
-        post.setAuthor(user);
-        post.setTopic(topic);
-        user.setNbPostedMessage(user.getNbPostedMessage() + 1);
-        topic.setNbPostedMessage(topic.getNbPostedMessage() + 1);
-        postService.savePost(post);
-        topicService.saveTopic(topic);
-        userService.saveUser(user);
-        
-        return "redirect:/"+ categoryName +"/topic/" + post.getTopic().getId();
+    	if(post.getMessage().length() < 2000000)
+    	{
+	        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+	        User user = userService.findUserByName(auth.getName());		
+	        Topic topic = topicService.findTopicById(id);
+	        
+	        post.setAuthor(user);
+	        post.setTopic(topic);
+	        user.setNbPostedMessage(user.getNbPostedMessage() + 1);
+	        topic.setNbPostedMessage(topic.getNbPostedMessage() + 1);
+	        postService.savePost(post);
+	        topicService.saveTopic(topic);
+	        userService.saveUser(user);	        
+    	}
+    	return "redirect:/forum/"+ categoryName +"/topic/" + post.getTopic().getId();
     }
     
-    @GetMapping("/{categoryName}/addTopic")
+    @GetMapping("/forum/{categoryName}/addTopic")
     public ModelAndView post(@PathVariable("categoryName") String categoryName, Map<String, Object> model) {
     	SubForum s = subForumService.findSubForumByName(categoryName);
     	Iterable<SubForum> subforums = subForumService.findAll();
@@ -99,7 +144,7 @@ public class ForumController {
         modelAndView.setViewName("addtopic");
 	   return modelAndView;
     }
-    @PostMapping(value = "/{categoryName}/addTopic")
+    @PostMapping(value = "/forum/{categoryName}")
     public String addTopic(@Valid @ModelAttribute Topic topic, @PathVariable("categoryName") String categoryName, BindingResult bindingResult,Map<String, Object> model) {    	
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         User user = userService.findUserByName(auth.getName());		
@@ -107,7 +152,7 @@ public class ForumController {
         topic.setAuthor(user);
         topicService.saveTopic(topic);
         
-        return "redirect:/" + categoryName + "/topic/" + topic.getId();
+        return "redirect:/forum/" + categoryName + "/topic/" + topic.getId();
     }
     
     @GetMapping("/users/{username}")
@@ -153,7 +198,7 @@ public class ForumController {
         return modelAndView;
     }
     
-    @PostMapping("/addSubforum")
+    @PostMapping("/forum/addSubforum")
     public ModelAndView greetingSubmit(@ModelAttribute SubForum subforum, Model model, BindingResult bindingResult ) {
         ModelAndView modelAndView = new ModelAndView();
 
@@ -172,7 +217,7 @@ public class ForumController {
 	    	subForumService.saveSubForum(subforum);
 	    	model.addAttribute("name", subforum.getName());
 	    	
-	    	return new ModelAndView("redirect:/"+subforum.getName());
+	    	return new ModelAndView("redirect:/forum"+ subforum.getName());
 
         }
         return modelAndView;
@@ -181,10 +226,44 @@ public class ForumController {
     @RequestMapping(value = "/forum/{name}")
     public String handleTestRequest (@PathVariable("name") String name, Model model) {
     	SubForum subForum = subForumService.findSubForumByName(name);
+    	Topic t = new Topic();
+    	model.addAttribute("topic", t);
     	model.addAttribute("topics", topicService.findTopicBySubForum(subForum));
         model.addAttribute("categoryName", name);
         return "subForum";
         
+    }
+    @RequestMapping(value = "/forum/{name}/{page}")
+    public ModelAndView listArticlesPageByPage(@PathVariable("page") int page, @PathVariable("name") String name) {
+    	SubForum subForum = subForumService.findSubForumByName(name);
+        ModelAndView modelAndView = new ModelAndView("subForum");
+        PageRequest pageable = PageRequest.of(page - 1, 1);
+        Page<Topic> topicPage = topicService.getPaginatedTopicsBySubForum(pageable, subForum);
+        int totalPages = topicPage.getTotalPages();
+        if(totalPages > 0) {
+            List<Integer> pageNumbers = IntStream.rangeClosed(1,totalPages).boxed().collect(Collectors.toList());
+            modelAndView.addObject("pageNumbers", pageNumbers);
+            System.out.println(pageNumbers);
+        }
+        if(page < totalPages)
+        {
+        	modelAndView.addObject("next", true);
+        }
+        if(page == 1)
+        {
+        	modelAndView.addObject("previous", false);
+        }
+        else
+        {
+        	modelAndView.addObject("previous", true);
+        }
+
+        Topic t = new Topic();
+        modelAndView.addObject("topic", t);
+        modelAndView.addObject("categoryName", name);
+        modelAndView.addObject("currentPage", page);
+        modelAndView.addObject("topics", topicPage.getContent());
+        return modelAndView;
     }
 
 }

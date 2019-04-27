@@ -58,8 +58,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		authorizeRequests()
 		.antMatchers("**/addTopic").hasAnyRole("USER","ADMIN","MOD")
 		.antMatchers("/").hasAnyRole("USER","ADMIN","MOD")
-		.antMatchers("/*/topic/*", "/forum", "/", "/login", "/registration", 
-				"/advancedSearch", "/search", "/search/*", "/forum/*").permitAll()
+		.antMatchers("/forum", "/", "/login", "/registration", 
+				"/advancedSearch", "/search", "/search/*", "/forum/**").permitAll()
 		.antMatchers("/admin/**").hasAuthority("ADMIN").anyRequest()
 		.authenticated().and().csrf().disable().formLogin()
 		.loginPage("/login").failureUrl("/login?error=true")

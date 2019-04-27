@@ -2,10 +2,12 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
+<!-- Main Quill library -->
+	<script src="//cdn.quilljs.com/1.3.6/quill.js"></script>
+	
+	<!-- Theme included stylesheets -->
+	<link href="//cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">	
 <style>
-.table-row{
-cursor:pointer;
-}
 </style>
 <title>My subforum</title>
 </head>
@@ -23,7 +25,7 @@ cursor:pointer;
 	  	</div>
 	  	
 		 <div class="list-group" th:each="topic: ${topics}">
-  			<a th:href="@{/{subForum}/topic/{id}(subForum=${categoryName}, id=${topic.id})}" class="list-group-item list-group-item-action pl-0 pr-0 pt-2 pb-2">
+  			<a th:href="@{/forum/{subForum}/topic/{id}(subForum=${categoryName}, id=${topic.id})}" class="list-group-item list-group-item-action pl-0 pr-0 pt-2 pb-2">
 			    <div class="container">
 			    	<div class="row">
 					      <h5 class="mb-1 col-sm-8" th:text="${topic.name}"></h5><p class="col-sm-3" th:text="${topic.author.name}"></p>
@@ -32,6 +34,27 @@ cursor:pointer;
 		    	</div>
 	  		</a>
 	  	</div>
+	  	
+	  <nav aria-label="Page navigation example">
+		  <ul class="pagination">
+		    <li class="page-item">
+		      <a th:if="${previous}" class="page-link" th:href="@{/forum/{subForum}/page/{n}(subForum=${categoryName}, n=${page - 1})}" aria-label="Previous">
+		        <span aria-hidden="true">&laquo;</span>
+		        <span class="sr-only">Previous</span>
+		      </a>
+		    </li>
+		    <li th:each="n : ${pageNumbers}" class="page-item">
+		      <a class="page-link" th:href="@{/forum/{subForum}/page/{n}(subForum=${categoryName}, n=${n})}" th:text="${n}">
+		      </a>
+		    </li>
+		    <li class="page-item">
+		      <a th:if="${next}" class="page-link"  th:href="@{/forum/{subForum}/page/{n}(subForum=${categoryName}, n=${page + 1})}" aria-label="Next">
+		        <span aria-hidden="true">&raquo;</span>
+		        <span class="sr-only">Next</span>
+		      </a>
+		    </li>
+		  </ul>
+		</nav>
 	  
 	  <!--
 		<table class="table table-striped">
@@ -50,7 +73,71 @@ cursor:pointer;
 		    </tr>
 		  </tbody>
 		</table> -->
+		
+		
+		
+		<h1>New Topic</h1>
+				
+				<div class="card">
+				  <div class="card-header">	
+				  </div>
+				  <div class="card-body">
+				  <div id="form-container" class="container">
+				    <form  th:object="${topic}" method="post">	
+					        <div class="form-group">
+						    	<label for="name">Title</label>
+						    	<input type="text" required th:field="*{name}" class="form-control" id="name" placeholder="name">
+						    </div>
+						   <div class="form-group">
+							      <label for="message">Message</label>
+							      <input type="hidden" th:field="*{message}" value="" name="message" id="message"/>
+							      <div id="editor-container">
+							      </div>
+							   </div>					  
+					   <button type="submit" class="btn btn-primary col-sm-12">Submit</button>
+					   <p th:text="${successMessage}"></p>						  
+					</form>
+					</div>
+				</div>
+		
+		
+		
+		
 		</div>	
+		
+		  <script type="text/javascript">
+    var quill = new Quill('#editor-container', {
+  	  modules: {
+  		  toolbar: [
+  		  ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
+
+  		  [{ 'header': 1 }, { 'header': 2 }],               // custom button values
+  		  [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+  		  [{ 'script': 'sub'}, { 'script': 'super' }],      // superscript/subscript
+  		  [{ 'indent': '-1'}, { 'indent': '+1' }],          // outdent/indent
+  		  [{ 'direction': 'rtl' }],                         // text direction
+
+  		  [{ 'size': ['small', false, 'large', 'huge'] }],  // custom dropdown
+  		  [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
+
+  		  [{ 'color': [] }, { 'background': [] }],          // dropdown with defaults from theme
+  		  [{ 'font': [] }],
+  		  [{ 'align': [] }],
+
+  		  ['clean'],                                     // remove formatting button
+  		  ['image']
+  		  ]
+  	  },
+  	  theme: 'snow'
+  	});
+
+    quill.on('text-change', function() {
+    	  var about = document.querySelector('input[name=message]');
+	       about.value = quill.root.innerHTML;
+    	});    
+    
+    </script>
+		
 		<div th:insert="fragments/footer :: footer"></div>
 	</body>
 </html>
