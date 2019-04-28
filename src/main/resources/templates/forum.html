@@ -8,20 +8,35 @@
      <div th:insert="fragments/breadCrumb :: breadCrumb"></div>
     <div class="container">
     	<H1>Welcome to the forum</H1>
-    	<h2>All subforums</h2>
-    	<div th:each="subforum: ${subforums}">
-    		<a th:href="@{/forum/{subforumName}(subforumName=${subforum.name})}"><div th:text="${subforum.name}" /></a>
-    		<div th:text="${subforum.description}" />
-    		
-    	</div>
+    	
+    	<div class="list-group mt-3 mb-5">
+		  <a th:each="subforum: ${subforums}" th:href="@{/forum/{subforumName}(subforumName=${subforum.name})}" class="list-group-item list-group-item-action flex-column align-items-start">
+		    <div class="d-flex w-100 justify-content-between">
+		      <h5 th:text="${subforum.name}" class="mb-1"></h5>
+		    </div>
+		    <p th:text="${subforum.description}" class="mb-1"></p>
+		  </a>
+		</div>	
+    	
     	<div sec:authorize="hasAuthority('ADMIN')">
     	<h3>Create a category</h3>
-    	<form th:action="@{/addSubforum}" th:object="${subforum}" method="post">
-    	<p>Category <input type="text" th:field="*{name}" /></p>
     	<p th:text="${error}"></p>
-        <p>Description<input type="text" th:field="*{description}" /></p>
-        		
-        <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+    	<form th:action="@{/addSubforum}" th:object="${subforum}" method="post">
+    	<div class="form-group">
+	    	<label for="categoryName" >Category </label>
+	    	<input class="form-control" type="text" th:field="*{name}" id="categoryName" /></p>
+	    </div>
+	    <div class="form-group">
+	    	<label for="categoryDescription" >Description</label>
+	    	<input class="form-control" type="text" th:field="*{description}"  id="categoryDescription" />
+	    </div>
+    	
+    	
+    <div class="container">
+	    <div class="row justify-content-between">
+	    	<input type="submit" value="Submit" class="btn btn-primary col-5"/> <input type="reset" value="Reset" class="btn btn-danger col-5"/>
+	    </div>
+    </div>
     </form>
 		</div>
     </div>

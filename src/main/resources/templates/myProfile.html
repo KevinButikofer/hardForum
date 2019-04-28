@@ -14,7 +14,7 @@
 				  <h2>Update profile</h2>
 				  </div>
 				  <div class="card-body pb-2">
-				    <form action="#" th:action="@{/myprofile}" th:object="${user}" method="post">
+				    <form th:action="@{/myprofile}" th:object="${user}" method="post">
 				    
 					     <div class="form-group">
 					    	<label for="age" >Age</label>
@@ -32,6 +32,7 @@
 					   
 						  
 					   <button type="submit" class="btn btn-primary form-control">Submit</button>
+					   </form>
 					   <p th:text="${successMessage}"></p>
 						  
 				</div>
