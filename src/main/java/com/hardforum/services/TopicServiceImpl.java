@@ -61,5 +61,8 @@ public class TopicServiceImpl implements TopicService{
     public Page<Topic> getPaginatedTopicsBySubForum(Pageable pageable, SubForum subForum) {
         return topicRepository.findBySubForum(pageable, subForum);
     }
-
+	@Override
+	public long removeById(int id) {
+		return topicRepository.removeById(id);
+	}
 }

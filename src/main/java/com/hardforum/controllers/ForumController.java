@@ -94,6 +94,10 @@ public class ForumController {
     	Topic topic = topicService.findTopicById(id);
     	SubForum subForum = subForumService.findSubForumByName(categoryName);
     	
+    	Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+		User user = userService.findUserByName(auth.getName());	
+		boolean hasModRight =  subForum.getSubForum_admin() == user;
+		
     	
     	List<Map.Entry<String, String>> links = new ArrayList<>();
     	links.add(new AbstractMap.SimpleEntry<String, String>("Forum", "/forum"));
@@ -121,6 +125,8 @@ public class ForumController {
         	modelAndView.addObject("previous", true);
         }				
 		
+        System.out.println("MOD " + hasModRight);
+        modelAndView.addObject("hasModRight", hasModRight);
         modelAndView.addObject("links", links);
         modelAndView.addObject("currentPage", page);
         modelAndView.addObject("post", new Post());
@@ -149,6 +155,23 @@ public class ForumController {
 	        userService.saveUser(user);	        
     	}
     	return "redirect:/forum/"+ categoryName +"/topic/" + post.getTopic().getId();
+    }
+    @PostMapping(value = "/forum/{categoryName}/topic/{id}/removeTopic")
+    public String removeTopic(@PathVariable("categoryName") String categoryName, @PathVariable("id") int id, Map<String, Object> model) {    	
+    	
+	    Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+	    topicService.removeById(id);
+      
+    	return "redirect:/forum/"+ categoryName;
+    }
+    @PostMapping(value = "/forum/{categoryName}/topic/{id}/removePost/{postId}")
+    public String removePost(@PathVariable("categoryName") String categoryName, @PathVariable("id") int id, @PathVariable("postId") int postId, Map<String, Object> model) {    	
+    	
+	    Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+	    
+	    postService.removeById(postId);
+      
+	    return "redirect:/forum/"+ categoryName +"/topic/" + id;
     }
     
     @GetMapping("/forum/{categoryName}/addTopic")
@@ -267,7 +290,10 @@ public class ForumController {
     }
     @RequestMapping(value = "/forum/{name}/page/{page}")
     public ModelAndView listArticlesPageByPage(@PathVariable("page") int page, @PathVariable("name") String name) {
+    	
     	SubForum subForum = subForumService.findSubForumByName(name);
+    	
+    	
         ModelAndView modelAndView = new ModelAndView("subForum");
         
         Map<String, String> linkMap = new HashMap<>();

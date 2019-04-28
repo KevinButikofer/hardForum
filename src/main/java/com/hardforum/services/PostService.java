@@ -14,4 +14,5 @@ public interface PostService {
 	public Iterable<Post> findAll();
 	public List<Post> findPostByTopic(Topic topic);
 	public Page<Post> getPaginatedPostByTopic(Pageable pageable, Topic topic);
+	public long removeById(int id);
 }

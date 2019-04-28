@@ -18,4 +18,5 @@ public interface TopicService {
 	public Integer findTopicPostNumber();
 	public List<Topic> find(String topicName, String authorName, int categoryID);
 	public Page<Topic> getPaginatedTopicsBySubForum(Pageable pageable, SubForum subForum);
+	public long removeById(int id);
 }

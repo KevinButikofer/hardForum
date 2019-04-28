@@ -43,5 +43,10 @@ public class PostServiceImpl implements PostService{
         return postRepository.findAllByTopic(pageable, topic);
     }
 
+	@Override
+	public long removeById(int id) {
+		return postRepository.removeById(id);
+	}
+
 
 }
