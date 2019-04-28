@@ -1,8 +1,12 @@
 package com.hardforum.controllers;
 
 
+import java.util.AbstractMap;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
@@ -48,14 +52,26 @@ public class ForumController {
     
     @GetMapping("/forum")
     public String forum(Map<String, Object> model) {
+    	List<Map.Entry<String, String>> links = new ArrayList<>();
+    	links.add(new AbstractMap.SimpleEntry<String, String>("Forum", ""));
+    	
+    	model.put("links", links);
 		model.put("subforum", new SubForum() );
 		model.put("subforums", subForumService.findAll());
         return "forum";
     }
     @GetMapping("/forum/{categoryName}/topic/{id}")
-    public ModelAndView post(@PathVariable("categoryName") String categoryName, @PathVariable("id") int id, Map<String, Object> model) {
+    public String post(@PathVariable("categoryName") String categoryName, @PathVariable("id") int id, Map<String, Object> model) {
+    	return "redirect:/forum/"+ categoryName + "/topic/" + id + "/page/1";
+    	/*
     	Topic topic = topicService.findTopicById(id);
     	SubForum subForum = subForumService.findSubForumByName(categoryName);
+    	
+    	List<Map.Entry<String, String>> links = new ArrayList<>();
+    	links.add(new AbstractMap.SimpleEntry<String, String>("Forum", "/forum"));
+    	links.add(new AbstractMap.SimpleEntry<String, String>(categoryName, "/forum" + "/" + categoryName));
+    	links.add(new AbstractMap.SimpleEntry<String, String>(topic.getName(), ""));
+    	
 
     	Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 		User user = userService.findUserByName(auth.getName());		
@@ -64,20 +80,25 @@ public class ForumController {
 		
 		ModelAndView modelAndView = new ModelAndView();
 		
+		modelAndView.addObject("links", links);
         modelAndView.addObject("post", new Post());
         modelAndView.addObject("topic", topic);
         modelAndView.addObject("posts", posts);
         
         modelAndView.setViewName("topic");
-	   return modelAndView;
+	   return modelAndView;*/
     }
     @GetMapping("/forum/{categoryName}/topic/{id}/page/{page}")
     public ModelAndView postPage(@PathVariable("categoryName") String categoryName, @PathVariable("id") int id, @PathVariable("page") int page, Map<String, Object> model) {
-        System.out.println("test");
+      
     	Topic topic = topicService.findTopicById(id);
     	SubForum subForum = subForumService.findSubForumByName(categoryName);
-
-        //List<Post> posts= postService.findPostByTopic(topic);
+    	
+    	
+    	List<Map.Entry<String, String>> links = new ArrayList<>();
+    	links.add(new AbstractMap.SimpleEntry<String, String>("Forum", "/forum"));
+    	links.add(new AbstractMap.SimpleEntry<String, String>(categoryName, "/forum" + "/" + categoryName));
+    	links.add(new AbstractMap.SimpleEntry<String, String>(topic.getName(), ""));
 		
 		ModelAndView modelAndView = new ModelAndView();
 		PageRequest pageable = PageRequest.of(page - 1, 5);
@@ -100,11 +121,13 @@ public class ForumController {
         	modelAndView.addObject("previous", true);
         }				
 		
+        modelAndView.addObject("links", links);
         modelAndView.addObject("currentPage", page);
         modelAndView.addObject("post", new Post());
         modelAndView.addObject("topic", topic);
         modelAndView.addObject("posts", postPage.getContent());
         modelAndView.addObject("subForum", subForum);
+        
         
         modelAndView.setViewName("topic");
 	   return modelAndView;
@@ -225,18 +248,36 @@ public class ForumController {
     
     @RequestMapping(value = "/forum/{name}")
     public String handleTestRequest (@PathVariable("name") String name, Model model) {
+    	return "redirect:/forum/"+ name +"/page/1";
+    	/*Map<String, String> linkMap = new HashMap<>();
+    	linkMap.put("Forum", "/forum");
+    	
+    	List<Map.Entry<String, String>> links = new ArrayList<>();
+    	links.add(new AbstractMap.SimpleEntry<String, String>("Forum", "/forum"));
+    	links.add(new AbstractMap.SimpleEntry<String, String>(name, ""));
+    	
     	SubForum subForum = subForumService.findSubForumByName(name);
     	Topic t = new Topic();
+    	model.addAttribute("links", links);
     	model.addAttribute("topic", t);
     	model.addAttribute("topics", topicService.findTopicBySubForum(subForum));
         model.addAttribute("categoryName", name);
-        return "subForum";
+        return "subForum";*/
         
     }
-    @RequestMapping(value = "/forum/{name}/{page}")
+    @RequestMapping(value = "/forum/{name}/page/{page}")
     public ModelAndView listArticlesPageByPage(@PathVariable("page") int page, @PathVariable("name") String name) {
     	SubForum subForum = subForumService.findSubForumByName(name);
         ModelAndView modelAndView = new ModelAndView("subForum");
+        
+        Map<String, String> linkMap = new HashMap<>();
+    	linkMap.put("Forum", "/forum");
+    	
+    	List<Map.Entry<String, String>> links = new ArrayList<>();
+    	links.add(new AbstractMap.SimpleEntry<String, String>("Forum", "/forum"));
+    	links.add(new AbstractMap.SimpleEntry<String, String>(name, ""));
+        
+        
         PageRequest pageable = PageRequest.of(page - 1, 1);
         Page<Topic> topicPage = topicService.getPaginatedTopicsBySubForum(pageable, subForum);
         int totalPages = topicPage.getTotalPages();
@@ -259,6 +300,7 @@ public class ForumController {
         }
 
         Topic t = new Topic();
+        modelAndView.addObject("links", links);
         modelAndView.addObject("topic", t);
         modelAndView.addObject("categoryName", name);
         modelAndView.addObject("currentPage", page);
