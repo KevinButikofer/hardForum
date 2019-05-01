@@ -5,7 +5,7 @@
 <body>
 <div th:fragment="breadCrumb">
 	<nav aria-label="breadcrumb">
-	  <ol class="breadcrumb">
+	  <ol class="breadcrumb mt-5">
 	    <li th:each="link, doc : ${links}" th:class="${doc.last} ? 'breadcrumb-item active':'breadcrumb-item'"><a  th:href="${link.value}" th:text="${link.key}"></a></li>
 	  </ol>
 	  </nav>

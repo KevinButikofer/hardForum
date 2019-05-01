@@ -5,7 +5,9 @@
 <title>Advanced Search</title>
 </head>
 <body>
+<div class="flex-wrapper">
 <div th:insert="fragments/header :: header"></div>
+
 <div  class="container">
 	<h3>Advanced topic search</h3>
 	<form th:action="@{/advancedSearch}" method="post">
@@ -48,6 +50,8 @@
 
     </form>
     </div>
+ 
 <div th:insert="fragments/footer :: footer"></div>
+   </div>
 </body>
 </html>

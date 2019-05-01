@@ -22,6 +22,8 @@ public interface TopicRepository extends JpaRepository<Topic, Integer>{
 	Topic findById(int topic_id);
 	List<Topic> findByNameContaining(String name);
 	List<Topic> findBySubForum(SubForum subForum);
+	List<Topic> findFirst10ByOrderByNameAsc();
+
 	@Query( value = "select COUNT(*) from topic t where t.sub_forum_id=?", nativeQuery = true)
 	Integer findPostNumber();
 	

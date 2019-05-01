@@ -1,0 +1,33 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<body>
+	<div th:fragment="aside">
+
+		<div class="container">
+
+			<aside>
+				<h4>Featured playlist</h4>
+				<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/127163465&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+				<hr>
+				<h4>New topics</h4>
+				 <div th:each="topic: ${topicsAside}">
+		  			<a th:href="@{/forum/{subForum}/topic/{id}(subForum=${categoryName}, id=${topic.id})}" class="list-group-item list-group-item-action pl-0 pr-0 pt-2 pb-2">
+					    <div class="container">
+					    	<div>
+					    	<small class="col-sm-1 bg-dark text-light float-right rounded" th:text="${topic.nbPostedMessage}"></small>
+					    	</div>
+					    	<div>
+							      <h5 class="mb-1" th:text="${topic.name}"></h5>
+							      <h6>By<span class="col-sm-3" th:text="${topic.author.name}"></span></h6>
+							      <p class=" text-muted" th:text="${topic.subForum.name}"></p>
+					      	</div>
+				    	</div>
+			  		</a>
+			  	</div>
+			  	<hr>				
+			</aside>
+		</div>
+	</div>
+
+</body>
+</html>

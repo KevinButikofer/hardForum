@@ -64,7 +64,9 @@ public class ForumController {
     	List<Map.Entry<String, String>> links = new ArrayList<>();
     	links.add(new AbstractMap.SimpleEntry<String, String>("Forum", ""));
     	Iterable<User> users = userService.findUserByRole(roleService.findByName("MOD"));
-    	
+    	users.forEach(x -> System.out.println(x.getName()));
+    	List<Topic> topicsAside = topicService.findFirst10ByOrderByNameAsc();
+    	model.put("topicsAside", topicsAside);
     	model.put("moderators", users);
     	model.put("links", links);
 		model.put("subforum", new SubForum() );
@@ -85,6 +87,8 @@ public class ForumController {
 		User user = userService.findUserByName(auth.getName());	
 		boolean hasModRight =  (subForum.getSubForum_admin() == user || user.getRoles().contains(roleService.findByName("ADMIN"))) && user != null;
 		
+    	List<Topic> topicsAside = topicService.findFirst10ByOrderByNameAsc();
+    	
     	
     	List<Map.Entry<String, String>> links = new ArrayList<>();
     	links.add(new AbstractMap.SimpleEntry<String, String>("Forum", "/forum"));
@@ -112,6 +116,8 @@ public class ForumController {
         	modelAndView.addObject("previous", true);
         }				
 		
+        System.out.println("MOD " + hasModRight);
+        modelAndView.addObject("topicsAside", topicsAside);
         modelAndView.addObject("hasModRight", hasModRight);
         modelAndView.addObject("links", links);
         modelAndView.addObject("currentPage", page);
@@ -169,10 +175,10 @@ public class ForumController {
 		
 		Topic t = new Topic();
 		//t.setSubForum(s);
-		
 		ModelAndView modelAndView = new ModelAndView();
         modelAndView.addObject("topic", t);
         
+
         modelAndView.setViewName("addtopic");
 	   return modelAndView;
     }
@@ -183,6 +189,7 @@ public class ForumController {
         topic.setSubForum(subForumService.findSubForumByName(categoryName));
         topic.setAuthor(user);
         topicService.saveTopic(topic);
+
         
         return "redirect:/forum/" + categoryName + "/topic/" + topic.getId();
     }
@@ -291,7 +298,8 @@ public class ForumController {
     	List<Map.Entry<String, String>> links = new ArrayList<>();
     	links.add(new AbstractMap.SimpleEntry<String, String>("Forum", "/forum"));
     	links.add(new AbstractMap.SimpleEntry<String, String>(name, ""));
-        
+    	List<Topic> topicsAside = topicService.findFirst10ByOrderByNameAsc();
+    	
         
         PageRequest pageable = PageRequest.of(page - 1, 10);
         Page<Topic> topicPage = topicService.getPaginatedTopicsBySubForum(pageable, subForum);
@@ -315,6 +323,7 @@ public class ForumController {
         }
 
         Topic t = new Topic();
+        modelAndView.addObject("topicsAside", topicsAside);
         modelAndView.addObject("links", links);
         modelAndView.addObject("topic", t);
         modelAndView.addObject("categoryName", name);
