@@ -28,9 +28,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.hardforum.services.PostService;
+import com.hardforum.services.RoleService;
 import com.hardforum.services.TopicService;
 import com.hardforum.services.UserService;
 import com.hardforum.models.Post;
+import com.hardforum.models.Role;
 import com.hardforum.models.SubForum;
 import com.hardforum.models.Topic;
 import com.hardforum.models.User;
@@ -49,12 +51,17 @@ public class ForumController {
 	private PostService postService;	
 	@Autowired
 	private SubForumService subForumService;	
+	@Autowired
+	private RoleService roleService;	
+    
     
     @GetMapping("/forum")
     public String forum(Map<String, Object> model) {
     	List<Map.Entry<String, String>> links = new ArrayList<>();
     	links.add(new AbstractMap.SimpleEntry<String, String>("Forum", ""));
-    	
+    	List<User> users = userService.findUserByRole(roleService.findByName("MOD"));
+    	System.out.println(users.size());
+    	model.put("mods", users);
     	model.put("links", links);
 		model.put("subforum", new SubForum() );
 		model.put("subforums", subForumService.findAll());
@@ -96,7 +103,7 @@ public class ForumController {
     	
     	Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 		User user = userService.findUserByName(auth.getName());	
-		boolean hasModRight =  subForum.getSubForum_admin() == user;
+		boolean hasModRight =  subForum.getSubForum_admin() == user && user != null;
 		
     	
     	List<Map.Entry<String, String>> links = new ArrayList<>();

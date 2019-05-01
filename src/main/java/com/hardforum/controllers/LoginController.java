@@ -81,9 +81,4 @@ public class LoginController {
 		modelAndView.setViewName("admin/home");
 		return modelAndView;
 	}
-	
-	public int add(int a, int b)
-	{
-		return a+b;
-	}
 }
