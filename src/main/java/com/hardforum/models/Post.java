@@ -1,5 +1,7 @@
 package com.hardforum.models;
 
+import java.time.LocalDateTime;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -11,7 +13,9 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotEmpty;
 
+import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.ManyToAny;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import net.bytebuddy.implementation.bind.annotation.Default;
 
@@ -22,6 +26,27 @@ public class Post {
     @GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name="post_id")
 	private int id;
+	
+	@Column
+	@CreationTimestamp
+	private LocalDateTime createDateTime;
+	
+	@Column
+	@UpdateTimestamp
+	private LocalDateTime updateDateTime;
+	
+	public LocalDateTime getCreateDateTime() {
+		return createDateTime;
+	}
+	public void setCreateDateTime(LocalDateTime createDateTime) {
+		this.createDateTime = createDateTime;
+	}
+	public LocalDateTime getUpdateDateTime() {
+		return updateDateTime;
+	}
+	public void setUpdateDateTime(LocalDateTime updateDateTime) {
+		this.updateDateTime = updateDateTime;
+	}
 	@Column(name="message", columnDefinition="LONGTEXT")
 	@NotEmpty(message = "*Please provide a message")
 	private String message;

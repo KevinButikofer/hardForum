@@ -1,6 +1,8 @@
 package com.hardforum.controllers;
 
 
+import java.awt.Image;
+import java.io.IOException;
 import java.util.AbstractMap;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -25,6 +27,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.hardforum.services.PostService;
@@ -60,7 +64,6 @@ public class ForumController {
     	List<Map.Entry<String, String>> links = new ArrayList<>();
     	links.add(new AbstractMap.SimpleEntry<String, String>("Forum", ""));
     	Iterable<User> users = userService.findUserByRole(roleService.findByName("MOD"));
-    	users.forEach(x -> System.out.println(x.getName()));
     	
     	model.put("moderators", users);
     	model.put("links", links);
@@ -71,30 +74,6 @@ public class ForumController {
     @GetMapping("/forum/{categoryName}/topic/{id}")
     public String post(@PathVariable("categoryName") String categoryName, @PathVariable("id") int id, Map<String, Object> model) {
     	return "redirect:/forum/"+ categoryName + "/topic/" + id + "/page/1";
-    	/*
-    	Topic topic = topicService.findTopicById(id);
-    	SubForum subForum = subForumService.findSubForumByName(categoryName);
-    	
-    	List<Map.Entry<String, String>> links = new ArrayList<>();
-    	links.add(new AbstractMap.SimpleEntry<String, String>("Forum", "/forum"));
-    	links.add(new AbstractMap.SimpleEntry<String, String>(categoryName, "/forum" + "/" + categoryName));
-    	links.add(new AbstractMap.SimpleEntry<String, String>(topic.getName(), ""));
-    	
-
-    	Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-		User user = userService.findUserByName(auth.getName());		
-
-        List<Post> posts= postService.findPostByTopic(topic);
-		
-		ModelAndView modelAndView = new ModelAndView();
-		
-		modelAndView.addObject("links", links);
-        modelAndView.addObject("post", new Post());
-        modelAndView.addObject("topic", topic);
-        modelAndView.addObject("posts", posts);
-        
-        modelAndView.setViewName("topic");
-	   return modelAndView;*/
     }
     @GetMapping("/forum/{categoryName}/topic/{id}/page/{page}")
     public ModelAndView postPage(@PathVariable("categoryName") String categoryName, @PathVariable("id") int id, @PathVariable("page") int page, Map<String, Object> model) {
@@ -104,7 +83,7 @@ public class ForumController {
     	
     	Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 		User user = userService.findUserByName(auth.getName());	
-		boolean hasModRight =  subForum.getSubForum_admin() == user && user != null;
+		boolean hasModRight =  (subForum.getSubForum_admin() == user || user.getRoles().contains(roleService.findByName("ADMIN"))) && user != null;
 		
     	
     	List<Map.Entry<String, String>> links = new ArrayList<>();
@@ -133,7 +112,6 @@ public class ForumController {
         	modelAndView.addObject("previous", true);
         }				
 		
-        System.out.println("MOD " + hasModRight);
         modelAndView.addObject("hasModRight", hasModRight);
         modelAndView.addObject("links", links);
         modelAndView.addObject("currentPage", page);
@@ -198,7 +176,7 @@ public class ForumController {
         modelAndView.setViewName("addtopic");
 	   return modelAndView;
     }
-    @PostMapping(value = "/forum/{categoryName}")
+    @PostMapping(value = "/forum/{categoryName}/addTopic")
     public String addTopic(@Valid @ModelAttribute Topic topic, @PathVariable("categoryName") String categoryName, BindingResult bindingResult,Map<String, Object> model) {    	
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         User user = userService.findUserByName(auth.getName());		
@@ -221,26 +199,38 @@ public class ForumController {
     @GetMapping("/myprofile")
     public ModelAndView profile(Map<String, Object> model) {
     	Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-		User user = userService.findUserByName(auth.getName());		
+		User user = userService.findUserByName(auth.getName());
+		System.out.println(user.getName());
 		ModelAndView modelAndView = new ModelAndView();
         modelAndView.addObject("user", user);
         modelAndView.setViewName("myProfile");
 	   return modelAndView;
     }
-    @PostMapping(value = "/myprofile")
-    public ModelAndView UpdateUser(@Valid @ModelAttribute User user, BindingResult bindingResult) {
+    @PostMapping("/myprofile")
+    public ModelAndView UpdateUser(@ModelAttribute User user, @RequestParam("imageFile") MultipartFile image, BindingResult bindingResult) {
         ModelAndView modelAndView = new ModelAndView();
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 		User currentUser = userService.findUserByName(auth.getName());
-        User userExists = userService.findUserById(currentUser.getId());
-        if (userExists != null) {
-        	userExists.setAge(user.getAge());
-        	userExists.setBio(user.getBio());
-        	userService.saveUser(userExists);   
+        if (currentUser != null) {
+        	
+        	currentUser.setAge(user.getAge());
+        	currentUser.setBio(user.getBio());
+        	currentUser.setSignature(user.getSignature());
+        	
+        	try {
+        		currentUser.setImage(image.getBytes());
+			} catch (IOException e) {
+				modelAndView.setViewName("myProfile");
+				return modelAndView;
+			}
+        	
+        	userService.saveUser(currentUser);         	
+        	
 
             modelAndView.addObject("successMessage", "Profile has been update successfully");
             modelAndView.setViewName("myProfile");
         }
+        
         if (bindingResult.hasErrors()) {
             modelAndView.setViewName("myProfile");
         } else {
@@ -250,6 +240,11 @@ public class ForumController {
 
         }
         return modelAndView;
+    }
+    @RequestMapping(value = "/{userId}/image")
+    @ResponseBody
+    public byte[] userImage(@PathVariable int userId)  {       
+      return userService.findUserById(userId).getImage();
     }
     
     @PostMapping("/forum/addSubforum")
@@ -280,20 +275,6 @@ public class ForumController {
     @RequestMapping(value = "/forum/{name}")
     public String handleTestRequest (@PathVariable("name") String name, Model model) {
     	return "redirect:/forum/"+ name +"/page/1";
-    	/*Map<String, String> linkMap = new HashMap<>();
-    	linkMap.put("Forum", "/forum");
-    	
-    	List<Map.Entry<String, String>> links = new ArrayList<>();
-    	links.add(new AbstractMap.SimpleEntry<String, String>("Forum", "/forum"));
-    	links.add(new AbstractMap.SimpleEntry<String, String>(name, ""));
-    	
-    	SubForum subForum = subForumService.findSubForumByName(name);
-    	Topic t = new Topic();
-    	model.addAttribute("links", links);
-    	model.addAttribute("topic", t);
-    	model.addAttribute("topics", topicService.findTopicBySubForum(subForum));
-        model.addAttribute("categoryName", name);
-        return "subForum";*/
         
     }
     @RequestMapping(value = "/forum/{name}/page/{page}")
@@ -312,7 +293,7 @@ public class ForumController {
     	links.add(new AbstractMap.SimpleEntry<String, String>(name, ""));
         
         
-        PageRequest pageable = PageRequest.of(page - 1, 1);
+        PageRequest pageable = PageRequest.of(page - 1, 10);
         Page<Topic> topicPage = topicService.getPaginatedTopicsBySubForum(pageable, subForum);
         int totalPages = topicPage.getTotalPages();
         if(totalPages > 0) {

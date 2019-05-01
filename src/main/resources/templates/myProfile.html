@@ -14,7 +14,7 @@
 				  <h2>Update profile</h2>
 				  </div>
 				  <div class="card-body pb-2">
-				    <form th:action="@{/myprofile}" th:object="${user}" method="post">
+				    <form action="/myprofile" th:object="${user}" method="post" enctype="multipart/form-data">
 				    
 					     <div class="form-group">
 					    	<label for="age" >Age</label>
@@ -28,12 +28,17 @@
 					     <div class="form-group">
 					    	<label for="signature" >Signature</label>
 					    	<input type="text" th:field="*{signature}" class="form-control" id="signature" placeholder="Your Signature">
-					    </div>				    
-					   
+					    </div>	
+					    
+					  <div class="form-group">
+						    <label for="imageFile">Choose a profile picture</label>
+						    <input type="file" class="form-control-file" id="imageFile" name="imageFile"  accept="image/png, image/jpeg">
+						  </div>
 						  
 					   <button type="submit" class="btn btn-primary form-control">Submit</button>
-					   </form>
-					   <p th:text="${successMessage}"></p>
+				   </form>
+				   <img th:src="@{/{userId}/image(userId=${user.id})}" alt="user_Image"/>
+				   <p th:text="${successMessage}"></p>
 						  
 				</div>
 				

@@ -1,5 +1,6 @@
 package com.hardforum.models;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Set;
 
@@ -19,6 +20,8 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotEmpty;
 
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 import org.springframework.lang.Nullable;
 
 @Entity
@@ -28,6 +31,14 @@ public class Topic {
     @GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name="topic_id")
 	private int id;
+	
+	@Column
+	@CreationTimestamp
+	private LocalDateTime createDateTime;
+
+	@Column
+	@UpdateTimestamp
+	private LocalDateTime updateDateTime;
 	
 	@Column(name="message", columnDefinition="LONGTEXT")
 	@NotEmpty(message = "*Please provide a message")

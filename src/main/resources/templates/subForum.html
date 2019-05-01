@@ -85,7 +85,7 @@
 				  </div>
 				  <div class="card-body">
 				  <div id="form-container" class="container">
-				    <form  th:object="${topic}" method="post">	
+				    <form  th:object="${topic}" method="post" th:action="@{/forum/{subForum}/addTopic(subForum=${categoryName})}">	
 					        <div class="form-group">
 						    	<label for="name">Title</label>
 						    	<input type="text" required th:field="*{name}" class="form-control" id="name" placeholder="name">

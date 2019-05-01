@@ -10,11 +10,13 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
+import javax.persistence.Lob;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotEmpty;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.lang.Nullable;
 
 
 @Entity
@@ -51,8 +53,24 @@ public class User {
     
     @Column(name = "nb_posted_message")
     private Integer nbPostedMessage = 0;
+
     
-    public Integer getNbPostedMessage() {
+    @Lob
+    @Nullable
+    @Column(name="user_image", columnDefinition="mediumblob")
+    private byte[] image;
+ 
+    
+    public byte[] getImage() {
+		return image;
+	}
+
+	public void setImage(byte[] image) {
+		this.image = image;
+	}
+
+    
+	public Integer getNbPostedMessage() {
 		return nbPostedMessage;
 	}
 

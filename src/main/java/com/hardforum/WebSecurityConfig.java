@@ -56,7 +56,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		//RedirectStrategy redirectStrategy = new DefaultRedirectStrategy();		
 		http.
 		authorizeRequests()
-		.antMatchers("**/addTopic").hasAnyRole("USER","ADMIN","MOD")
+		.antMatchers("**/addTopic", "**/addPost").hasAnyRole("USER","ADMIN","MOD")
 		.antMatchers("/").hasAnyRole("USER","ADMIN","MOD")
 		.antMatchers("/forum", "/", "/login", "/registration", 
 				"/advancedSearch", "/search", "/search/*", "/forum/**").permitAll()
