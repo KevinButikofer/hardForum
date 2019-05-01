@@ -59,9 +59,10 @@ public class ForumController {
     public String forum(Map<String, Object> model) {
     	List<Map.Entry<String, String>> links = new ArrayList<>();
     	links.add(new AbstractMap.SimpleEntry<String, String>("Forum", ""));
-    	List<User> users = userService.findUserByRole(roleService.findByName("MOD"));
-    	System.out.println(users.size());
-    	model.put("mods", users);
+    	Iterable<User> users = userService.findUserByRole(roleService.findByName("MOD"));
+    	users.forEach(x -> System.out.println(x.getName()));
+    	
+    	model.put("moderators", users);
     	model.put("links", links);
 		model.put("subforum", new SubForum() );
 		model.put("subforums", subForumService.findAll());
