@@ -5,9 +5,12 @@
 <title>Insert title here</title>
 </head>
 <body>
+<div class="flex-wrapper">
 <div th:insert="fragments/header :: header"></div>
 <div class="container">
-<p th:text="${searchText}"></p>
+<h4 th:if="${searchText}"> Search result for "<span th:text="${searchText}"/>"</h4>
+<h4 th:unless="${searchText}"> Search result </h4>
+<hr>	
 <div class="list-group">
 			     <div class="container">
 			    	<div class="row">
@@ -16,8 +19,8 @@
 			      </div>
 		    	</div>
 	  	</div>
- <div class="list-group" th:each="topic: ${topics}">
-  			<a th:href="@{/forum/{subForum}/topic/{id}(subForum=${topic.subForum.id}, id=${topic.id})}" class="list-group-item list-group-item-action pl-0 pr-0 pt-2 pb-2">
+ 			<div class="list-group" th:each="topic: ${topics}">
+  			<a th:href="@{/forum/{subForum}/topic/{id}(subForum=${topic.subForum.name}, id=${topic.id})}" class="list-group-item list-group-item-action pl-0 pr-0 pt-2 pb-2">
 			    <div class="container">
 			    	<div class="row">
 					      <h5 class="mb-1 col-sm-8" th:text="${topic.name}"></h5><p class="col-sm-3" th:text="${topic.author.name}"></p>
@@ -30,6 +33,7 @@
     		<a th:href="@{{category}/topic/{topicID}(category=${topic.name}, topicID =${topic.id})}"><div th:text="${topic.name}" /></a>
     		
     	</div>-->
+    	</div>
     	<div th:insert="fragments/footer :: footer"></div>
     	</div>
 </body>
