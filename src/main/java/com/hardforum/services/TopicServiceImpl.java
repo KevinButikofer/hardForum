@@ -65,4 +65,12 @@ public class TopicServiceImpl implements TopicService{
 	public long removeById(int id) {
 		return topicRepository.removeById(id);
 	}
+
+	@Override
+	public List<Topic> findFirst10ByOrderByNameAsc() {
+		
+		return topicRepository.findFirst10ByOrderByNameAsc();
+	}
+	
+	
 }

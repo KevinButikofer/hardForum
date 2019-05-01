@@ -7,10 +7,10 @@
 </head>
 
 <body>
+<div class="flex-wrapper">
+
 <div th:insert="fragments/header :: header"></div>
-	<form th:action="@{/registration}" method="get">
-		<button class="btn btn-md btn-warning btn-block" type="Submit">Go To Registration Page</button>
-	</form>	
+
 	
 	<div class="container">
 		<form th:action="@{/login}" method="POST" class="form-signin">
@@ -26,7 +26,12 @@
 			</div>
 			<button class="btn btn-lg btn-primary btn-block" name="Submit" value="Login" type="Submit" th:text="Login"></button>
 		</form>
+		<div class="col-12 d-flex flex-row justify-content-center mt-3 mb-3">OR</div>
+		<form th:action="@{/registration}" method="get">
+			<button class="btn btn-md btn-warning btn-block pt-1 pb-1" type="Submit">Go To Registration Page</button>
+		</form>	
 	</div>
 	<div th:insert="fragments/footer :: footer"></div>
+</div>
 </body>
 </html>
