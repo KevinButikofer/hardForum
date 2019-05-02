@@ -21,9 +21,9 @@
 		<div class="list-group">
 			     <div class="container">
 			    	<div class="row">
-				      <h5 class="mb-1 col-sm-8">Topic Name</h5><p class="col-sm-2" >Author</p>
+				      <h5 class="mb-1 col-sm-7">Topic Name</h5><p class="col-sm-2" >Author</p>
 				      <small class="col-sm-1">N Replies</small>
-				      <small class="col-sm-1">Updated</small>
+				      <small class="col-sm-2">Updated</small>
 				      
 			      </div>
 		    	</div>
@@ -33,9 +33,9 @@
   			<a th:href="@{/forum/{subForum}/topic/{id}(subForum=${categoryName}, id=${topic.id})}" class="list-group-item list-group-item-action pl-0 pr-0 pt-2 pb-2">
 			    <div class="container">
 			    	<div class="row">
-					      <h5 class="mb-1 col-sm-8" th:text="${topic.name}"></h5><p class="col-sm-2" th:text="${topic.author.name}"></p>
+					      <h5 class="mb-1 col-sm-7" th:text="${topic.name}"></h5><p class="col-sm-2" th:text="${topic.author.name}"></p>
 					      <small class="col-sm-1" th:text="${topic.nbPostedMessage}"></small>
-					      <small class="col-sm-1" th:text="${{topic.updateDateTime}}"></small>
+					      <small class="col-sm-2" th:text="${{topic.updateDateTime}}"></small>
 					      
 			      	</div>
 		    	</div>

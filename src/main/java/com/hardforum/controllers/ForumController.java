@@ -65,7 +65,7 @@ public class ForumController {
     	links.add(new AbstractMap.SimpleEntry<String, String>("Forum", ""));
     	Iterable<User> users = userService.findUserByRole(roleService.findByName("MOD"));
     	users.forEach(x -> System.out.println(x.getName()));
-    	List<Topic> topicsAside = topicService.findFirst10ByOrderByNameAsc();
+    	List<Topic> topicsAside = topicService.findFirst10ByOrderByUpdateDateTimeDesc();
     	model.put("topicsAside", topicsAside);
     	model.put("moderators", users);
     	model.put("links", links);
@@ -87,7 +87,7 @@ public class ForumController {
 		User user = userService.findUserByName(auth.getName());	
 		boolean hasModRight =  (subForum.getSubForum_admin() == user || user.getRoles().contains(roleService.findByName("ADMIN"))) && user != null;
 		
-    	List<Topic> topicsAside = topicService.findFirst10ByOrderByNameAsc();
+    	List<Topic> topicsAside = topicService.findFirst10ByOrderByUpdateDateTimeDesc();
     	
     	
     	List<Map.Entry<String, String>> links = new ArrayList<>();
@@ -298,7 +298,7 @@ public class ForumController {
     	List<Map.Entry<String, String>> links = new ArrayList<>();
     	links.add(new AbstractMap.SimpleEntry<String, String>("Forum", "/forum"));
     	links.add(new AbstractMap.SimpleEntry<String, String>(name, ""));
-    	List<Topic> topicsAside = topicService.findFirst10ByOrderByNameAsc();
+    	List<Topic> topicsAside = topicService.findFirst10ByOrderByUpdateDateTimeDesc();
     	
         
         PageRequest pageable = PageRequest.of(page - 1, 10);

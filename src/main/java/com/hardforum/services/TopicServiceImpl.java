@@ -50,7 +50,7 @@ public class TopicServiceImpl implements TopicService{
 
 	@Override
 	public List<Topic> findTopicBySubForum(SubForum subForum) {
-		return topicRepository.findBySubForum(subForum);
+		return topicRepository.findBySubForumOrderByUpdateDateTimeDesc(subForum);
 	}
 
 	@Override
@@ -59,7 +59,7 @@ public class TopicServiceImpl implements TopicService{
 	}
 	@Override
     public Page<Topic> getPaginatedTopicsBySubForum(Pageable pageable, SubForum subForum) {
-        return topicRepository.findBySubForum(pageable, subForum);
+        return topicRepository.findBySubForumOrderByUpdateDateTimeDesc(pageable, subForum);
     }
 	@Override
 	public long removeById(int id) {
@@ -67,9 +67,9 @@ public class TopicServiceImpl implements TopicService{
 	}
 
 	@Override
-	public List<Topic> findFirst10ByOrderByNameAsc() {
+	public List<Topic> findFirst10ByOrderByUpdateDateTimeDesc() {
 		
-		return topicRepository.findFirst10ByOrderByNameAsc();
+		return topicRepository.findFirst10ByOrderByUpdateDateTimeDesc();
 	}
 	
 	
