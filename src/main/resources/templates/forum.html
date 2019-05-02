@@ -25,7 +25,7 @@
     	<div sec:authorize="hasAuthority('ADMIN')" class="pb-3">
     	<h3>Create a category</h3>
     	<p th:text="${error}"></p>
-    	<form th:action="@{/addSubforum}" th:object="${subforum}" method="post">
+    	<form th:action="@{/addSubforum}" th:object="${subforum}" method="post" class="formCat">
     	<div class="form-group">
 	    	<label for="categoryName" >Category </label>
 	    	<input class="form-control" type="text" th:field="*{name}" id="categoryName" /></p>
