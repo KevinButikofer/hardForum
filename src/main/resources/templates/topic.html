@@ -46,12 +46,13 @@
 				 	  <div class="card  mb-2">
 					  <div class="card-header row justify-content-between m-0 pl-0 pr-0 float-right">
 					    <h4 class="col-6" th:text="${poste.title}"></h4>
-					    					    <div class="col-md-2 offset-md-4" >at <span th:text="${{poste.updateDateTime}}"></div>
-					    
 					    <div class="d-inline col-2 ">
 					    
-					    <form  th:if="${hasModRight}"  method="post" class="float-right " th:action="@{/forum/{subForum}/topic/{topicId}/removePost/{id}(subForum=${subForum.name}, topicId=${topic.id},id=${poste.id})}"><input type="submit" class="btn btn-danger" value="Delete"></form></div>
-					  </div>
+					    	<form  th:if="${hasModRight}"  method="post" class="float-right" th:action="@{/forum/{subForum}/topic/{topicId}/removePost/{id}(subForum=${subForum.name}, topicId=${topic.id},id=${poste.id})}"><input type="submit" class="btn btn-danger" value="Delete"></form>
+					  	</div>
+					    <div class="col-md-2" >at <span th:text="${{poste.updateDateTime}}"></div>
+					    
+
 					  <div  th:utext="${poste.message}"class="card-body">
 					  </div>
 					  <div  class="card-footer text-muted container">

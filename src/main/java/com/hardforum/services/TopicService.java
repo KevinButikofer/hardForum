@@ -14,7 +14,7 @@ public interface TopicService {
 	public void saveTopic(Topic topic);
 	public Iterable<Topic> findAll();
 	public List<Topic> findByNameContaining(String name);
-	public List<Topic> findFirst10ByOrderByNameAsc();
+	public List<Topic> findFirst10ByOrderByUpdateDateTimeDesc();
 
 	public List<Topic> findTopicBySubForum(SubForum subForum);
 	public Integer findTopicPostNumber();
