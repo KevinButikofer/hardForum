@@ -90,14 +90,20 @@
 				  </div>
 				  <div class="card-body">
 				  <div id="form-container" class="container">
-				    <form  th:object="${topic}" method="post" th:action="@{/forum/{subForum}/addTopic(subForum=${categoryName})}">	
+				    <form  th:object="${topic}" method="post" th:action="@{/forum/{subForum}/addTopic(subForum=${categoryName})}" onsubmit="return isTooLong()">	
 					        <div class="form-group">
 						    	<label for="name">Title</label>
-						    	<input type="text" required th:field="*{name}" class="form-control" id="name" placeholder="name">
+						    	<input type="text"  th:field="*{name}" class="form-control" id="name" placeholder="name" required>
 						    </div>
+						    <div class="alert alert-danger" style="display:none" role="alert" id="tooLongAlert">
+								  Your message is too long, try to put smaller image
+								</div>
+								 <div class="alert alert-danger" style="display:none" role="alert" id="emptyAlert">
+								  Your message cannot be empty
+								</div>
 						   <div class="form-group">
 							      <label for="message">Message</label>
-							      <input type="hidden" th:field="*{message}" value="" name="message" id="message"/>
+							      <input type="hidden" th:field="*{message}" value="" name="message" id="message" required/>
 							      <div id="editor-container">
 							      </div>
 							   </div>					  
@@ -110,36 +116,65 @@
 			</div>		
 		</div>	
 		
-		  <script type="text/javascript">
-    var quill = new Quill('#editor-container', {
-  	  modules: {
-  		  toolbar: [
-  		  ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
+		  <script sec:authorize="isAuthenticated()" type="text/javascript">
 
-  		  [{ 'header': 1 }, { 'header': 2 }],               // custom button values
-  		  [{ 'list': 'ordered'}, { 'list': 'bullet' }],
-  		  [{ 'script': 'sub'}, { 'script': 'super' }],      // superscript/subscript
-  		  [{ 'indent': '-1'}, { 'indent': '+1' }],          // outdent/indent
-  		  [{ 'direction': 'rtl' }],                         // text direction
+		    var tooLong = false;
+		    var quill = new Quill('#editor-container', {
+		  	  modules: {
+		  		  toolbar: [
+		  		  ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
 
-  		  [{ 'size': ['small', false, 'large', 'huge'] }],  // custom dropdown
-  		  [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
+		  		  [{ 'header': 1 }, { 'header': 2 }],               // custom button values
+		  		  [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+		  		  [{ 'script': 'sub'}, { 'script': 'super' }],      // superscript/subscript
+		  		  [{ 'indent': '-1'}, { 'indent': '+1' }],          // outdent/indent
+		  		  [{ 'direction': 'rtl' }],                         // text direction
 
-  		  [{ 'color': [] }, { 'background': [] }],          // dropdown with defaults from theme
-  		  [{ 'font': [] }],
-  		  [{ 'align': [] }],
+		  		  [{ 'size': ['small', false, 'large', 'huge'] }],  // custom dropdown
+		  		  [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
 
-  		  ['clean'],                                     // remove formatting button
-  		  ['image']
-  		  ]
-  	  },
-  	  theme: 'snow'
-  	});
+		  		  [{ 'color': [] }, { 'background': [] }],          // dropdown with defaults from theme
+		  		  [{ 'font': [] }],
+		  		  [{ 'align': [] }],
 
-    quill.on('text-change', function() {
-    	  var about = document.querySelector('input[name=message]');
-	       about.value = quill.root.innerHTML;
-    	});    
+		  		  ['clean'],                                     // remove formatting button
+		  		  ['image']
+		  		  ]
+		  	  },
+		  	  theme: 'snow'
+		  	});
+
+		    function isTooLong() {
+		       if(tooLong)
+		    	   return false;
+		       else if(quill.getText().trim().length === 0)
+		    	   {
+		    	   $('#emptyAlert').css("display", "block");
+		    	   return false;
+		    	   }
+		       else
+		    	   {
+		    	   return true;
+		    	   }
+		    }
+		    quill.on('text-change', function() {
+		  	  var about = document.querySelector('input[name=message]');
+		  	 $('#emptyAlert').css("display", "none");
+		  	  	if(quill.root.innerHTML.length > 2000000 )
+		  	  		{
+		  	  	   
+		  	  		tooLong = true;
+		  	  		$('#tooLongAlert').css("display", "block");
+		  	  		//$('#tooLongAlert').removeClass('invisible');
+		  	  		}
+		  	  	else
+		  	  		{
+		  	  		tooLong = false;
+		  	  		$('#tooLongAlert').css("display", "none");
+		  	  		//$('#tooLongAlert').addClass('invisible');
+		  	  		}
+			       about.value = quill.root.innerHTML;
+		  		});
     
     </script>
 		

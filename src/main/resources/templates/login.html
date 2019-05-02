@@ -17,9 +17,9 @@
 			<h3 class="form-signin-heading" th:text="Welcome"></h3>
 			<br/>
 			 			<input type="text" id="name" name="name"  th:placeholder="name"
-				class="form-control" /> <br/> 
+				class="form-control" required /> <br/> 
 			<input type="password"  th:placeholder="Password"
-				id="password" name="password" class="form-control" /> <br /> 
+				id="password" name="password" class="form-control" required /> <br /> 
 				
 			<div align="center" th:if="${param.error}">
 				<p style="font-size: 20; color: #FF1C19;">name or Password invalid, please verify</p>

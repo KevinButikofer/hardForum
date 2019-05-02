@@ -87,7 +87,7 @@ body{
 				</ul>				
 				<form th:action="@{/search}"  method="post" class="form-inline  my-lg-0">
    				<p class="text-white pr-sm-2 mb-0">Search a topic <input  type="text" th:value="*{searchText}" name="searchText" class="form-control mr-sm-2 ml-sm-2 "/>      		
-       			<input type="submit" value="Submit" class="btn btn-outline-success  my-sm-0"/></p>
+       			<input type="submit" value="Submit" class="btn btn-outline-success  my-sm-0" required /></p>
    				</form>
   					
 			</div>
