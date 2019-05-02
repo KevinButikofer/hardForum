@@ -61,7 +61,6 @@ public class ForumController {
     	List<Map.Entry<String, String>> links = new ArrayList<>();
     	links.add(new AbstractMap.SimpleEntry<String, String>("Forum", ""));
     	Iterable<User> users = userService.findUserByRole(roleService.findByName("MOD"));
-    	users.forEach(x -> System.out.println(x.getName()));
     	List<Topic> topicsAside = topicService.findFirst10ByOrderByUpdateDateTimeDesc();
     	model.put("topicsAside", topicsAside);
     	model.put("moderators", users);
@@ -113,7 +112,6 @@ public class ForumController {
         	modelAndView.addObject("previous", true);
         }				
 		
-        System.out.println("MOD " + hasModRight);
         modelAndView.addObject("topicsAside", topicsAside);
         modelAndView.addObject("hasModRight", hasModRight);
         modelAndView.addObject("links", links);
@@ -186,14 +184,13 @@ public class ForumController {
     public ModelAndView profile(Map<String, Object> model) {
     	Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 		User user = userService.findUserByName(auth.getName());
-		System.out.println(user.getName());
 		ModelAndView modelAndView = new ModelAndView();
         modelAndView.addObject("user", user);
         modelAndView.setViewName("myProfile");
 	   return modelAndView;
     }
     @PostMapping("/myprofile")
-   public ModelAndView UpdateUser(@ModelAttribute User user, @RequestParam("imageFile") MultipartFile image, BindingResult bindingResult) {
+   public ModelAndView updateUser(@ModelAttribute User user, @RequestParam("imageFile") MultipartFile image, BindingResult bindingResult) {
         ModelAndView modelAndView = new ModelAndView();
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 		User currentUser = userService.findUserByName(auth.getName());
@@ -287,7 +284,6 @@ public class ForumController {
         if(totalPages > 0) {
             List<Integer> pageNumbers = IntStream.rangeClosed(1,totalPages).boxed().collect(Collectors.toList());
             modelAndView.addObject("pageNumbers", pageNumbers);
-            System.out.println(pageNumbers);
         }
         if(page < totalPages)
         {

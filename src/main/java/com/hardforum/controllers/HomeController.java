@@ -36,14 +36,6 @@ public class HomeController {
            return modelAndView;      
     }
     
-    /*@RequestMapping(value = "/search/{search}")
-    public String handleTestRequest (@PathVariable("search") String search, Model model) {
-        
-           model.addAttribute("searchName", search);
-           return "search";
-        
-    }*/
-    
     @GetMapping(value = "/advancedSearch")
     public ModelAndView advancedSearch (Model model) {
 		ModelAndView modelAndView = new ModelAndView("/advancedSearch");
