@@ -255,7 +255,7 @@ public class ForumController {
     }
     
     @PostMapping("/forum/addSubforum")
-    public ModelAndView greetingSubmit(@ModelAttribute SubForum subforum, Model model, BindingResult bindingResult ) {
+    public ModelAndView greetingSubmit(@ModelAttribute SubForum subforum, Model model, BindingResult bindingResult, @RequestParam("moderator") int idMod ) {
         ModelAndView modelAndView = new ModelAndView();
 
         SubForum subforumExists = subForumService.findSubForumByName(subforum.getName());
@@ -270,10 +270,11 @@ public class ForumController {
             modelAndView.addObject("error", "Subforum already existing");
 
         } else {
+        	subforum.setSubForum_admin(userService.findUserById(idMod));
 	    	subForumService.saveSubForum(subforum);
 	    	model.addAttribute("name", subforum.getName());
 	    	
-	    	return new ModelAndView("redirect:/forum"+ subforum.getName());
+	    	return new ModelAndView("redirect:/forum/"+ subforum.getName());
 
         }
         return modelAndView;

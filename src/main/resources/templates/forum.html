@@ -36,8 +36,8 @@
 	    </div>
     	<div class="form-group">
     	<label for="categoryDescription" >Description</label>
-    		<select th:field="*{subForum_admin}" class="form-control">    		
-			    <option th:each="moderator : ${moderators}" th:value="${moderator}" th:text="${moderator.name}">
+    		<select name="moderator" class="form-control">    		
+			    <option th:each="moderator : ${moderators}" th:value="${moderator.id}" th:text="${moderator.name}">
 			    </option>
 			</select>
 			</div>
