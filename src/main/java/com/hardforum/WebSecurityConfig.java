@@ -58,7 +58,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		authorizeRequests()
 		.antMatchers("**/addTopic", "**/addPost").hasAnyRole("USER","ADMIN","MOD")
 		.antMatchers("/").hasAnyRole("USER","ADMIN","MOD")
-		.antMatchers("/forum", "/", "/login", "/registration", 
+		.antMatchers("/forum", "/", "/login", "/registration", "/img/*", "/*/image",
 				"/advancedSearch", "/search", "/search/*", "/forum/**").permitAll()
 		.antMatchers("/admin/**").hasAuthority("ADMIN").anyRequest()
 		.authenticated().and().csrf().disable().formLogin()
@@ -69,6 +69,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		.and().logout()
 		.logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
 		.logoutSuccessUrl("/").and().exceptionHandling()
+		
 		.accessDeniedPage("/access-denied");
 	}
 	

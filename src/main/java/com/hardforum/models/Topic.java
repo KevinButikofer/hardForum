@@ -40,6 +40,18 @@ public class Topic {
 	@UpdateTimestamp
 	private LocalDateTime updateDateTime;
 	
+	public LocalDateTime getCreateDateTime() {
+		return createDateTime;
+	}
+	public void setCreateDateTime(LocalDateTime createDateTime) {
+		this.createDateTime = createDateTime;
+	}
+	public LocalDateTime getUpdateDateTime() {
+		return updateDateTime;
+	}
+	public void setUpdateDateTime(LocalDateTime updateDateTime) {
+		this.updateDateTime = updateDateTime;
+	}
 	@Column(name="message", columnDefinition="LONGTEXT")
 	@NotEmpty(message = "*Please provide a message")
 	private String message;

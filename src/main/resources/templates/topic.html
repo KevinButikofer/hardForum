@@ -12,33 +12,56 @@
 	</head>
 <body> 	 	
     <div th:insert="fragments/header :: header"></div>
-    <div class= "float-right pr-5 pt-5" th:insert="fragments/aside :: aside"></div> 
+    <div class= "float-right pr-5 pt-5 fullHeight" th:insert="fragments/aside :: aside"></div> 
     
-    <div class="container">   
+    <div class="container mainContent">   
     <div th:insert="fragments/breadCrumb :: breadCrumb"></div>
     <div class="starter-template">
     	<div class="row justify-content-between">
+    	
 				<h1 class="col-6" > <span th:text="${topic.name}"></span> by <a th:href="@{/users/{userName}(userName=${topic.author.name})}"><span  th:text="${topic.author.name}"></span></a></h1>
 				<div th:if="${hasModRight}" class="d-inline col-2 "><form method="post" class="float-right btn-lg" th:action="@{/forum/{subForum}/topic/{topicId}/removeTopic(subForum=${subForum.name}, topicId=${topic.id})}"><input type="submit" class="btn btn-danger" value="Delete"></form></div>
-		</div>
-				<div class="card  mb-4" >
+				
+			</div>
+				<p>				 	  		
+				 	<img th:if="${topic.author.image}" th:src="@{/{userId}/image(userId=${topic.author.id})}" alt="user_Image" class="img-thumbnail imgForum mr-1 float-left"/>
+				 	<img th:unless="${topic.author.image}"  th:src="@{/img/default.jpg}" alt="user_Image" class="img-thumbnail imgForum mr-1 float-left" />
+				</p>
+				 	  <div class="card  mb-5">
+
 					<div  class="card-body">
-						<p th:utext="${topic.message}"></p>
+						<span th:utext="${topic.message}"></span>
 					</div>
-				</div>
-				 <div class="card  mb-2" th:each="poste : ${posts}">
-					  <div class="card-header row justify-content-between m-0 pl-0 pr-0">
-					    <h4 class="col-6" th:text="${poste.title}"></h4><div class="d-inline col-2 ">
+					</div>
+				<br>
+				<br>
+				 <div class ="posts" th:each="poste : ${posts}">
+				 	  <div class="float-left">
+				 	  	<p>				 	  		
+				 	  		<img th:if="${poste.author.image}" th:src="@{/{userId}/image(userId=${poste.author.id})}" alt="user_Image" class="img-thumbnail imgForum mr-1 "/>
+				 	  		<img th:unless="${poste.author.image}"  th:src="@{/img/default.jpg}" alt="user_Image" class="img-thumbnail imgForum mr-1 " />
+				 	  	</p>
+				 	  	<div class="d-flex flex-row justify-content-center align-items-center"><a th:href="@{/users/{userName}(userName=${poste.author.name})}"> <span th:text="${poste.author.name}"></a></div>				 	  	
+				 	  </div>
+				 	  <div class="card  mb-2">
+					  <div class="card-header row justify-content-between m-0 pl-0 pr-0 float-right">
+					    <h4 class="col-6" th:text="${poste.title}"></h4>
+					    					    <div class="col-md-2 offset-md-4" >at <span th:text="${{poste.updateDateTime}}"></div>
+					    
+					    <div class="d-inline col-2 ">
+					    
 					    <form  th:if="${hasModRight}"  method="post" class="float-right " th:action="@{/forum/{subForum}/topic/{topicId}/removePost/{id}(subForum=${subForum.name}, topicId=${topic.id},id=${poste.id})}"><input type="submit" class="btn btn-danger" value="Delete"></form></div>
 					  </div>
 					  <div  th:utext="${poste.message}"class="card-body">
 					  </div>
 					  <div  class="card-footer text-muted container">
-						   <div class="row">
-							   <div class="col-md-2 offset-md-6" >Posted by <a th:href="@{/users/{userName}(userName=${poste.author.name})}"> <span th:text="${poste.author.name}"></a></div>
-							  <div class="col-md-2 offset-md-2" >at <span th:text="${poste.updateDateTime}"></div>
+						   <div class="d-flex flex-row justify-content-center align-items-center">
+							   <div th:text="${poste.author.bio}" ></div>
 						  </div>
 					  </div>
+					  </div>
+					  					  <br>
+					  
 					  </div>
 				 </div>
 				 

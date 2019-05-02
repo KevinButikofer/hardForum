@@ -13,9 +13,14 @@
 				 <div th:each="topic: ${topicsAside}">
 		  			<a th:href="@{/forum/{subForum}/topic/{id}(subForum=${categoryName}, id=${topic.id})}" class="list-group-item list-group-item-action pl-0 pr-0 pt-2 pb-2">
 					    <div class="container">
-					    	<div>
-					    	<small class="col-sm-1 bg-dark text-light float-right rounded" th:text="${topic.nbPostedMessage}"></small>
+					    
+					    	<div class="float-right">
+					    	<span th:text="${{topic.updateDateTime}}"></span>					    	
+					    	
+					    	<small class="col-sm-1 bg-dark text-light rounded" th:text="${topic.nbPostedMessage}"></small>
+					    	
 					    	</div>
+					    	
 					    	<div>
 							      <h5 class="mb-1" th:text="${topic.name}"></h5>
 							      <h6>By<span class="col-sm-3" th:text="${topic.author.name}"></span></h6>
