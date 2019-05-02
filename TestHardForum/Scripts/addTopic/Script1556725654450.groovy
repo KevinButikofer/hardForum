@@ -17,9 +17,9 @@ WebUI.openBrowser('')
 
 WebUI.navigateToUrl('http://localhost:8080/login')
 
-WebUI.setText(findTestObject('Object Repository/Page_Spring Security Tutorial/input_Welcome_name (3)'), 'user2')
+WebUI.setText(findTestObject('Object Repository/Page_Spring Security Tutorial/input_Welcome_name (3)'), 'user6')
 
-WebUI.setEncryptedText(findTestObject('Object Repository/Page_Spring Security Tutorial/input_Welcome_password (3)'), 'jEDueeLlpJI=')
+WebUI.setEncryptedText(findTestObject('Object Repository/Page_Spring Security Tutorial/input_Welcome_password (3)'), 'OfYSgXUfG6A=')
 
 not_run: WebUI.sendKeys(findTestObject('Object Repository/Page_Spring Security Tutorial/input_Welcome_password (3)'), Keys.chord(
         Keys.ENTER))
@@ -41,4 +41,8 @@ WebUI.setText(findTestObject('Object Repository/Page_Spring Security Tutorial/di
 WebUI.click(findTestObject('Object Repository/Page_Spring Security Tutorial/button_Submit'))
 
 WebUI.click(findTestObject('Object Repository/Page_Spring Security Tutorial/h4_Test Post'))
+
+WebUI.navigateToUrl('http://localhost:8080/logout')
+
+WebUI.closeBrowser()
 

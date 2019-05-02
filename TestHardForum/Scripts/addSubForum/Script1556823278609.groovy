@@ -17,9 +17,9 @@ WebUI.openBrowser('')
 
 WebUI.navigateToUrl('http://localhost:8080/login')
 
-WebUI.setText(findTestObject('Object Repository/1/input_Welcome_name (1)'), 'user2')
+WebUI.setText(findTestObject('Object Repository/1/input_Welcome_name (1)'), 'user6')
 
-WebUI.setEncryptedText(findTestObject('Object Repository/1/input_Welcome_password (1)'), 'jEDueeLlpJI=')
+WebUI.setEncryptedText(findTestObject('Object Repository/1/input_Welcome_password (1)'), 'OfYSgXUfG6A=')
 
 WebUI.click(findTestObject('Object Repository/1/button_Login (1)'))
 
@@ -29,4 +29,9 @@ WebUI.setText(findTestObject('Object Repository/1/input_Description_description 
 
 WebUI.click(findTestObject('Object Repository/1/input_Description_btn btn-primary col-5'))
 
-assert WebUI.getUrl() == "http://localhost/forum/" + categoryName;
+assert WebUI.getUrl() == ('http://localhost/forum/' + categoryName)
+
+WebUI.navigateToUrl('http://localhost:8080/logout')
+
+WebUI.closeBrowser()
+

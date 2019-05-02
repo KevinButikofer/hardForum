@@ -27,3 +27,5 @@ WebUI.click(findTestObject('Object Repository/Page_Registration Form/button_Regi
 
 WebUI.click(findTestObject('Object Repository/Page_Registration Form/label_There is already a user registered with the name provided'))
 
+WebUI.closeBrowser()
+

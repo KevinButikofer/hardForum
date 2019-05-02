@@ -17,9 +17,9 @@ WebUI.openBrowser('')
 
 WebUI.navigateToUrl('http://localhost:8080/login')
 
-WebUI.setText(findTestObject('Object Repository/input_Welcome_name (5)'), 'user2')
+WebUI.setText(findTestObject('Object Repository/input_Welcome_name (5)'), 'user6')
 
-WebUI.setEncryptedText(findTestObject('Object Repository/input_Welcome_password (5)'), 'jEDueeLlpJI=')
+WebUI.setEncryptedText(findTestObject('Object Repository/input_Welcome_password (5)'), 'OfYSgXUfG6A=')
 
 WebUI.click(findTestObject('Object Repository/button_Login (2)'))
 
@@ -32,6 +32,8 @@ WebUI.click(findTestObject('Object Repository/a_dwake      10      5119 713 PM')
 WebUI.click(findTestObject('Object Repository/input_ke_btn btn-danger'))
 
 assert url == WebUI.getUrl()
+
+WebUI.navigateToUrl('http://localhost:8080/logout')
 
 WebUI.closeBrowser()
 

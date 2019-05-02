@@ -11,13 +11,37 @@
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
    <testSuiteGuid>c10f0c34-f54f-4fe5-b309-dd06882dae83</testSuiteGuid>
    <testCaseLink>
-      <guid>ac4622dd-83ed-4545-8547-1b4c50e84fed</guid>
+      <guid>af151108-9f50-4b3a-9317-1bc227998ae9</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/addPost</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>22ba17e5-3e05-4b41-846d-4c1d4ef446d6</guid>
+      <guid>3e21965f-aaf0-49f7-9f68-43a81419b494</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/addPostNoMessage</testCaseId>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>b0fd35fa-7833-4073-913d-6ba502085595</variableId>
+      </variableLink>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>6c5e14e2-0cef-4ac2-9316-acf6af8564fe</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/addSubForum</testCaseId>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>70c6384a-b208-4849-8d75-0be950774600</variableId>
+      </variableLink>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>66e0e298-b403-466b-b7f9-cb0efd536756</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/addTopic</testCaseId>
@@ -29,31 +53,7 @@
       </variableLink>
    </testCaseLink>
    <testCaseLink>
-      <guid>6f8d4a2c-041e-440a-8dc0-29effa0cbbe3</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/alreadyRegisteredUser</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>f041bc8b-0957-49d2-a5b3-f55310cbefcc</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/LoginNotRegistered</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>39add1a2-812b-4483-8cd8-9de02943c646</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/LoginRegisteredUser</testCaseId>
-      <variableLink>
-         <testDataLinkId></testDataLinkId>
-         <type>DEFAULT</type>
-         <value></value>
-         <variableId>f4d33633-157d-4414-b89a-66cf6c5b26ae</variableId>
-      </variableLink>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>3e1b92b4-6632-4fb7-8b9f-5775642d3eb9</guid>
+      <guid>6fb20d79-8fec-4d44-a9b4-cc8f494b1bf1</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/advancedSearch</testCaseId>
@@ -71,31 +71,13 @@
       </variableLink>
    </testCaseLink>
    <testCaseLink>
-      <guid>5a1cd746-9eac-49d1-9394-4b65314684ed</guid>
+      <guid>3db6b379-e166-4a8b-a15e-a862a339f849</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/addPostNoMessage</testCaseId>
-      <variableLink>
-         <testDataLinkId></testDataLinkId>
-         <type>DEFAULT</type>
-         <value></value>
-         <variableId>b0fd35fa-7833-4073-913d-6ba502085595</variableId>
-      </variableLink>
+      <testCaseId>Test Cases/alreadyRegisteredUser</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>6e501a1c-7c88-45ed-aeb2-296d5c5fcb98</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/addSubForum</testCaseId>
-      <variableLink>
-         <testDataLinkId></testDataLinkId>
-         <type>DEFAULT</type>
-         <value></value>
-         <variableId>70c6384a-b208-4849-8d75-0be950774600</variableId>
-      </variableLink>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>a4e5518b-4510-409c-b9ea-8c32948f1d33</guid>
+      <guid>2b8b7727-7e16-4539-8a06-ba3e73cd0105</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/deletePost</testCaseId>
@@ -107,31 +89,49 @@
       </variableLink>
    </testCaseLink>
    <testCaseLink>
-      <guid>a662d3f8-f3b0-45ce-b87e-95e7b544210e</guid>
+      <guid>8b6d8f60-74d6-4d8d-a418-79a3ed20abe5</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/deleteTopic</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>94df7ddb-7e42-4287-9d13-b60d9963292e</guid>
+      <guid>d14dc77c-c745-46d5-9e08-15522bf34635</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/LoginNotRegistered</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>28ca0a58-9acb-4ebf-8869-7b9212fff0e5</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/LoginRegisteredUser</testCaseId>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>f4d33633-157d-4414-b89a-66cf6c5b26ae</variableId>
+      </variableLink>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>5dd6d5b5-3370-4af4-9520-47d3c44db3a2</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/LoginWrongPassword</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>7a26b796-9e24-4758-95a8-a7bb3e860dcb</guid>
+      <guid>42cfa6b5-b58d-4a25-9f1f-06ab90fc9a80</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/modifyProfile</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>d1e19685-df6d-4edc-8796-670f98452cbb</guid>
+      <guid>682c7fb1-20fe-4826-9fde-c144f82dd9ed</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/RegisterNewUser</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>a0bc3488-a47c-47bf-ae7e-ec08ef1fa640</guid>
+      <guid>f79dbe22-9d22-425d-9284-edcea4392391</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/search</testCaseId>

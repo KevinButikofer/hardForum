@@ -15,9 +15,9 @@ import internal.GlobalVariable as GlobalVariable
 
 WebUI.navigateToUrl('http://localhost:8080/login')
 
-WebUI.setText(findTestObject('Object Repository/input_Welcome_name (9)'), 'user2')
+WebUI.setText(findTestObject('Object Repository/input_Welcome_name (9)'), 'user6')
 
-WebUI.setEncryptedText(findTestObject('Object Repository/input_Welcome_password (9)'), 'jEDueeLlpJI=')
+WebUI.setEncryptedText(findTestObject('Object Repository/input_Welcome_password (9)'), 'OfYSgXUfG6A=')
 
 WebUI.sendKeys(findTestObject('Object Repository/input_Welcome_password (9)'), Keys.chord(Keys.ENTER))
 
@@ -37,7 +37,11 @@ WebUI.click(findTestObject('Object Repository/p_Profile has been update successf
 
 assert Age == WebUI.getText(findTestObject('Object Repository/input_Age_age'))
 
-assert Bio ==  WebUI.getText(findTestObject('textarea_Bio_bio'))
+assert Bio == WebUI.getText(findTestObject('textarea_Bio_bio'))
 
-assert Signature ==  WebUI.getText(findTestObject('input_Signature_signature'))
+assert Signature == WebUI.getText(findTestObject('input_Signature_signature'))
+
+WebUI.navigateToUrl('http://localhost:8080/logout')
+
+WebUI.closeBrowser()
 

@@ -17,11 +17,14 @@ WebUI.openBrowser('')
 
 WebUI.navigateToUrl('http://localhost:8080/login')
 
-WebUI.setText(findTestObject('Page_Spring Security Tutorial/input_Welcome_name'), 'user2')
+WebUI.setText(findTestObject('Page_Spring Security Tutorial/input_Welcome_name'), 'user6')
 
-WebUI.setEncryptedText(findTestObject('Page_Spring Security Tutorial/input_Welcome_password'), 'jEDueeLlpJI=')
+WebUI.setEncryptedText(findTestObject('Page_Spring Security Tutorial/input_Welcome_password'), 'OfYSgXUfG6A=')
 
 WebUI.click(findTestObject('Page_Spring Security Tutorial/button_Login'))
 
 assert succesUrl == WebUI.getUrl()
+WebUI.navigateToUrl('http://localhost:8080/logout')
+
+WebUI.closeBrowser()
 

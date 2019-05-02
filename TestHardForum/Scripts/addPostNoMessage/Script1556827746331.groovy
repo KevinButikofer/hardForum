@@ -17,9 +17,9 @@ WebUI.openBrowser('')
 
 WebUI.navigateToUrl('http://localhost:8080/login')
 
-WebUI.setText(findTestObject('Page_Spring Security Tutorial/input_Welcome_name (2)'), 'user2')
+WebUI.setText(findTestObject('Page_Spring Security Tutorial/input_Welcome_name (2)'), 'user6')
 
-WebUI.setEncryptedText(findTestObject('Page_Spring Security Tutorial/input_Welcome_password (2)'), 'jEDueeLlpJI=')
+WebUI.setEncryptedText(findTestObject('Page_Spring Security Tutorial/input_Welcome_password (2)'), 'OfYSgXUfG6A=')
 
 WebUI.click(findTestObject('1/button_Login'))
 
@@ -48,4 +48,8 @@ url = WebUI.getUrl()
 WebUI.click(findTestObject('Object Repository/button_Submit (1)'))
 
 assert url == WebUI.getUrl()
+
+WebUI.navigateToUrl('http://localhost:8080/logout')
+
+WebUI.closeBrowser()
 

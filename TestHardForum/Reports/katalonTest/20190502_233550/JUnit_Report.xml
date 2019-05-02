@@ -1,0 +1,1734 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="katalonTest" time="226" tests="5" failures="9" errors="0">
+   <testsuite name="katalonTest" tests="5" failures="9" errors="0" time="226" timestamp="2019-05-02 23:37:20" hostname="Kevin - 157.26.66.104" id="Test Suites/katalonTest">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform" value=""/>
+         <property name="logFolder" value="C:\\Dev\\JEE\\hardForum\\TestHardForum\\Reports\\katalonTest\\20190502_233550"/>
+         <property name="logFiles" value="C:\\Dev\\JEE\\hardForum\\TestHardForum\\Reports\\katalonTest\\20190502_233550\\execution0.log"/>
+         <property name="attachments" value="C:\\Dev\\JEE\\hardForum\\TestHardForum\\Reports\\katalonTest\\20190502_233550\\1556833097949.png, C:\\Dev\\JEE\\hardForum\\TestHardForum\\Reports\\katalonTest\\20190502_233550\\1556833104883.png, C:\\Dev\\JEE\\hardForum\\TestHardForum\\Reports\\katalonTest\\20190502_233550\\1556833122767.png, C:\\Dev\\JEE\\hardForum\\TestHardForum\\Reports\\katalonTest\\20190502_233550\\1556833165687.png, C:\\Dev\\JEE\\hardForum\\TestHardForum\\Reports\\katalonTest\\20190502_233550\\1556833202252.png, C:\\Dev\\JEE\\hardForum\\TestHardForum\\Reports\\katalonTest\\20190502_233550\\1556833259217.png, C:\\Dev\\JEE\\hardForum\\TestHardForum\\Reports\\katalonTest\\20190502_233550\\1556833265721.png"/>
+         <property name="hostName" value="Kevin - 157.26.66.104"/>
+         <property name="os" value="Windows 10 64bit"/>
+         <property name="katalonVersion" value="6.0.5.10"/>
+         <property name="browser" value="Chrome 74.0.3729.131"/>
+         <property name="hostAddress" value="157.26.66.104"/>
+         <property name="sessionId" value="a32c62232da896ac2fe4df54c3500436"/>
+         <property name="seleniumVersion" value="3.7.1"/>
+         <property name="proxyInformation" value="ProxyInformation{proxyOption=NO_PROXY, proxyServerType=HTTP, password=, proxyServerAddress=, proxyServerPort=0}"/>
+         <property name="platform" value="Windows 10"/>
+      </properties>
+      <testcase name="Test Cases/addPost" classname="Test Cases/addPost" status="PASSED">
+         <system-out><![CDATA[2019-05-02 23:37:21 - [TEST_CASE][PASSED] - Test Cases/addPost: Test Cases/addPost
+
+2019-05-02 23:37:22 - [TEST_STEP][PASSED] - openBrowser(""): Browser is opened with url: ''
+
+2019-05-02 23:37:22 - [MESSAGE][INFO] - Starting 'Chrome' driver
+
+2019-05-02 23:37:22 - [MESSAGE][INFO] - Action delay is set to 0 seconds
+
+2019-05-02 23:37:29 - [MESSAGE][PASSED] - Browser is opened with url: ''
+
+2019-05-02 23:37:29 - [TEST_STEP][PASSED] - navigateToUrl("http://localhost:8080/login"): Navigate to 'http://localhost:8080/login' successfully
+
+2019-05-02 23:37:30 - [MESSAGE][PASSED] - Navigate to 'http://localhost:8080/login' successfully
+
+2019-05-02 23:37:30 - [TEST_STEP][PASSED] - setText(findTestObject("Page_Spring Security Tutorial/input_Welcome_name (2)"), "user6"): Text 'user6' is set on object 'Object Repository/Page_Spring Security Tutorial/input_Welcome_name (2)'
+
+2019-05-02 23:37:30 - [MESSAGE][PASSED] - Text 'user6' is set on object 'Object Repository/Page_Spring Security Tutorial/input_Welcome_name (2)'
+
+2019-05-02 23:37:30 - [TEST_STEP][PASSED] - setEncryptedText(findTestObject("Page_Spring Security Tutorial/input_Welcome_password (2)"), "OfYSgXUfG6A="): Text ****** has been set on object 'Object Repository/Page_Spring Security Tutorial/input_Welcome_password (2)'
+
+2019-05-02 23:37:30 - [MESSAGE][PASSED] - Text ****** has been set on object 'Object Repository/Page_Spring Security Tutorial/input_Welcome_password (2)'
+
+2019-05-02 23:37:30 - [TEST_STEP][PASSED] - click(findTestObject("1/button_Login")): Object: 'Object Repository/1/button_Login' is clicked on
+
+2019-05-02 23:37:31 - [MESSAGE][PASSED] - Object: 'Object Repository/1/button_Login' is clicked on
+
+2019-05-02 23:37:31 - [TEST_STEP][NOT_RUN] - sendKeys(findTestObject("Object Repository/input_Welcome_password (2) (4)"), Keys.chord(ENTER)): NOT_RUN: sendKeys(findTestObject("Object Repository/input_Welcome_password (2) (4)"), Keys.chord(ENTER))
+
+2019-05-02 23:37:31 - [MESSAGE][NOT_RUN] - NOT_RUN: sendKeys(findTestObject("Object Repository/input_Welcome_password (2) (4)"), Keys.chord(ENTER))
+
+2019-05-02 23:37:32 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/a_Hardware        Le physique (3)")): Object: 'Object Repository/a_Hardware        Le physique (3)' is clicked on
+
+2019-05-02 23:37:33 - [MESSAGE][PASSED] - Object: 'Object Repository/a_Hardware        Le physique (3)' is clicked on
+
+2019-05-02 23:37:33 - [TEST_STEP][PASSED] - setText(findTestObject("Page_My subforum/input_Title_name"), "testTopic"): Text 'testTopic' is set on object 'Object Repository/Page_My subforum/input_Title_name'
+
+2019-05-02 23:37:33 - [MESSAGE][PASSED] - Text 'testTopic' is set on object 'Object Repository/Page_My subforum/input_Title_name'
+
+2019-05-02 23:37:33 - [TEST_STEP][PASSED] - click(findTestObject("Page_My subforum/p_Mon bon topic de test")): Object: 'Object Repository/Page_My subforum/p_Mon bon topic de test' is clicked on
+
+2019-05-02 23:37:33 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_My subforum/p_Mon bon topic de test' is clicked on
+
+2019-05-02 23:37:33 - [TEST_STEP][PASSED] - setText(findTestObject("Page_My subforum/div_Mon bon topic de test"), "<p style="">Mon bon topic de test</p>"): Text '<p style="">Mon bon topic de test</p>' is set on object 'Object Repository/Page_My subforum/div_Mon bon topic de test'
+
+2019-05-02 23:37:33 - [MESSAGE][PASSED] - Text '<p style="">Mon bon topic de test</p>' is set on object 'Object Repository/Page_My subforum/div_Mon bon topic de test'
+
+2019-05-02 23:37:33 - [TEST_STEP][PASSED] - click(findTestObject("Page_My subforum/button_Submit")): Object: 'Object Repository/Page_My subforum/button_Submit' is clicked on
+
+2019-05-02 23:37:34 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_My subforum/button_Submit' is clicked on
+
+2019-05-02 23:37:34 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/a_testTopic (4)")): Object: 'Object Repository/a_testTopic (4)' is clicked on
+
+2019-05-02 23:37:35 - [MESSAGE][PASSED] - Object: 'Object Repository/a_testTopic (4)' is clicked on
+
+2019-05-02 23:37:35 - [TEST_STEP][PASSED] - navigateToUrl("http://localhost:8080/logout"): Navigate to 'http://localhost:8080/logout' successfully
+
+2019-05-02 23:37:36 - [MESSAGE][PASSED] - Navigate to 'http://localhost:8080/logout' successfully
+
+2019-05-02 23:37:36 - [TEST_STEP][PASSED] - closeBrowser(): Browser is closed
+
+2019-05-02 23:37:37 - [MESSAGE][PASSED] - Browser is closed]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/addPostNoMessage" classname="Test Cases/addPostNoMessage" status="FAILED">
+         <failure type="FAILED" message="Test Cases/addPostNoMessage FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Unable to click on object 'Object Repository/button_Submit (1)'
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy:48)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:65)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:27)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.click(ClickKeyword.groovy:86)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.execute(ClickKeyword.groovy:67)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.click(WebUiBuiltInKeywords.groovy:616)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$click$3.call(Unknown Source)
+	at addPostNoMessage.run(addPostNoMessage:48)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:331)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:301)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:293)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:227)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:129)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:112)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:81)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1556832957773.run(TempTestSuite1556832957773.groovy:35)
+"/>
+         <system-out><![CDATA[2019-05-02 23:37:37 - [TEST_CASE][FAILED] - Test Cases/addPostNoMessage: Test Cases/addPostNoMessage FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Unable to click on object 'Object Repository/button_Submit (1)'
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy:48)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:65)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:27)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.click(ClickKeyword.groovy:86)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.execute(ClickKeyword.groovy:67)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.click(WebUiBuiltInKeywords.groovy:616)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$click$3.call(Unknown Source)
+	at addPostNoMessage.run(addPostNoMessage:48)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:331)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:301)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:293)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:227)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:129)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:112)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:81)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1556832957773.run(TempTestSuite1556832957773.groovy:35)
+
+
+2019-05-02 23:37:37 - [TEST_STEP][PASSED] - openBrowser(""): Browser is opened with url: ''
+
+2019-05-02 23:37:37 - [MESSAGE][INFO] - Starting 'Chrome' driver
+
+2019-05-02 23:37:41 - [MESSAGE][PASSED] - Browser is opened with url: ''
+
+2019-05-02 23:37:41 - [TEST_STEP][PASSED] - navigateToUrl("http://localhost:8080/login"): Navigate to 'http://localhost:8080/login' successfully
+
+2019-05-02 23:37:41 - [MESSAGE][PASSED] - Navigate to 'http://localhost:8080/login' successfully
+
+2019-05-02 23:37:41 - [TEST_STEP][PASSED] - setText(findTestObject("Page_Spring Security Tutorial/input_Welcome_name (2)"), "user6"): Text 'user6' is set on object 'Object Repository/Page_Spring Security Tutorial/input_Welcome_name (2)'
+
+2019-05-02 23:37:41 - [MESSAGE][PASSED] - Text 'user6' is set on object 'Object Repository/Page_Spring Security Tutorial/input_Welcome_name (2)'
+
+2019-05-02 23:37:41 - [TEST_STEP][PASSED] - setEncryptedText(findTestObject("Page_Spring Security Tutorial/input_Welcome_password (2)"), "OfYSgXUfG6A="): Text ****** has been set on object 'Object Repository/Page_Spring Security Tutorial/input_Welcome_password (2)'
+
+2019-05-02 23:37:41 - [MESSAGE][PASSED] - Text ****** has been set on object 'Object Repository/Page_Spring Security Tutorial/input_Welcome_password (2)'
+
+2019-05-02 23:37:41 - [TEST_STEP][PASSED] - click(findTestObject("1/button_Login")): Object: 'Object Repository/1/button_Login' is clicked on
+
+2019-05-02 23:37:42 - [MESSAGE][PASSED] - Object: 'Object Repository/1/button_Login' is clicked on
+
+2019-05-02 23:37:42 - [TEST_STEP][NOT_RUN] - sendKeys(findTestObject("Object Repository/input_Welcome_password (2) (3)"), Keys.chord(ENTER)): NOT_RUN: sendKeys(findTestObject("Object Repository/input_Welcome_password (2) (3)"), Keys.chord(ENTER))
+
+2019-05-02 23:37:42 - [MESSAGE][NOT_RUN] - NOT_RUN: sendKeys(findTestObject("Object Repository/input_Welcome_password (2) (3)"), Keys.chord(ENTER))
+
+2019-05-02 23:37:42 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/a_Hardware        Le physique (2)")): Object: 'Object Repository/a_Hardware        Le physique (2)' is clicked on
+
+2019-05-02 23:37:43 - [MESSAGE][PASSED] - Object: 'Object Repository/a_Hardware        Le physique (2)' is clicked on
+
+2019-05-02 23:37:43 - [TEST_STEP][PASSED] - setText(findTestObject("Object Repository/input_Title_name"), "testTopic"): Text 'testTopic' is set on object 'Object Repository/input_Title_name'
+
+2019-05-02 23:37:43 - [MESSAGE][PASSED] - Text 'testTopic' is set on object 'Object Repository/input_Title_name'
+
+2019-05-02 23:37:43 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/p_Mon bon topic de test")): Object: 'Object Repository/p_Mon bon topic de test' is clicked on
+
+2019-05-02 23:37:43 - [MESSAGE][PASSED] - Object: 'Object Repository/p_Mon bon topic de test' is clicked on
+
+2019-05-02 23:37:43 - [TEST_STEP][PASSED] - setText(findTestObject("Object Repository/div_Mon bon topic de test"), "<p style="">Mon bon topic de test</p>"): Text '<p style="">Mon bon topic de test</p>' is set on object 'Object Repository/div_Mon bon topic de test'
+
+2019-05-02 23:37:44 - [MESSAGE][PASSED] - Text '<p style="">Mon bon topic de test</p>' is set on object 'Object Repository/div_Mon bon topic de test'
+
+2019-05-02 23:37:44 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/button_Submit (1)")): Object: 'Object Repository/button_Submit (1)' is clicked on
+
+2019-05-02 23:37:45 - [MESSAGE][PASSED] - Object: 'Object Repository/button_Submit (1)' is clicked on
+
+2019-05-02 23:37:45 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/a_testTopic (3)")): Object: 'Object Repository/a_testTopic (3)' is clicked on
+
+2019-05-02 23:37:46 - [MESSAGE][PASSED] - Object: 'Object Repository/a_testTopic (3)' is clicked on
+
+2019-05-02 23:37:46 - [TEST_STEP][PASSED] - navigateToUrl("http://localhost:8080/login"): Navigate to 'http://localhost:8080/login' successfully
+
+2019-05-02 23:37:46 - [MESSAGE][PASSED] - Navigate to 'http://localhost:8080/login' successfully
+
+2019-05-02 23:37:46 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/div_HardForum      LoginAdvanced search   Search a topic                   Welcome     LoginORGo To Registration Page")): Object: 'Object Repository/div_HardForum      LoginAdvanced search   Search a topic                   Welcome     LoginORGo To Registration Page' is clicked on
+
+2019-05-02 23:37:47 - [MESSAGE][PASSED] - Object: 'Object Repository/div_HardForum      LoginAdvanced search   Search a topic                   Welcome     LoginORGo To Registration Page' is clicked on
+
+2019-05-02 23:37:47 - [TEST_STEP][PASSED] - setText(findTestObject("Object Repository/input_Title_name"), "testTopic"): Text 'testTopic' is set on object 'Object Repository/input_Title_name'
+
+2019-05-02 23:37:47 - [MESSAGE][PASSED] - Text 'testTopic' is set on object 'Object Repository/input_Title_name'
+
+2019-05-02 23:37:47 - [TEST_STEP][PASSED] - url = getUrl(): Current window's url is: 'http://localhost:8080/login'
+
+2019-05-02 23:37:47 - [MESSAGE][PASSED] - Current window's url is: 'http://localhost:8080/login'
+
+2019-05-02 23:37:47 - [TEST_STEP][FAILED] - click(findTestObject("Object Repository/button_Submit (1)")): click(findTestObject("Object Repository/button_Submit (1)")) FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Unable to click on object 'Object Repository/button_Submit (1)'
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy:48)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:65)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:27)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.click(ClickKeyword.groovy:86)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.execute(ClickKeyword.groovy:67)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.click(WebUiBuiltInKeywords.groovy:616)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$click$3.call(Unknown Source)
+	at addPostNoMessage.run(addPostNoMessage:48)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:331)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:301)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:293)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:227)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:129)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:112)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:81)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1556832957773.run(TempTestSuite1556832957773.groovy:35)
+
+
+2019-05-02 23:38:17 - [MESSAGE][INFO] - Unable to find the element located by 'By.xpath: //button[@type='submit']'. Please recheck the objects properties to make sure the desired element is located. 
+
+2019-05-02 23:38:18 - [MESSAGE][FAILED] - Unable to click on object 'Object Repository/button_Submit (1)'
+[[ATTACHMENT|C:\\Dev\\JEE\\hardForum\\TestHardForum\\Reports\\katalonTest\\20190502_233550\\1556833097949.png]]
+
+2019-05-02 23:38:18 - [MESSAGE][FAILED] - click(findTestObject("Object Repository/button_Submit (1)")) FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Unable to click on object 'Object Repository/button_Submit (1)'
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy:48)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:65)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:27)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.click(ClickKeyword.groovy:86)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.execute(ClickKeyword.groovy:67)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.click(WebUiBuiltInKeywords.groovy:616)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$click$3.call(Unknown Source)
+	at addPostNoMessage.run(addPostNoMessage:48)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:331)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:301)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:293)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:227)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:129)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:112)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:81)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1556832957773.run(TempTestSuite1556832957773.groovy:35)]]></system-out>
+         <system-err><![CDATA[2019-05-02 23:37:37 - [TEST_CASE][FAILED] - Test Cases/addPostNoMessage: Test Cases/addPostNoMessage FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Unable to click on object 'Object Repository/button_Submit (1)'
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy:48)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:65)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:27)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.click(ClickKeyword.groovy:86)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.execute(ClickKeyword.groovy:67)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.click(WebUiBuiltInKeywords.groovy:616)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$click$3.call(Unknown Source)
+	at addPostNoMessage.run(addPostNoMessage:48)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:331)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:301)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:293)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:227)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:129)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:112)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:81)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1556832957773.run(TempTestSuite1556832957773.groovy:35)]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/addSubForum" classname="Test Cases/addSubForum" status="FAILED">
+         <failure type="FAILED" message="Test Cases/addSubForum FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Unable to set text
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy:48)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:65)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:27)
+	at com.kms.katalon.core.webui.keyword.builtin.SetTextKeyword.setText(SetTextKeyword.groovy:65)
+	at com.kms.katalon.core.webui.keyword.builtin.SetTextKeyword.execute(SetTextKeyword.groovy:37)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.setText(WebUiBuiltInKeywords.groovy:950)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$setText$1.call(Unknown Source)
+	at addSubForum.run(addSubForum:26)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:331)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:301)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:293)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:227)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:129)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:112)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:81)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1556832957773.run(TempTestSuite1556832957773.groovy:35)
+"/>
+         <system-out><![CDATA[2019-05-02 23:38:18 - [TEST_CASE][FAILED] - Test Cases/addSubForum: Test Cases/addSubForum FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Unable to set text
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy:48)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:65)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:27)
+	at com.kms.katalon.core.webui.keyword.builtin.SetTextKeyword.setText(SetTextKeyword.groovy:65)
+	at com.kms.katalon.core.webui.keyword.builtin.SetTextKeyword.execute(SetTextKeyword.groovy:37)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.setText(WebUiBuiltInKeywords.groovy:950)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$setText$1.call(Unknown Source)
+	at addSubForum.run(addSubForum:26)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:331)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:301)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:293)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:227)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:129)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:112)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:81)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1556832957773.run(TempTestSuite1556832957773.groovy:35)
+
+
+2019-05-02 23:38:18 - [TEST_STEP][PASSED] - openBrowser(""): Browser is opened with url: ''
+
+2019-05-02 23:38:18 - [MESSAGE][WARNING] - A browser is already opened. Closing browser and opening a new one
+
+2019-05-02 23:38:19 - [MESSAGE][INFO] - Starting 'Chrome' driver
+
+2019-05-02 23:38:23 - [MESSAGE][PASSED] - Browser is opened with url: ''
+
+2019-05-02 23:38:23 - [TEST_STEP][PASSED] - navigateToUrl("http://localhost:8080/login"): Navigate to 'http://localhost:8080/login' successfully
+
+2019-05-02 23:38:23 - [MESSAGE][PASSED] - Navigate to 'http://localhost:8080/login' successfully
+
+2019-05-02 23:38:23 - [TEST_STEP][PASSED] - setText(findTestObject("Object Repository/1/input_Welcome_name (1)"), "user6"): Text 'user6' is set on object 'Object Repository/1/input_Welcome_name (1)'
+
+2019-05-02 23:38:23 - [MESSAGE][PASSED] - Text 'user6' is set on object 'Object Repository/1/input_Welcome_name (1)'
+
+2019-05-02 23:38:23 - [TEST_STEP][PASSED] - setEncryptedText(findTestObject("Object Repository/1/input_Welcome_password (1)"), "OfYSgXUfG6A="): Text ****** has been set on object 'Object Repository/1/input_Welcome_password (1)'
+
+2019-05-02 23:38:23 - [MESSAGE][PASSED] - Text ****** has been set on object 'Object Repository/1/input_Welcome_password (1)'
+
+2019-05-02 23:38:23 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/1/button_Login (1)")): Object: 'Object Repository/1/button_Login (1)' is clicked on
+
+2019-05-02 23:38:24 - [MESSAGE][PASSED] - Object: 'Object Repository/1/button_Login (1)' is clicked on
+
+2019-05-02 23:38:24 - [TEST_STEP][FAILED] - setText(findTestObject("Page_Spring Security Tutorial/input_Category_name"), categoryName): setText(findTestObject("Page_Spring Security Tutorial/input_Category_name"), categoryName) FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Unable to set text
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy:48)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:65)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:27)
+	at com.kms.katalon.core.webui.keyword.builtin.SetTextKeyword.setText(SetTextKeyword.groovy:65)
+	at com.kms.katalon.core.webui.keyword.builtin.SetTextKeyword.execute(SetTextKeyword.groovy:37)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.setText(WebUiBuiltInKeywords.groovy:950)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$setText$1.call(Unknown Source)
+	at addSubForum.run(addSubForum:26)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:331)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:301)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:293)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:227)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:129)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:112)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:81)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1556832957773.run(TempTestSuite1556832957773.groovy:35)
+
+
+2019-05-02 23:38:24 - [MESSAGE][WARNING] - Test object with id 'Object Repository/Page_Spring Security Tutorial/input_Category_name' does not exist
+
+2019-05-02 23:38:24 - [MESSAGE][WARNING] - Test object with id 'Object Repository/' does not exist
+
+2019-05-02 23:38:25 - [MESSAGE][FAILED] - Unable to set text
+[[ATTACHMENT|C:\\Dev\\JEE\\hardForum\\TestHardForum\\Reports\\katalonTest\\20190502_233550\\1556833104883.png]]
+
+2019-05-02 23:38:25 - [MESSAGE][FAILED] - setText(findTestObject("Page_Spring Security Tutorial/input_Category_name"), categoryName) FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Unable to set text
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy:48)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:65)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:27)
+	at com.kms.katalon.core.webui.keyword.builtin.SetTextKeyword.setText(SetTextKeyword.groovy:65)
+	at com.kms.katalon.core.webui.keyword.builtin.SetTextKeyword.execute(SetTextKeyword.groovy:37)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.setText(WebUiBuiltInKeywords.groovy:950)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$setText$1.call(Unknown Source)
+	at addSubForum.run(addSubForum:26)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:331)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:301)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:293)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:227)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:129)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:112)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:81)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1556832957773.run(TempTestSuite1556832957773.groovy:35)]]></system-out>
+         <system-err><![CDATA[2019-05-02 23:38:18 - [TEST_CASE][FAILED] - Test Cases/addSubForum: Test Cases/addSubForum FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Unable to set text
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy:48)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:65)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:27)
+	at com.kms.katalon.core.webui.keyword.builtin.SetTextKeyword.setText(SetTextKeyword.groovy:65)
+	at com.kms.katalon.core.webui.keyword.builtin.SetTextKeyword.execute(SetTextKeyword.groovy:37)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.setText(WebUiBuiltInKeywords.groovy:950)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$setText$1.call(Unknown Source)
+	at addSubForum.run(addSubForum:26)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:331)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:301)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:293)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:227)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:129)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:112)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:81)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1556832957773.run(TempTestSuite1556832957773.groovy:35)]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/addTopic" classname="Test Cases/addTopic" status="PASSED">
+         <system-out><![CDATA[2019-05-02 23:38:25 - [TEST_CASE][PASSED] - Test Cases/addTopic: Test Cases/addTopic
+
+2019-05-02 23:38:25 - [TEST_STEP][PASSED] - openBrowser(""): Browser is opened with url: ''
+
+2019-05-02 23:38:25 - [MESSAGE][WARNING] - A browser is already opened. Closing browser and opening a new one
+
+2019-05-02 23:38:26 - [MESSAGE][INFO] - Starting 'Chrome' driver
+
+2019-05-02 23:38:29 - [MESSAGE][PASSED] - Browser is opened with url: ''
+
+2019-05-02 23:38:29 - [TEST_STEP][PASSED] - navigateToUrl("http://localhost:8080/login"): Navigate to 'http://localhost:8080/login' successfully
+
+2019-05-02 23:38:30 - [MESSAGE][PASSED] - Navigate to 'http://localhost:8080/login' successfully
+
+2019-05-02 23:38:30 - [TEST_STEP][PASSED] - setText(findTestObject("Object Repository/Page_Spring Security Tutorial/input_Welcome_name (3)"), "user6"): Text 'user6' is set on object 'Object Repository/Page_Spring Security Tutorial/input_Welcome_name (3)'
+
+2019-05-02 23:38:30 - [MESSAGE][PASSED] - Text 'user6' is set on object 'Object Repository/Page_Spring Security Tutorial/input_Welcome_name (3)'
+
+2019-05-02 23:38:30 - [TEST_STEP][PASSED] - setEncryptedText(findTestObject("Object Repository/Page_Spring Security Tutorial/input_Welcome_password (3)"), "OfYSgXUfG6A="): Text ****** has been set on object 'Object Repository/Page_Spring Security Tutorial/input_Welcome_password (3)'
+
+2019-05-02 23:38:30 - [MESSAGE][PASSED] - Text ****** has been set on object 'Object Repository/Page_Spring Security Tutorial/input_Welcome_password (3)'
+
+2019-05-02 23:38:30 - [TEST_STEP][NOT_RUN] - sendKeys(findTestObject("Object Repository/Page_Spring Security Tutorial/input_Welcome_password (3)"), Keys.chord(ENTER)): NOT_RUN: sendKeys(findTestObject("Object Repository/Page_Spring Security Tutorial/input_Welcome_password (3)"), Keys.chord(ENTER))
+
+2019-05-02 23:38:30 - [MESSAGE][NOT_RUN] - NOT_RUN: sendKeys(findTestObject("Object Repository/Page_Spring Security Tutorial/input_Welcome_password (3)"), Keys.chord(ENTER))
+
+2019-05-02 23:38:30 - [TEST_STEP][PASSED] - click(findTestObject("1/button_Login")): Object: 'Object Repository/1/button_Login' is clicked on
+
+2019-05-02 23:38:31 - [MESSAGE][PASSED] - Object: 'Object Repository/1/button_Login' is clicked on
+
+2019-05-02 23:38:31 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Spring Security Tutorial/div_Hardware")): Object: 'Object Repository/Page_Spring Security Tutorial/div_Hardware' is clicked on
+
+2019-05-02 23:38:33 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Spring Security Tutorial/div_Hardware' is clicked on
+
+2019-05-02 23:38:33 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_My subforum/h5_testTopic")): Object: 'Object Repository/Page_My subforum/h5_testTopic' is clicked on
+
+2019-05-02 23:38:33 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_My subforum/h5_testTopic' is clicked on
+
+2019-05-02 23:38:33 - [TEST_STEP][PASSED] - setText(findTestObject("Object Repository/Page_Spring Security Tutorial/input_Title_title"), "Test Post"): Text 'Test Post' is set on object 'Object Repository/Page_Spring Security Tutorial/input_Title_title'
+
+2019-05-02 23:38:34 - [MESSAGE][PASSED] - Text 'Test Post' is set on object 'Object Repository/Page_Spring Security Tutorial/input_Title_title'
+
+2019-05-02 23:38:34 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Spring Security Tutorial/p")): Object: 'Object Repository/Page_Spring Security Tutorial/p' is clicked on
+
+2019-05-02 23:38:34 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Spring Security Tutorial/p' is clicked on
+
+2019-05-02 23:38:34 - [TEST_STEP][PASSED] - setText(findTestObject("Object Repository/Page_Spring Security Tutorial/div_post content"), "<p style="">post content </p>"): Text '<p style="">post content </p>' is set on object 'Object Repository/Page_Spring Security Tutorial/div_post content'
+
+2019-05-02 23:38:34 - [MESSAGE][PASSED] - Text '<p style="">post content </p>' is set on object 'Object Repository/Page_Spring Security Tutorial/div_post content'
+
+2019-05-02 23:38:34 - [TEST_STEP][PASSED] - setText(findTestObject("Object Repository/Page_Spring Security Tutorial/div_post content dwdwad"), "<h1 style="">post content dw</h1><p style="">dwad</p>"): Text '<h1 style="">post content dw</h1><p style="">dwad</p>' is set on object 'Object Repository/Page_Spring Security Tutorial/div_post content dwdwad'
+
+2019-05-02 23:38:34 - [MESSAGE][PASSED] - Text '<h1 style="">post content dw</h1><p style="">dwad</p>' is set on object 'Object Repository/Page_Spring Security Tutorial/div_post content dwdwad'
+
+2019-05-02 23:38:34 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Spring Security Tutorial/button_Submit")): Object: 'Object Repository/Page_Spring Security Tutorial/button_Submit' is clicked on
+
+2019-05-02 23:38:36 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Spring Security Tutorial/button_Submit' is clicked on
+
+2019-05-02 23:38:36 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Spring Security Tutorial/h4_Test Post")): Object: 'Object Repository/Page_Spring Security Tutorial/h4_Test Post' is clicked on
+
+2019-05-02 23:38:36 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Spring Security Tutorial/h4_Test Post' is clicked on
+
+2019-05-02 23:38:36 - [TEST_STEP][PASSED] - navigateToUrl("http://localhost:8080/logout"): Navigate to 'http://localhost:8080/logout' successfully
+
+2019-05-02 23:38:36 - [MESSAGE][PASSED] - Navigate to 'http://localhost:8080/logout' successfully
+
+2019-05-02 23:38:36 - [TEST_STEP][PASSED] - closeBrowser(): Browser is closed
+
+2019-05-02 23:38:37 - [MESSAGE][PASSED] - Browser is closed]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/advancedSearch" classname="Test Cases/advancedSearch" status="FAILED">
+         <failure type="FAILED" message="Test Cases/advancedSearch FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Unable to click on object 'Object Repository/a_Advanced search'
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy:48)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:65)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:27)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.click(ClickKeyword.groovy:86)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.execute(ClickKeyword.groovy:67)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.click(WebUiBuiltInKeywords.groovy:616)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$click$3.call(Unknown Source)
+	at advancedSearch.run(advancedSearch:22)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:331)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:301)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:293)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:227)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:129)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:112)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:81)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1556832957773.run(TempTestSuite1556832957773.groovy:35)
+"/>
+         <system-out><![CDATA[2019-05-02 23:38:37 - [TEST_CASE][FAILED] - Test Cases/advancedSearch: Test Cases/advancedSearch FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Unable to click on object 'Object Repository/a_Advanced search'
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy:48)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:65)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:27)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.click(ClickKeyword.groovy:86)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.execute(ClickKeyword.groovy:67)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.click(WebUiBuiltInKeywords.groovy:616)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$click$3.call(Unknown Source)
+	at advancedSearch.run(advancedSearch:22)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:331)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:301)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:293)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:227)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:129)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:112)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:81)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1556832957773.run(TempTestSuite1556832957773.groovy:35)
+
+
+2019-05-02 23:38:38 - [TEST_STEP][PASSED] - openBrowser(""): Browser is opened with url: ''
+
+2019-05-02 23:38:38 - [MESSAGE][INFO] - Starting 'Chrome' driver
+
+2019-05-02 23:38:41 - [MESSAGE][PASSED] - Browser is opened with url: ''
+
+2019-05-02 23:38:41 - [TEST_STEP][PASSED] - navigateToUrl("http://localhost:8080/login"): Navigate to 'http://localhost:8080/login' successfully
+
+2019-05-02 23:38:41 - [MESSAGE][PASSED] - Navigate to 'http://localhost:8080/login' successfully
+
+2019-05-02 23:38:41 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/a_HardForum")): Object: 'Object Repository/a_HardForum' is clicked on
+
+2019-05-02 23:38:42 - [MESSAGE][PASSED] - Object: 'Object Repository/a_HardForum' is clicked on
+
+2019-05-02 23:38:42 - [TEST_STEP][FAILED] - click(findTestObject("Object Repository/a_Advanced search")): click(findTestObject("Object Repository/a_Advanced search")) FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Unable to click on object 'Object Repository/a_Advanced search'
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy:48)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:65)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:27)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.click(ClickKeyword.groovy:86)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.execute(ClickKeyword.groovy:67)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.click(WebUiBuiltInKeywords.groovy:616)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$click$3.call(Unknown Source)
+	at advancedSearch.run(advancedSearch:22)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:331)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:301)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:293)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:227)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:129)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:112)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:81)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1556832957773.run(TempTestSuite1556832957773.groovy:35)
+
+
+2019-05-02 23:38:43 - [MESSAGE][FAILED] - Unable to click on object 'Object Repository/a_Advanced search'
+[[ATTACHMENT|C:\\Dev\\JEE\\hardForum\\TestHardForum\\Reports\\katalonTest\\20190502_233550\\1556833122767.png]]
+
+2019-05-02 23:38:43 - [MESSAGE][FAILED] - click(findTestObject("Object Repository/a_Advanced search")) FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Unable to click on object 'Object Repository/a_Advanced search'
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy:48)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:65)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:27)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.click(ClickKeyword.groovy:86)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.execute(ClickKeyword.groovy:67)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.click(WebUiBuiltInKeywords.groovy:616)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$click$3.call(Unknown Source)
+	at advancedSearch.run(advancedSearch:22)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:331)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:301)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:293)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:227)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:129)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:112)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:81)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1556832957773.run(TempTestSuite1556832957773.groovy:35)]]></system-out>
+         <system-err><![CDATA[2019-05-02 23:38:37 - [TEST_CASE][FAILED] - Test Cases/advancedSearch: Test Cases/advancedSearch FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Unable to click on object 'Object Repository/a_Advanced search'
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy:48)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:65)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:27)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.click(ClickKeyword.groovy:86)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.execute(ClickKeyword.groovy:67)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.click(WebUiBuiltInKeywords.groovy:616)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$click$3.call(Unknown Source)
+	at advancedSearch.run(advancedSearch:22)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:331)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:301)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:293)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:227)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:129)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:112)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:81)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1556832957773.run(TempTestSuite1556832957773.groovy:35)]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/alreadyRegisteredUser" classname="Test Cases/alreadyRegisteredUser" status="PASSED">
+         <system-out><![CDATA[2019-05-02 23:38:43 - [TEST_CASE][PASSED] - Test Cases/alreadyRegisteredUser: Test Cases/alreadyRegisteredUser
+
+2019-05-02 23:38:43 - [TEST_STEP][PASSED] - openBrowser(""): Browser is opened with url: ''
+
+2019-05-02 23:38:43 - [MESSAGE][WARNING] - A browser is already opened. Closing browser and opening a new one
+
+2019-05-02 23:38:44 - [MESSAGE][INFO] - Starting 'Chrome' driver
+
+2019-05-02 23:38:47 - [MESSAGE][PASSED] - Browser is opened with url: ''
+
+2019-05-02 23:38:47 - [TEST_STEP][PASSED] - navigateToUrl("http://localhost:8080/registration"): Navigate to 'http://localhost:8080/registration' successfully
+
+2019-05-02 23:38:48 - [MESSAGE][PASSED] - Navigate to 'http://localhost:8080/registration' successfully
+
+2019-05-02 23:38:48 - [TEST_STEP][PASSED] - setText(findTestObject("Object Repository/Page_Registration Form/input_Registration Form_name"), "testCase"): Text 'testCase' is set on object 'Object Repository/Page_Registration Form/input_Registration Form_name'
+
+2019-05-02 23:38:48 - [MESSAGE][PASSED] - Text 'testCase' is set on object 'Object Repository/Page_Registration Form/input_Registration Form_name'
+
+2019-05-02 23:38:48 - [TEST_STEP][PASSED] - setText(findTestObject("Object Repository/Page_Registration Form/input_Registration Form_email"), "test@mail.com"): Text 'test@mail.com' is set on object 'Object Repository/Page_Registration Form/input_Registration Form_email'
+
+2019-05-02 23:38:48 - [MESSAGE][PASSED] - Text 'test@mail.com' is set on object 'Object Repository/Page_Registration Form/input_Registration Form_email'
+
+2019-05-02 23:38:48 - [TEST_STEP][PASSED] - setEncryptedText(findTestObject("Object Repository/Page_Registration Form/input_Registration Form_password"), "k5M9B2M38/NbP4F7W5R/fg=="): Text ****** has been set on object 'Object Repository/Page_Registration Form/input_Registration Form_password'
+
+2019-05-02 23:38:48 - [MESSAGE][PASSED] - Text ****** has been set on object 'Object Repository/Page_Registration Form/input_Registration Form_password'
+
+2019-05-02 23:38:48 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Registration Form/button_Register User")): Object: 'Object Repository/Page_Registration Form/button_Register User' is clicked on
+
+2019-05-02 23:38:49 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Registration Form/button_Register User' is clicked on
+
+2019-05-02 23:38:49 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Registration Form/label_There is already a user registered with the name provided")): Object: 'Object Repository/Page_Registration Form/label_There is already a user registered with the name provided' is clicked on
+
+2019-05-02 23:38:49 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Registration Form/label_There is already a user registered with the name provided' is clicked on
+
+2019-05-02 23:38:49 - [TEST_STEP][PASSED] - closeBrowser(): Browser is closed
+
+2019-05-02 23:38:50 - [MESSAGE][PASSED] - Browser is closed]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/deletePost" classname="Test Cases/deletePost" status="FAILED">
+         <failure type="FAILED" message="Test Cases/deletePost FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Unable to click on object 'Object Repository/Page_Spring Security Tutorial/p_Le physique'
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy:48)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:65)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:27)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.click(ClickKeyword.groovy:86)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.execute(ClickKeyword.groovy:67)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.click(WebUiBuiltInKeywords.groovy:616)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$click$3.call(Unknown Source)
+	at deletePost.run(deletePost:26)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:331)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:301)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:293)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:227)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:129)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:112)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:81)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1556832957773.run(TempTestSuite1556832957773.groovy:35)
+"/>
+         <system-out><![CDATA[2019-05-02 23:38:50 - [TEST_CASE][FAILED] - Test Cases/deletePost: Test Cases/deletePost FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Unable to click on object 'Object Repository/Page_Spring Security Tutorial/p_Le physique'
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy:48)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:65)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:27)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.click(ClickKeyword.groovy:86)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.execute(ClickKeyword.groovy:67)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.click(WebUiBuiltInKeywords.groovy:616)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$click$3.call(Unknown Source)
+	at deletePost.run(deletePost:26)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:331)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:301)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:293)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:227)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:129)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:112)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:81)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1556832957773.run(TempTestSuite1556832957773.groovy:35)
+
+
+2019-05-02 23:38:50 - [TEST_STEP][PASSED] - openBrowser(""): Browser is opened with url: ''
+
+2019-05-02 23:38:50 - [MESSAGE][INFO] - Starting 'Chrome' driver
+
+2019-05-02 23:38:54 - [MESSAGE][PASSED] - Browser is opened with url: ''
+
+2019-05-02 23:38:54 - [TEST_STEP][PASSED] - navigateToUrl("http://localhost:8080/login"): Navigate to 'http://localhost:8080/login' successfully
+
+2019-05-02 23:38:54 - [MESSAGE][PASSED] - Navigate to 'http://localhost:8080/login' successfully
+
+2019-05-02 23:38:54 - [TEST_STEP][PASSED] - setText(findTestObject("Object Repository/Page_Spring Security Tutorial/input_Welcome_name (5)"), "user6"): Text 'user6' is set on object 'Object Repository/Page_Spring Security Tutorial/input_Welcome_name (5)'
+
+2019-05-02 23:38:54 - [MESSAGE][PASSED] - Text 'user6' is set on object 'Object Repository/Page_Spring Security Tutorial/input_Welcome_name (5)'
+
+2019-05-02 23:38:54 - [TEST_STEP][PASSED] - setEncryptedText(findTestObject("Object Repository/Page_Spring Security Tutorial/input_Welcome_password (5)"), "OfYSgXUfG6A="): Text ****** has been set on object 'Object Repository/Page_Spring Security Tutorial/input_Welcome_password (5)'
+
+2019-05-02 23:38:54 - [MESSAGE][PASSED] - Text ****** has been set on object 'Object Repository/Page_Spring Security Tutorial/input_Welcome_password (5)'
+
+2019-05-02 23:38:54 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Spring Security Tutorial/button_Login (2)")): Object: 'Object Repository/Page_Spring Security Tutorial/button_Login (2)' is clicked on
+
+2019-05-02 23:38:55 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Spring Security Tutorial/button_Login (2)' is clicked on
+
+2019-05-02 23:38:55 - [TEST_STEP][FAILED] - click(findTestObject("Object Repository/Page_Spring Security Tutorial/p_Le physique")): click(findTestObject("Object Repository/Page_Spring Security Tutorial/p_Le physique")) FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Unable to click on object 'Object Repository/Page_Spring Security Tutorial/p_Le physique'
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy:48)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:65)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:27)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.click(ClickKeyword.groovy:86)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.execute(ClickKeyword.groovy:67)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.click(WebUiBuiltInKeywords.groovy:616)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$click$3.call(Unknown Source)
+	at deletePost.run(deletePost:26)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:331)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:301)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:293)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:227)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:129)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:112)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:81)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1556832957773.run(TempTestSuite1556832957773.groovy:35)
+
+
+2019-05-02 23:39:25 - [MESSAGE][INFO] - Unable to find the element located by 'By.xpath: (.//*[normalize-space(text()) and normalize-space(.)='Hardware'])[11]/following::p[1]'. Please recheck the objects properties to make sure the desired element is located. 
+
+2019-05-02 23:39:25 - [MESSAGE][FAILED] - Unable to click on object 'Object Repository/Page_Spring Security Tutorial/p_Le physique'
+[[ATTACHMENT|C:\\Dev\\JEE\\hardForum\\TestHardForum\\Reports\\katalonTest\\20190502_233550\\1556833165687.png]]
+
+2019-05-02 23:39:25 - [MESSAGE][FAILED] - click(findTestObject("Object Repository/Page_Spring Security Tutorial/p_Le physique")) FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Unable to click on object 'Object Repository/Page_Spring Security Tutorial/p_Le physique'
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy:48)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:65)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:27)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.click(ClickKeyword.groovy:86)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.execute(ClickKeyword.groovy:67)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.click(WebUiBuiltInKeywords.groovy:616)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$click$3.call(Unknown Source)
+	at deletePost.run(deletePost:26)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:331)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:301)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:293)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:227)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:129)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:112)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:81)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1556832957773.run(TempTestSuite1556832957773.groovy:35)]]></system-out>
+         <system-err><![CDATA[2019-05-02 23:38:50 - [TEST_CASE][FAILED] - Test Cases/deletePost: Test Cases/deletePost FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Unable to click on object 'Object Repository/Page_Spring Security Tutorial/p_Le physique'
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy:48)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:65)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:27)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.click(ClickKeyword.groovy:86)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.execute(ClickKeyword.groovy:67)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.click(WebUiBuiltInKeywords.groovy:616)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$click$3.call(Unknown Source)
+	at deletePost.run(deletePost:26)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:331)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:301)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:293)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:227)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:129)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:112)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:81)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1556832957773.run(TempTestSuite1556832957773.groovy:35)]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/deleteTopic" classname="Test Cases/deleteTopic" status="FAILED">
+         <failure type="FAILED" message="Test Cases/deleteTopic FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Unable to click on object 'Object Repository/p_Le physique'
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy:48)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:65)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:27)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.click(ClickKeyword.groovy:86)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.execute(ClickKeyword.groovy:67)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.click(WebUiBuiltInKeywords.groovy:616)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$click$3.call(Unknown Source)
+	at deleteTopic.run(deleteTopic:26)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:331)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:301)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:293)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:227)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:129)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:112)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:81)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1556832957773.run(TempTestSuite1556832957773.groovy:35)
+"/>
+         <system-out><![CDATA[2019-05-02 23:39:25 - [TEST_CASE][FAILED] - Test Cases/deleteTopic: Test Cases/deleteTopic FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Unable to click on object 'Object Repository/p_Le physique'
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy:48)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:65)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:27)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.click(ClickKeyword.groovy:86)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.execute(ClickKeyword.groovy:67)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.click(WebUiBuiltInKeywords.groovy:616)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$click$3.call(Unknown Source)
+	at deleteTopic.run(deleteTopic:26)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:331)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:301)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:293)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:227)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:129)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:112)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:81)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1556832957773.run(TempTestSuite1556832957773.groovy:35)
+
+
+2019-05-02 23:39:26 - [TEST_STEP][PASSED] - openBrowser(""): Browser is opened with url: ''
+
+2019-05-02 23:39:26 - [MESSAGE][WARNING] - A browser is already opened. Closing browser and opening a new one
+
+2019-05-02 23:39:27 - [MESSAGE][INFO] - Starting 'Chrome' driver
+
+2019-05-02 23:39:30 - [MESSAGE][PASSED] - Browser is opened with url: ''
+
+2019-05-02 23:39:30 - [TEST_STEP][PASSED] - navigateToUrl("http://localhost:8080/login"): Navigate to 'http://localhost:8080/login' successfully
+
+2019-05-02 23:39:31 - [MESSAGE][PASSED] - Navigate to 'http://localhost:8080/login' successfully
+
+2019-05-02 23:39:31 - [TEST_STEP][PASSED] - setText(findTestObject("Object Repository/input_Welcome_name (5)"), "user6"): Text 'user6' is set on object 'Object Repository/input_Welcome_name (5)'
+
+2019-05-02 23:39:31 - [MESSAGE][PASSED] - Text 'user6' is set on object 'Object Repository/input_Welcome_name (5)'
+
+2019-05-02 23:39:31 - [TEST_STEP][PASSED] - setEncryptedText(findTestObject("Object Repository/input_Welcome_password (5)"), "OfYSgXUfG6A="): Text ****** has been set on object 'Object Repository/input_Welcome_password (5)'
+
+2019-05-02 23:39:31 - [MESSAGE][PASSED] - Text ****** has been set on object 'Object Repository/input_Welcome_password (5)'
+
+2019-05-02 23:39:31 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/button_Login (2)")): Object: 'Object Repository/button_Login (2)' is clicked on
+
+2019-05-02 23:39:31 - [MESSAGE][PASSED] - Object: 'Object Repository/button_Login (2)' is clicked on
+
+2019-05-02 23:39:31 - [TEST_STEP][FAILED] - click(findTestObject("Object Repository/p_Le physique")): click(findTestObject("Object Repository/p_Le physique")) FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Unable to click on object 'Object Repository/p_Le physique'
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy:48)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:65)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:27)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.click(ClickKeyword.groovy:86)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.execute(ClickKeyword.groovy:67)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.click(WebUiBuiltInKeywords.groovy:616)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$click$3.call(Unknown Source)
+	at deleteTopic.run(deleteTopic:26)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:331)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:301)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:293)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:227)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:129)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:112)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:81)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1556832957773.run(TempTestSuite1556832957773.groovy:35)
+
+
+2019-05-02 23:40:02 - [MESSAGE][INFO] - Unable to find the element located by 'By.xpath: (.//*[normalize-space(text()) and normalize-space(.)='Hardware'])[11]/following::p[1]'. Please recheck the objects properties to make sure the desired element is located. 
+
+2019-05-02 23:40:02 - [MESSAGE][FAILED] - Unable to click on object 'Object Repository/p_Le physique'
+[[ATTACHMENT|C:\\Dev\\JEE\\hardForum\\TestHardForum\\Reports\\katalonTest\\20190502_233550\\1556833202252.png]]
+
+2019-05-02 23:40:02 - [MESSAGE][FAILED] - click(findTestObject("Object Repository/p_Le physique")) FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Unable to click on object 'Object Repository/p_Le physique'
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy:48)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:65)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:27)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.click(ClickKeyword.groovy:86)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.execute(ClickKeyword.groovy:67)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.click(WebUiBuiltInKeywords.groovy:616)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$click$3.call(Unknown Source)
+	at deleteTopic.run(deleteTopic:26)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:331)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:301)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:293)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:227)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:129)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:112)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:81)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1556832957773.run(TempTestSuite1556832957773.groovy:35)]]></system-out>
+         <system-err><![CDATA[2019-05-02 23:39:25 - [TEST_CASE][FAILED] - Test Cases/deleteTopic: Test Cases/deleteTopic FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Unable to click on object 'Object Repository/p_Le physique'
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy:48)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:65)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:27)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.click(ClickKeyword.groovy:86)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.execute(ClickKeyword.groovy:67)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.click(WebUiBuiltInKeywords.groovy:616)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$click$3.call(Unknown Source)
+	at deleteTopic.run(deleteTopic:26)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:331)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:301)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:293)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:227)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:129)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:112)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:81)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1556832957773.run(TempTestSuite1556832957773.groovy:35)]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/LoginNotRegistered" classname="Test Cases/LoginNotRegistered" status="PASSED">
+         <system-out><![CDATA[2019-05-02 23:40:02 - [TEST_CASE][PASSED] - Test Cases/LoginNotRegistered: Test Cases/LoginNotRegistered
+
+2019-05-02 23:40:02 - [TEST_STEP][PASSED] - openBrowser(""): Browser is opened with url: ''
+
+2019-05-02 23:40:02 - [MESSAGE][WARNING] - A browser is already opened. Closing browser and opening a new one
+
+2019-05-02 23:40:03 - [MESSAGE][INFO] - Starting 'Chrome' driver
+
+2019-05-02 23:40:07 - [MESSAGE][PASSED] - Browser is opened with url: ''
+
+2019-05-02 23:40:07 - [TEST_STEP][PASSED] - navigateToUrl("http://localhost:8080/login"): Navigate to 'http://localhost:8080/login' successfully
+
+2019-05-02 23:40:07 - [MESSAGE][PASSED] - Navigate to 'http://localhost:8080/login' successfully
+
+2019-05-02 23:40:07 - [TEST_STEP][PASSED] - setText(findTestObject("Page_Spring Security Tutorial/input_Welcome_name"), "nonExisting"): Text 'nonExisting' is set on object 'Object Repository/Page_Spring Security Tutorial/input_Welcome_name'
+
+2019-05-02 23:40:08 - [MESSAGE][PASSED] - Text 'nonExisting' is set on object 'Object Repository/Page_Spring Security Tutorial/input_Welcome_name'
+
+2019-05-02 23:40:08 - [TEST_STEP][PASSED] - setEncryptedText(findTestObject("Object Repository/Page_Spring Security Tutorial/input_Welcome_password (1)"), "k7BhWEneXWQ="): Text ****** has been set on object 'Object Repository/Page_Spring Security Tutorial/input_Welcome_password (1)'
+
+2019-05-02 23:40:08 - [MESSAGE][PASSED] - Text ****** has been set on object 'Object Repository/Page_Spring Security Tutorial/input_Welcome_password (1)'
+
+2019-05-02 23:40:08 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Spring Security Tutorial/button_Login (1)")): Object: 'Object Repository/Page_Spring Security Tutorial/button_Login (1)' is clicked on
+
+2019-05-02 23:40:08 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Spring Security Tutorial/button_Login (1)' is clicked on
+
+2019-05-02 23:40:08 - [TEST_STEP][PASSED] - click(findTestObject("Object Repository/Page_Spring Security Tutorial/p_name or Password invalid please verify")): Object: 'Object Repository/Page_Spring Security Tutorial/p_name or Password invalid please verify' is clicked on
+
+2019-05-02 23:40:08 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Spring Security Tutorial/p_name or Password invalid please verify' is clicked on
+
+2019-05-02 23:40:08 - [TEST_STEP][PASSED] - closeBrowser(): Browser is closed
+
+2019-05-02 23:40:09 - [MESSAGE][PASSED] - Browser is closed]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/LoginRegisteredUser" classname="Test Cases/LoginRegisteredUser" status="FAILED">
+         <failure type="FAILED" message="Test Cases/LoginRegisteredUser FAILED.
+Reason:
+Assertion failed: 
+
+assert succesUrl == WebUI.getUrl()
+       |         |        |
+       |         false    http://localhost:8080/login?error=true
+       http://localhost:8080/forum
+
+	at LoginRegisteredUser.run(LoginRegisteredUser:26)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:331)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:301)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:293)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:227)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:129)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:112)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:81)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1556832957773.run(TempTestSuite1556832957773.groovy:35)
+"/>
+         <system-out><![CDATA[2019-05-02 23:40:09 - [TEST_CASE][FAILED] - Test Cases/LoginRegisteredUser: Test Cases/LoginRegisteredUser FAILED.
+Reason:
+Assertion failed: 
+
+assert succesUrl == WebUI.getUrl()
+       |         |        |
+       |         false    http://localhost:8080/login?error=true
+       http://localhost:8080/forum
+
+	at LoginRegisteredUser.run(LoginRegisteredUser:26)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:331)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:301)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:293)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:227)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:129)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:112)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:81)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1556832957773.run(TempTestSuite1556832957773.groovy:35)
+
+
+2019-05-02 23:40:09 - [TEST_STEP][PASSED] - openBrowser(""): Browser is opened with url: ''
+
+2019-05-02 23:40:09 - [MESSAGE][INFO] - Starting 'Chrome' driver
+
+2019-05-02 23:40:13 - [MESSAGE][PASSED] - Browser is opened with url: ''
+
+2019-05-02 23:40:13 - [TEST_STEP][PASSED] - navigateToUrl("http://localhost:8080/login"): Navigate to 'http://localhost:8080/login' successfully
+
+2019-05-02 23:40:13 - [MESSAGE][PASSED] - Navigate to 'http://localhost:8080/login' successfully
+
+2019-05-02 23:40:13 - [TEST_STEP][PASSED] - setText(findTestObject("Page_Spring Security Tutorial/input_Welcome_name"), "user4"): Text 'user4' is set on object 'Object Repository/Page_Spring Security Tutorial/input_Welcome_name'
+
+2019-05-02 23:40:13 - [MESSAGE][PASSED] - Text 'user4' is set on object 'Object Repository/Page_Spring Security Tutorial/input_Welcome_name'
+
+2019-05-02 23:40:13 - [TEST_STEP][PASSED] - setEncryptedText(findTestObject("Page_Spring Security Tutorial/input_Welcome_password"), "6c7NgI6EUIg="): Text ****** has been set on object 'Object Repository/Page_Spring Security Tutorial/input_Welcome_password'
+
+2019-05-02 23:40:13 - [MESSAGE][PASSED] - Text ****** has been set on object 'Object Repository/Page_Spring Security Tutorial/input_Welcome_password'
+
+2019-05-02 23:40:13 - [TEST_STEP][PASSED] - click(findTestObject("Page_Spring Security Tutorial/button_Login")): Object: 'Object Repository/Page_Spring Security Tutorial/button_Login' is clicked on
+
+2019-05-02 23:40:14 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Spring Security Tutorial/button_Login' is clicked on
+
+2019-05-02 23:40:14 - [TEST_STEP][FAILED] - assert succesUrl == getUrl(): assert succesUrl == getUrl() FAILED.
+Reason:
+Assertion failed: 
+
+assert succesUrl == WebUI.getUrl()
+       |         |        |
+       |         false    http://localhost:8080/login?error=true
+       http://localhost:8080/forum
+
+	at LoginRegisteredUser.run(LoginRegisteredUser:26)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:331)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:301)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:293)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:227)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:129)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:112)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:81)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1556832957773.run(TempTestSuite1556832957773.groovy:35)
+
+
+2019-05-02 23:40:14 - [MESSAGE][PASSED] - Current window's url is: 'http://localhost:8080/login?error=true'
+
+2019-05-02 23:40:14 - [MESSAGE][FAILED] - assert succesUrl == getUrl() FAILED.
+Reason:
+Assertion failed: 
+
+assert succesUrl == WebUI.getUrl()
+       |         |        |
+       |         false    http://localhost:8080/login?error=true
+       http://localhost:8080/forum
+
+	at LoginRegisteredUser.run(LoginRegisteredUser:26)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:331)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:301)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:293)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:227)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:129)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:112)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:81)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1556832957773.run(TempTestSuite1556832957773.groovy:35)]]></system-out>
+         <system-err><![CDATA[2019-05-02 23:40:09 - [TEST_CASE][FAILED] - Test Cases/LoginRegisteredUser: Test Cases/LoginRegisteredUser FAILED.
+Reason:
+Assertion failed: 
+
+assert succesUrl == WebUI.getUrl()
+       |         |        |
+       |         false    http://localhost:8080/login?error=true
+       http://localhost:8080/forum
+
+	at LoginRegisteredUser.run(LoginRegisteredUser:26)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:331)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:301)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:293)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:227)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:129)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:112)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:81)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1556832957773.run(TempTestSuite1556832957773.groovy:35)]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/LoginWrongPassword" classname="Test Cases/LoginWrongPassword" status="PASSED">
+         <system-out><![CDATA[2019-05-02 23:40:14 - [TEST_CASE][PASSED] - Test Cases/LoginWrongPassword: Test Cases/LoginWrongPassword
+
+2019-05-02 23:40:14 - [TEST_STEP][PASSED] - openBrowser(""): Browser is opened with url: ''
+
+2019-05-02 23:40:14 - [MESSAGE][WARNING] - A browser is already opened. Closing browser and opening a new one
+
+2019-05-02 23:40:15 - [MESSAGE][INFO] - Starting 'Chrome' driver
+
+2019-05-02 23:40:18 - [MESSAGE][PASSED] - Browser is opened with url: ''
+
+2019-05-02 23:40:18 - [TEST_STEP][PASSED] - navigateToUrl("http://localhost:8080/login"): Navigate to 'http://localhost:8080/login' successfully
+
+2019-05-02 23:40:22 - [MESSAGE][PASSED] - Navigate to 'http://localhost:8080/login' successfully
+
+2019-05-02 23:40:22 - [TEST_STEP][PASSED] - setText(findTestObject("Page_Spring Security Tutorial/input_Welcome_name"), "user2"): Text 'user2' is set on object 'Object Repository/Page_Spring Security Tutorial/input_Welcome_name'
+
+2019-05-02 23:40:22 - [MESSAGE][PASSED] - Text 'user2' is set on object 'Object Repository/Page_Spring Security Tutorial/input_Welcome_name'
+
+2019-05-02 23:40:22 - [TEST_STEP][PASSED] - setEncryptedText(findTestObject("Page_Spring Security Tutorial/input_Welcome_password"), "BMMEIUJfJqT7EwQg/H/oNQ=="): Text ****** has been set on object 'Object Repository/Page_Spring Security Tutorial/input_Welcome_password'
+
+2019-05-02 23:40:23 - [MESSAGE][PASSED] - Text ****** has been set on object 'Object Repository/Page_Spring Security Tutorial/input_Welcome_password'
+
+2019-05-02 23:40:23 - [TEST_STEP][PASSED] - click(findTestObject("Page_Spring Security Tutorial/button_Login")): Object: 'Object Repository/Page_Spring Security Tutorial/button_Login' is clicked on
+
+2019-05-02 23:40:23 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Spring Security Tutorial/button_Login' is clicked on
+
+2019-05-02 23:40:23 - [TEST_STEP][PASSED] - click(findTestObject("Page_Spring Security Tutorial/p_name or Password invalid please verify")): Object: 'Object Repository/Page_Spring Security Tutorial/p_name or Password invalid please verify' is clicked on
+
+2019-05-02 23:40:23 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Spring Security Tutorial/p_name or Password invalid please verify' is clicked on
+
+2019-05-02 23:40:23 - [TEST_STEP][PASSED] - assert "http://localhost:8080/login?error=true" == getUrl(): Current window's url is: 'http://localhost:8080/login?error=true'
+
+2019-05-02 23:40:23 - [MESSAGE][PASSED] - Current window's url is: 'http://localhost:8080/login?error=true'
+
+2019-05-02 23:40:23 - [TEST_STEP][PASSED] - closeBrowser(): Browser is closed
+
+2019-05-02 23:40:24 - [MESSAGE][PASSED] - Browser is closed]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/modifyProfile" classname="Test Cases/modifyProfile" status="FAILED">
+         <failure type="FAILED" message="Test Cases/modifyProfile FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Unable to navigate to 'http://localhost:8080/login'
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy:48)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:65)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:27)
+	at com.kms.katalon.core.webui.keyword.builtin.NavigateToUrlKeyword.navigateToUrl(NavigateToUrlKeyword.groovy:83)
+	at com.kms.katalon.core.webui.keyword.builtin.NavigateToUrlKeyword.execute(NavigateToUrlKeyword.groovy:67)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.navigateToUrl(WebUiBuiltInKeywords.groovy:183)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$navigateToUrl$0.call(Unknown Source)
+	at modifyProfile.run(modifyProfile:16)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:331)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:301)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:293)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:227)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:129)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:112)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:81)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1556832957773.run(TempTestSuite1556832957773.groovy:35)
+"/>
+         <system-out><![CDATA[2019-05-02 23:40:24 - [TEST_CASE][FAILED] - Test Cases/modifyProfile: Test Cases/modifyProfile FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Unable to navigate to 'http://localhost:8080/login'
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy:48)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:65)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:27)
+	at com.kms.katalon.core.webui.keyword.builtin.NavigateToUrlKeyword.navigateToUrl(NavigateToUrlKeyword.groovy:83)
+	at com.kms.katalon.core.webui.keyword.builtin.NavigateToUrlKeyword.execute(NavigateToUrlKeyword.groovy:67)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.navigateToUrl(WebUiBuiltInKeywords.groovy:183)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$navigateToUrl$0.call(Unknown Source)
+	at modifyProfile.run(modifyProfile:16)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:331)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:301)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:293)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:227)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:129)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:112)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:81)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1556832957773.run(TempTestSuite1556832957773.groovy:35)
+
+
+2019-05-02 23:40:24 - [TEST_STEP][FAILED] - navigateToUrl("http://localhost:8080/login"): navigateToUrl("http://localhost:8080/login") FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Unable to navigate to 'http://localhost:8080/login'
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy:48)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:65)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:27)
+	at com.kms.katalon.core.webui.keyword.builtin.NavigateToUrlKeyword.navigateToUrl(NavigateToUrlKeyword.groovy:83)
+	at com.kms.katalon.core.webui.keyword.builtin.NavigateToUrlKeyword.execute(NavigateToUrlKeyword.groovy:67)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.navigateToUrl(WebUiBuiltInKeywords.groovy:183)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$navigateToUrl$0.call(Unknown Source)
+	at modifyProfile.run(modifyProfile:16)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:331)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:301)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:293)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:227)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:129)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:112)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:81)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1556832957773.run(TempTestSuite1556832957773.groovy:35)
+
+
+2019-05-02 23:40:24 - [MESSAGE][WARNING] - Cannot take screenshot
+
+2019-05-02 23:40:24 - [MESSAGE][FAILED] - Unable to navigate to 'http://localhost:8080/login'
+
+2019-05-02 23:40:24 - [MESSAGE][FAILED] - navigateToUrl("http://localhost:8080/login") FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Unable to navigate to 'http://localhost:8080/login'
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy:48)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:65)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:27)
+	at com.kms.katalon.core.webui.keyword.builtin.NavigateToUrlKeyword.navigateToUrl(NavigateToUrlKeyword.groovy:83)
+	at com.kms.katalon.core.webui.keyword.builtin.NavigateToUrlKeyword.execute(NavigateToUrlKeyword.groovy:67)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.navigateToUrl(WebUiBuiltInKeywords.groovy:183)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$navigateToUrl$0.call(Unknown Source)
+	at modifyProfile.run(modifyProfile:16)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:331)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:301)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:293)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:227)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:129)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:112)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:81)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1556832957773.run(TempTestSuite1556832957773.groovy:35)]]></system-out>
+         <system-err><![CDATA[2019-05-02 23:40:24 - [TEST_CASE][FAILED] - Test Cases/modifyProfile: Test Cases/modifyProfile FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Unable to navigate to 'http://localhost:8080/login'
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy:48)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:65)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:27)
+	at com.kms.katalon.core.webui.keyword.builtin.NavigateToUrlKeyword.navigateToUrl(NavigateToUrlKeyword.groovy:83)
+	at com.kms.katalon.core.webui.keyword.builtin.NavigateToUrlKeyword.execute(NavigateToUrlKeyword.groovy:67)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.navigateToUrl(WebUiBuiltInKeywords.groovy:183)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$navigateToUrl$0.call(Unknown Source)
+	at modifyProfile.run(modifyProfile:16)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:331)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:301)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:293)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:227)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:129)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:112)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:81)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1556832957773.run(TempTestSuite1556832957773.groovy:35)]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/RegisterNewUser" classname="Test Cases/RegisterNewUser" status="FAILED">
+         <failure type="FAILED" message="Test Cases/RegisterNewUser FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Unable to click on object 'Object Repository/Page_Spring Security Tutorial/button_Go To Registration Page'
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy:48)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:65)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:27)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.click(ClickKeyword.groovy:86)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.execute(ClickKeyword.groovy:67)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.click(WebUiBuiltInKeywords.groovy:616)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$click$3.call(Unknown Source)
+	at RegisterNewUser.run(RegisterNewUser:18)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:331)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:301)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:293)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:227)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:129)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:112)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:81)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1556832957773.run(TempTestSuite1556832957773.groovy:35)
+"/>
+         <system-out><![CDATA[2019-05-02 23:40:24 - [TEST_CASE][FAILED] - Test Cases/RegisterNewUser: Test Cases/RegisterNewUser FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Unable to click on object 'Object Repository/Page_Spring Security Tutorial/button_Go To Registration Page'
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy:48)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:65)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:27)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.click(ClickKeyword.groovy:86)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.execute(ClickKeyword.groovy:67)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.click(WebUiBuiltInKeywords.groovy:616)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$click$3.call(Unknown Source)
+	at RegisterNewUser.run(RegisterNewUser:18)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:331)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:301)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:293)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:227)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:129)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:112)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:81)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1556832957773.run(TempTestSuite1556832957773.groovy:35)
+
+
+2019-05-02 23:40:24 - [TEST_STEP][PASSED] - openBrowser(""): Browser is opened with url: ''
+
+2019-05-02 23:40:24 - [MESSAGE][INFO] - Starting 'Chrome' driver
+
+2019-05-02 23:40:28 - [MESSAGE][PASSED] - Browser is opened with url: ''
+
+2019-05-02 23:40:28 - [TEST_STEP][FAILED] - click(findTestObject("Object Repository/Page_Spring Security Tutorial/button_Go To Registration Page")): click(findTestObject("Object Repository/Page_Spring Security Tutorial/button_Go To Registration Page")) FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Unable to click on object 'Object Repository/Page_Spring Security Tutorial/button_Go To Registration Page'
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy:48)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:65)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:27)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.click(ClickKeyword.groovy:86)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.execute(ClickKeyword.groovy:67)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.click(WebUiBuiltInKeywords.groovy:616)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$click$3.call(Unknown Source)
+	at RegisterNewUser.run(RegisterNewUser:18)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:331)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:301)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:293)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:227)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:129)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:112)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:81)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1556832957773.run(TempTestSuite1556832957773.groovy:35)
+
+
+2019-05-02 23:40:59 - [MESSAGE][INFO] - Unable to find the element located by 'By.xpath: (//button[@type='Submit'])[2]'. Please recheck the objects properties to make sure the desired element is located. 
+
+2019-05-02 23:40:59 - [MESSAGE][FAILED] - Unable to click on object 'Object Repository/Page_Spring Security Tutorial/button_Go To Registration Page'
+[[ATTACHMENT|C:\\Dev\\JEE\\hardForum\\TestHardForum\\Reports\\katalonTest\\20190502_233550\\1556833259217.png]]
+
+2019-05-02 23:40:59 - [MESSAGE][FAILED] - click(findTestObject("Object Repository/Page_Spring Security Tutorial/button_Go To Registration Page")) FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Unable to click on object 'Object Repository/Page_Spring Security Tutorial/button_Go To Registration Page'
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy:48)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:65)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:27)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.click(ClickKeyword.groovy:86)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.execute(ClickKeyword.groovy:67)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.click(WebUiBuiltInKeywords.groovy:616)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$click$3.call(Unknown Source)
+	at RegisterNewUser.run(RegisterNewUser:18)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:331)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:301)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:293)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:227)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:129)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:112)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:81)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1556832957773.run(TempTestSuite1556832957773.groovy:35)]]></system-out>
+         <system-err><![CDATA[2019-05-02 23:40:24 - [TEST_CASE][FAILED] - Test Cases/RegisterNewUser: Test Cases/RegisterNewUser FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Unable to click on object 'Object Repository/Page_Spring Security Tutorial/button_Go To Registration Page'
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy:48)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:65)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:27)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.click(ClickKeyword.groovy:86)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.execute(ClickKeyword.groovy:67)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.click(WebUiBuiltInKeywords.groovy:616)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$click$3.call(Unknown Source)
+	at RegisterNewUser.run(RegisterNewUser:18)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:331)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:301)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:293)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:227)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:129)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:112)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:81)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1556832957773.run(TempTestSuite1556832957773.groovy:35)]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/search" classname="Test Cases/search" status="FAILED">
+         <failure type="FAILED" message="Test Cases/search FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Unable to set text
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy:48)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:65)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:27)
+	at com.kms.katalon.core.webui.keyword.builtin.SetTextKeyword.setText(SetTextKeyword.groovy:65)
+	at com.kms.katalon.core.webui.keyword.builtin.SetTextKeyword.execute(SetTextKeyword.groovy:37)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.setText(WebUiBuiltInKeywords.groovy:950)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$setText$1.call(Unknown Source)
+	at search.run(search:20)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:331)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:301)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:293)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:227)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:129)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:112)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:81)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1556832957773.run(TempTestSuite1556832957773.groovy:35)
+"/>
+         <system-out><![CDATA[2019-05-02 23:40:59 - [TEST_CASE][FAILED] - Test Cases/search: Test Cases/search FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Unable to set text
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy:48)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:65)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:27)
+	at com.kms.katalon.core.webui.keyword.builtin.SetTextKeyword.setText(SetTextKeyword.groovy:65)
+	at com.kms.katalon.core.webui.keyword.builtin.SetTextKeyword.execute(SetTextKeyword.groovy:37)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.setText(WebUiBuiltInKeywords.groovy:950)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$setText$1.call(Unknown Source)
+	at search.run(search:20)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:331)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:301)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:293)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:227)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:129)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:112)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:81)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1556832957773.run(TempTestSuite1556832957773.groovy:35)
+
+
+2019-05-02 23:40:59 - [TEST_STEP][PASSED] - openBrowser(""): Browser is opened with url: ''
+
+2019-05-02 23:40:59 - [MESSAGE][WARNING] - A browser is already opened. Closing browser and opening a new one
+
+2019-05-02 23:41:00 - [MESSAGE][INFO] - Starting 'Chrome' driver
+
+2019-05-02 23:41:04 - [MESSAGE][PASSED] - Browser is opened with url: ''
+
+2019-05-02 23:41:04 - [TEST_STEP][PASSED] - navigateToUrl("http://localhost:8080/forum"): Navigate to 'http://localhost:8080/forum' successfully
+
+2019-05-02 23:41:05 - [MESSAGE][PASSED] - Navigate to 'http://localhost:8080/forum' successfully
+
+2019-05-02 23:41:05 - [TEST_STEP][FAILED] - setText(findTestObject("Page_Insert title here/input_Advanced search_searchText"), "testTopic"): setText(findTestObject("Page_Insert title here/input_Advanced search_searchText"), "testTopic") FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Unable to set text
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy:48)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:65)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:27)
+	at com.kms.katalon.core.webui.keyword.builtin.SetTextKeyword.setText(SetTextKeyword.groovy:65)
+	at com.kms.katalon.core.webui.keyword.builtin.SetTextKeyword.execute(SetTextKeyword.groovy:37)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.setText(WebUiBuiltInKeywords.groovy:950)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$setText$1.call(Unknown Source)
+	at search.run(search:20)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:331)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:301)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:293)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:227)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:129)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:112)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:81)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1556832957773.run(TempTestSuite1556832957773.groovy:35)
+
+
+2019-05-02 23:41:05 - [MESSAGE][WARNING] - Test object with id 'Object Repository/Page_Insert title here/input_Advanced search_searchText' does not exist
+
+2019-05-02 23:41:05 - [MESSAGE][WARNING] - Test object with id 'Object Repository/' does not exist
+
+2019-05-02 23:41:06 - [MESSAGE][FAILED] - Unable to set text
+[[ATTACHMENT|C:\\Dev\\JEE\\hardForum\\TestHardForum\\Reports\\katalonTest\\20190502_233550\\1556833265721.png]]
+
+2019-05-02 23:41:06 - [MESSAGE][FAILED] - setText(findTestObject("Page_Insert title here/input_Advanced search_searchText"), "testTopic") FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Unable to set text
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy:48)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:65)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:27)
+	at com.kms.katalon.core.webui.keyword.builtin.SetTextKeyword.setText(SetTextKeyword.groovy:65)
+	at com.kms.katalon.core.webui.keyword.builtin.SetTextKeyword.execute(SetTextKeyword.groovy:37)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.setText(WebUiBuiltInKeywords.groovy:950)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$setText$1.call(Unknown Source)
+	at search.run(search:20)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:331)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:301)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:293)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:227)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:129)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:112)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:81)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1556832957773.run(TempTestSuite1556832957773.groovy:35)]]></system-out>
+         <system-err><![CDATA[2019-05-02 23:40:59 - [TEST_CASE][FAILED] - Test Cases/search: Test Cases/search FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Unable to set text
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy:48)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:65)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:27)
+	at com.kms.katalon.core.webui.keyword.builtin.SetTextKeyword.setText(SetTextKeyword.groovy:65)
+	at com.kms.katalon.core.webui.keyword.builtin.SetTextKeyword.execute(SetTextKeyword.groovy:37)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.setText(WebUiBuiltInKeywords.groovy:950)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$setText$1.call(Unknown Source)
+	at search.run(search:20)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:331)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:301)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:293)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:227)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:129)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:112)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:81)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1556832957773.run(TempTestSuite1556832957773.groovy:35)]]></system-err>
+      </testcase>
+      <system-out><![CDATA[2019-05-02 23:37:20 - [TEST_SUITE][FAILED] - katalonTest: Test Cases/addPostNoMessage FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Unable to click on object 'Object Repository/button_Submit (1)'
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy:48)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:65)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:27)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.click(ClickKeyword.groovy:86)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.execute(ClickKeyword.groovy:67)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.click(WebUiBuiltInKeywords.groovy:616)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$click$3.call(Unknown Source)
+	at addPostNoMessage.run(addPostNoMessage:48)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:331)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:301)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:293)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:227)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:129)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:112)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:81)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1556832957773.run(TempTestSuite1556832957773.groovy:35)]]></system-out>
+      <system-err><![CDATA[2019-05-02 23:37:20 - [TEST_SUITE][FAILED] - katalonTest: Test Cases/addPostNoMessage FAILED.
+Reason:
+com.kms.katalon.core.exception.StepFailedException: Unable to click on object 'Object Repository/button_Submit (1)'
+	at com.kms.katalon.core.keyword.internal.KeywordMain.stepFailed(KeywordMain.groovy:48)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.stepFailed(WebUIKeywordMain.groovy:65)
+	at com.kms.katalon.core.webui.keyword.internal.WebUIKeywordMain.runKeyword(WebUIKeywordMain.groovy:27)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.click(ClickKeyword.groovy:86)
+	at com.kms.katalon.core.webui.keyword.builtin.ClickKeyword.execute(ClickKeyword.groovy:67)
+	at com.kms.katalon.core.keyword.internal.KeywordExecutor.executeKeywordForPlatform(KeywordExecutor.groovy:56)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords.click(WebUiBuiltInKeywords.groovy:616)
+	at com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords$click$3.call(Unknown Source)
+	at addPostNoMessage.run(addPostNoMessage:48)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:331)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:322)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:301)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:293)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:227)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestCaseMainPhase(TestSuiteExecutor.java:129)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:112)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:81)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:157)
+	at com.kms.katalon.core.main.TestCaseMain$startTestSuite$0.call(Unknown Source)
+	at TempTestSuite1556832957773.run(TempTestSuite1556832957773.groovy:35)]]></system-err>
+   </testsuite>
+</testsuites>

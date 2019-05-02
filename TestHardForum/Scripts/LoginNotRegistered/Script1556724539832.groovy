@@ -25,3 +25,5 @@ WebUI.click(findTestObject('Object Repository/Page_Spring Security Tutorial/butt
 
 WebUI.click(findTestObject('Object Repository/Page_Spring Security Tutorial/p_name or Password invalid please verify'))
 
+WebUI.closeBrowser()
+

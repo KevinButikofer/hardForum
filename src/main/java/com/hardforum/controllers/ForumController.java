@@ -214,7 +214,7 @@ public class ForumController {
 	   return modelAndView;
     }
     @PostMapping("/myprofile")
-    public ModelAndView UpdateUser(@ModelAttribute User user, @RequestParam("imageFile") MultipartFile image, BindingResult bindingResult) {
+   public ModelAndView UpdateUser(@ModelAttribute User user, @RequestParam("imageFile") MultipartFile image, BindingResult bindingResult) {
         ModelAndView modelAndView = new ModelAndView();
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 		User currentUser = userService.findUserByName(auth.getName());

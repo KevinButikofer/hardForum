@@ -17,7 +17,6 @@ WebUI.openBrowser('')
 
 WebUI.navigateToUrl('http://localhost:8080/forum')
 
-
 WebUI.setText(findTestObject('Page_Insert title here/input_Advanced search_searchText'), 'testTopic')
 
 WebUI.sendKeys(findTestObject('Page_Insert title here/input_Advanced search_searchText'), Keys.chord(Keys.ENTER))
@@ -29,4 +28,6 @@ WebUI.click(findTestObject('Page_Insert title here/h5_testTopic'))
 topicName2 = WebUI.getText(findTestObject('Page_Spring Security Tutorial/a_testTopic'))
 
 assert topicName == topicName2
+
+WebUI.closeBrowser()
 

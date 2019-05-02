@@ -17,24 +17,27 @@ WebUI.openBrowser('')
 
 WebUI.navigateToUrl('http://localhost:8080/login')
 
-WebUI.setText(findTestObject('Object Repository/Page_Spring Security Tutorial/input_Welcome_name (2)'), 'user2')
+WebUI.setText(findTestObject('Page_Spring Security Tutorial/input_Welcome_name (2)'), 'user6')
 
-WebUI.setEncryptedText(findTestObject('Object Repository/Page_Spring Security Tutorial/input_Welcome_password (2)'), 'jEDueeLlpJI=')
+WebUI.setEncryptedText(findTestObject('Page_Spring Security Tutorial/input_Welcome_password (2)'), 'OfYSgXUfG6A=')
 
 WebUI.click(findTestObject('1/button_Login'))
 
-not_run: WebUI.sendKeys(findTestObject('Object Repository/Page_Spring Security Tutorial/input_Welcome_password (2)'), Keys.chord(
-        Keys.ENTER))
+not_run: WebUI.sendKeys(findTestObject('Object Repository/input_Welcome_password (2) (4)'), Keys.chord(Keys.ENTER))
 
-WebUI.click(findTestObject('Object Repository/Page_Spring Security Tutorial/a_Hardware        Le physique'))
+WebUI.click(findTestObject('Object Repository/a_Hardware        Le physique (3)'))
 
-WebUI.setText(findTestObject('Object Repository/Page_My subforum/input_Title_name'), 'testTopic')
+WebUI.setText(findTestObject('Page_My subforum/input_Title_name'), 'testTopic')
 
-WebUI.click(findTestObject('Object Repository/Page_My subforum/p_Mon bon topic de test'))
+WebUI.click(findTestObject('Page_My subforum/p_Mon bon topic de test'))
 
-WebUI.setText(findTestObject('Object Repository/Page_My subforum/div_Mon bon topic de test'), '<p style="">Mon bon topic de test</p>')
+WebUI.setText(findTestObject('Page_My subforum/div_Mon bon topic de test'), '<p style="">Mon bon topic de test</p>')
 
-WebUI.click(findTestObject('Object Repository/Page_My subforum/button_Submit'))
+WebUI.click(findTestObject('Page_My subforum/button_Submit'))
 
-WebUI.click(findTestObject('Object Repository/Page_Spring Security Tutorial/a_testTopic'))
+WebUI.click(findTestObject('Object Repository/a_testTopic (4)'))
+
+WebUI.navigateToUrl('http://localhost:8080/logout')
+
+WebUI.closeBrowser()
 

@@ -27,3 +27,5 @@ WebUI.click(findTestObject('Page_Spring Security Tutorial/p_name or Password inv
 
 assert 'http://localhost:8080/login?error=true' == WebUI.getUrl()
 
+WebUI.closeBrowser()
+

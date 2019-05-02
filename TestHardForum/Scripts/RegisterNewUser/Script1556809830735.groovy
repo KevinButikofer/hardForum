@@ -28,3 +28,5 @@ WebUI.click(findTestObject('Object Repository/Page_Registration Form/button_Regi
 
 WebUI.click(findTestObject('Object Repository/Page_Registration Form/span_User has been registered successfully'))
 
+WebUI.closeBrowser()
+

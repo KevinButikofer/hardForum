@@ -35,30 +35,7 @@ public class HomeController {
     	return "redirect:/forum";
 
     }
-    
-    @GetMapping("/add")
-    public String add(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
     	
-    	User n = new User();
-		n.setName(name);
-		n.setEmail("mail");
-		model.addAttribute("name", n.getName());
-		userService.saveUser(n);
-        return "greeting";
-    }
-    
-	@GetMapping("/all")
-	public @ResponseBody Iterable<User> getAllUsers() {
-		// This returns a JSON or XML with the users
-		return userService.findAll();
-	}
-	
-	@GetMapping("/show")
-	public @ResponseBody User getUser(@RequestParam(name="name", required=true) String name) {
-		// This returns a JSON or XML with the users
-		return userService.findUserByName(name);
-	}
-	
     @PostMapping(value = "/search")
     public ModelAndView search (@RequestParam String searchText, Model model) {
     		ModelAndView modelAndView = new ModelAndView("search");
