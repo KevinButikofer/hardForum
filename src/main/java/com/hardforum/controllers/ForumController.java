@@ -1,14 +1,12 @@
 package com.hardforum.controllers;
 
 
-import java.awt.Image;
 import java.io.IOException;
 import java.util.AbstractMap;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
@@ -36,7 +34,6 @@ import com.hardforum.services.RoleService;
 import com.hardforum.services.TopicService;
 import com.hardforum.services.UserService;
 import com.hardforum.models.Post;
-import com.hardforum.models.Role;
 import com.hardforum.models.SubForum;
 import com.hardforum.models.Topic;
 import com.hardforum.models.User;
@@ -151,7 +148,6 @@ public class ForumController {
     @PostMapping(value = "/forum/{categoryName}/topic/{id}/removeTopic")
     public String removeTopic(@PathVariable("categoryName") String categoryName, @PathVariable("id") int id, Map<String, Object> model) {    	
     	
-	    Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 	    topicService.removeById(id);
       
     	return "redirect:/forum/"+ categoryName;
@@ -159,29 +155,12 @@ public class ForumController {
     @PostMapping(value = "/forum/{categoryName}/topic/{id}/removePost/{postId}")
     public String removePost(@PathVariable("categoryName") String categoryName, @PathVariable("id") int id, @PathVariable("postId") int postId, Map<String, Object> model) {    	
     	
-	    Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 	    
 	    postService.removeById(postId);
       
 	    return "redirect:/forum/"+ categoryName +"/topic/" + id;
     }
     
-    @GetMapping("/forum/{categoryName}/addTopic")
-    public ModelAndView post(@PathVariable("categoryName") String categoryName, Map<String, Object> model) {
-    	SubForum s = subForumService.findSubForumByName(categoryName);
-    	Iterable<SubForum> subforums = subForumService.findAll();
-    	Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-		User user = userService.findUserByName(auth.getName());	
-		
-		Topic t = new Topic();
-		//t.setSubForum(s);
-		ModelAndView modelAndView = new ModelAndView();
-        modelAndView.addObject("topic", t);
-        
-
-        modelAndView.setViewName("addtopic");
-	   return modelAndView;
-    }
     @PostMapping(value = "/forum/{categoryName}/addTopic")
     public String addTopic(@Valid @ModelAttribute Topic topic, @PathVariable("categoryName") String categoryName, BindingResult bindingResult,Map<String, Object> model) {    	
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();

@@ -9,9 +9,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.hardforum.models.Post;
 import com.hardforum.models.SubForum;
-import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import com.hardforum.models.Topic;
 

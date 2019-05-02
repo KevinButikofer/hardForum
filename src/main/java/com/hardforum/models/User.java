@@ -15,7 +15,6 @@ import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotEmpty;
 
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.lang.Nullable;
 
 

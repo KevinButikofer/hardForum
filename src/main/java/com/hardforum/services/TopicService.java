@@ -5,7 +5,6 @@ import java.util.List;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
-import com.hardforum.models.Post;
 import com.hardforum.models.SubForum;
 import com.hardforum.models.Topic;
 

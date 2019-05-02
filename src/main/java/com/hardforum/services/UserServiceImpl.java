@@ -9,7 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import com.hardforum.WebSecurityConfig;
 import com.hardforum.models.Role;
 import com.hardforum.models.User;
 import com.hardforum.repository.RoleRepository;

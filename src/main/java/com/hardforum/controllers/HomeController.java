@@ -4,26 +4,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.hardforum.repository.UserRepository;
 import com.hardforum.services.SubForumService;
 import com.hardforum.services.TopicService;
-import com.hardforum.services.UserService;
-import com.hardforum.models.User;
 
 @Controller
 public class HomeController {
-	
-	@Autowired
-	private UserService userService;
-	
+		
 	@Autowired
 	private TopicService topicService;
 
