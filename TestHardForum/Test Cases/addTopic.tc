@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>addTopic</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>fa95f1fb-92d4-4909-97da-5b0ac4942e39</testCaseGuid>
+   <variable>
+      <defaultValue>'/'</defaultValue>
+      <description></description>
+      <id>e67402d9-8cd3-473b-91d1-4f493312960b</id>
+      <masked>false</masked>
+      <name>topicUrl</name>
+   </variable>
+</TestCaseEntity>

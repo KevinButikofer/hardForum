@@ -231,7 +231,7 @@ public class ForumController {
 				return modelAndView;
 			}
         	
-        	userService.saveUser(currentUser);         	
+        	userService.updateUser(currentUser);      	
         	
 
             modelAndView.addObject("successMessage", "Profile has been update successfully");

@@ -13,21 +13,3 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.openBrowser('')
-
-WebUI.navigateToUrl('http://localhost:8080/')
-
-WebUI.click(findTestObject('Object Repository/Page_Spring Security Tutorial/span_HardForum_navbar-toggler-icon'))
-
-WebUI.click(findTestObject('Object Repository/Page_Spring Security Tutorial/a_Login'))
-
-WebUI.setText(findTestObject('Object Repository/Page_Spring Security Tutorial/input_Welcome_name'), 'john')
-
-WebUI.setEncryptedText(findTestObject('Object Repository/Page_Spring Security Tutorial/input_Welcome_password'), '1bLRAxlDc1c=')
-
-WebUI.click(findTestObject('Object Repository/Page_Spring Security Tutorial/button_Login'))
-
-urlSuccess = WebUI.getUrl()
-
-WebUI.closeBrowser()
-

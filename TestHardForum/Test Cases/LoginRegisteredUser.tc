@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>LoginRegisteredUser</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>959d4493-1c3b-44d9-b397-9c867aabdf2b</testCaseGuid>
+   <variable>
+      <defaultValue>'http://localhost:8080/forum'</defaultValue>
+      <description></description>
+      <id>f4d33633-157d-4414-b89a-66cf6c5b26ae</id>
+      <masked>false</masked>
+      <name>succesUrl</name>
+   </variable>
+</TestCaseEntity>

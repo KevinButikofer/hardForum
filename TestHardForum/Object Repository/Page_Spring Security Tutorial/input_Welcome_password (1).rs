@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>input_Welcome_password</name>
+   <name>input_Welcome_password (1)</name>
    <tag></tag>
-   <elementGuidId>636c4783-56fe-4e7c-a9fc-33aacd28fb05</elementGuidId>
+   <elementGuidId>88060d3e-bc77-4c19-bd0f-464522058f22</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
@@ -96,17 +96,5 @@
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <value>//form/input[2]</value>
-   </webElementXpaths>
-   <webElementXpaths>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>xpath:neighbor</name>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Go To Registration Page'])[1]/following::input[2]</value>
-   </webElementXpaths>
-   <webElementXpaths>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>xpath:neighbor</name>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)=concat('id(', '&quot;', 'password', '&quot;', ')')])[1]/preceding::input[1]</value>
    </webElementXpaths>
 </WebElementEntity>
