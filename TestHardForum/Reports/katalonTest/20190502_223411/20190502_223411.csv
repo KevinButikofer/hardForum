@@ -1,0 +1,113 @@
+Suite/Test/Step Name,Browser,Description,Start time,End time,Duration,Status
+katalonTest,Chrome 74.0.3729.131,,2019-05-02 22:34:22,2019-05-02 22:37:46,3m - 23.626s,FAILED
+,,,,,,
+Test Cases/addPost,Chrome 74.0.3729.131,,2019-05-02 22:34:22,2019-05-02 22:34:50,27.811s,FAILED
+"openBrowser("""")",Chrome 74.0.3729.131,,2019-05-02 22:34:23,2019-05-02 22:34:29,6.359s,PASSED
+"navigateToUrl(""http://localhost:8080/login"")",Chrome 74.0.3729.131,,2019-05-02 22:34:29,2019-05-02 22:34:30,0.362s,PASSED
+"setText(findTestObject(""Object Repository/Page_Spring Security Tutorial/input_Welcome_name (2)""), ""testCase"")",Chrome 74.0.3729.131,,2019-05-02 22:34:30,2019-05-02 22:34:30,0.237s,PASSED
+"setEncryptedText(findTestObject(""Object Repository/Page_Spring Security Tutorial/input_Welcome_password (2)""), ""k5M9B2M38/NbP4F7W5R/fg=="")",Chrome 74.0.3729.131,,2019-05-02 22:34:30,2019-05-02 22:34:30,0.209s,PASSED
+"click(findTestObject(""1/button_Login""))",Chrome 74.0.3729.131,,2019-05-02 22:34:30,2019-05-02 22:34:30,0.349s,PASSED
+"sendKeys(findTestObject(""Object Repository/Page_Spring Security Tutorial/input_Welcome_password (2)""), Keys.chord(ENTER))",Chrome 74.0.3729.131,,2019-05-02 22:34:30,2019-05-02 22:34:30,0.003s,NOT_RUN
+"click(findTestObject(""Object Repository/Page_Spring Security Tutorial/a_Hardware        Le physique""))",Chrome 74.0.3729.131,,2019-05-02 22:34:30,2019-05-02 22:34:50,19.873s,FAILED
+,,,,,,
+Test Cases/addTopic,Chrome 74.0.3729.131,,2019-05-02 22:34:50,2019-05-02 22:35:02,11.505s,PASSED
+"openBrowser("""")",Chrome 74.0.3729.131,,2019-05-02 22:34:51,2019-05-02 22:34:55,4.247s,PASSED
+"navigateToUrl(""http://localhost:8080/login"")",Chrome 74.0.3729.131,,2019-05-02 22:34:55,2019-05-02 22:34:55,0.545s,PASSED
+"setText(findTestObject(""Object Repository/Page_Spring Security Tutorial/input_Welcome_name (3)""), ""user2"")",Chrome 74.0.3729.131,,2019-05-02 22:34:55,2019-05-02 22:34:55,0.144s,PASSED
+"setEncryptedText(findTestObject(""Object Repository/Page_Spring Security Tutorial/input_Welcome_password (3)""), ""jEDueeLlpJI="")",Chrome 74.0.3729.131,,2019-05-02 22:34:55,2019-05-02 22:34:56,0.129s,PASSED
+"sendKeys(findTestObject(""Object Repository/Page_Spring Security Tutorial/input_Welcome_password (3)""), Keys.chord(ENTER))",Chrome 74.0.3729.131,,2019-05-02 22:34:56,2019-05-02 22:34:56,0.001s,NOT_RUN
+"click(findTestObject(""1/button_Login""))",Chrome 74.0.3729.131,,2019-05-02 22:34:56,2019-05-02 22:34:57,1.164s,PASSED
+"click(findTestObject(""Object Repository/Page_Spring Security Tutorial/div_Hardware""))",Chrome 74.0.3729.131,,2019-05-02 22:34:57,2019-05-02 22:34:58,1.628s,PASSED
+"click(findTestObject(""Object Repository/Page_My subforum/h5_testTopic""))",Chrome 74.0.3729.131,,2019-05-02 22:34:58,2019-05-02 22:34:59,0.762s,PASSED
+"setText(findTestObject(""Object Repository/Page_Spring Security Tutorial/input_Title_title""), ""Test Post"")",Chrome 74.0.3729.131,,2019-05-02 22:34:59,2019-05-02 22:34:59,0.214s,PASSED
+"click(findTestObject(""Object Repository/Page_Spring Security Tutorial/p""))",Chrome 74.0.3729.131,,2019-05-02 22:34:59,2019-05-02 22:34:59,0.089s,PASSED
+"setText(findTestObject(""Object Repository/Page_Spring Security Tutorial/div_post content""), ""<p style="""">post content </p>"")",Chrome 74.0.3729.131,,2019-05-02 22:34:59,2019-05-02 22:35:00,0.358s,PASSED
+"setText(findTestObject(""Object Repository/Page_Spring Security Tutorial/div_post content dwdwad""), ""<h1 style="""">post content dw</h1><p style="""">dwad</p>"")",Chrome 74.0.3729.131,,2019-05-02 22:35:00,2019-05-02 22:35:00,0.440s,PASSED
+"click(findTestObject(""Object Repository/Page_Spring Security Tutorial/button_Submit""))",Chrome 74.0.3729.131,,2019-05-02 22:35:00,2019-05-02 22:35:02,1.397s,PASSED
+"click(findTestObject(""Object Repository/Page_Spring Security Tutorial/h4_Test Post""))",Chrome 74.0.3729.131,,2019-05-02 22:35:02,2019-05-02 22:35:02,0.082s,PASSED
+,,,,,,
+Test Cases/alreadyRegisteredUser,Chrome 74.0.3729.131,,2019-05-02 22:35:02,2019-05-02 22:35:09,6.815s,PASSED
+"openBrowser("""")",Chrome 74.0.3729.131,,2019-05-02 22:35:02,2019-05-02 22:35:07,4.650s,PASSED
+"navigateToUrl(""http://localhost:8080/registration"")",Chrome 74.0.3729.131,,2019-05-02 22:35:07,2019-05-02 22:35:08,1.279s,PASSED
+"setText(findTestObject(""Object Repository/Page_Registration Form/input_Registration Form_name""), ""testCase"")",Chrome 74.0.3729.131,,2019-05-02 22:35:08,2019-05-02 22:35:08,0.147s,PASSED
+"setText(findTestObject(""Object Repository/Page_Registration Form/input_Registration Form_email""), ""test@mail.com"")",Chrome 74.0.3729.131,,2019-05-02 22:35:08,2019-05-02 22:35:08,0.152s,PASSED
+"setEncryptedText(findTestObject(""Object Repository/Page_Registration Form/input_Registration Form_password""), ""k5M9B2M38/NbP4F7W5R/fg=="")",Chrome 74.0.3729.131,,2019-05-02 22:35:08,2019-05-02 22:35:08,0.120s,PASSED
+"click(findTestObject(""Object Repository/Page_Registration Form/button_Register User""))",Chrome 74.0.3729.131,,2019-05-02 22:35:08,2019-05-02 22:35:08,0.177s,PASSED
+"click(findTestObject(""Object Repository/Page_Registration Form/label_There is already a user registered with the name provided""))",Chrome 74.0.3729.131,,2019-05-02 22:35:08,2019-05-02 22:35:09,0.078s,PASSED
+,,,,,,
+Test Cases/LoginNotRegistered,Chrome 74.0.3729.131,,2019-05-02 22:35:09,2019-05-02 22:35:15,5.984s,PASSED
+"openBrowser("""")",Chrome 74.0.3729.131,,2019-05-02 22:35:09,2019-05-02 22:35:13,4.674s,PASSED
+"navigateToUrl(""http://localhost:8080/login"")",Chrome 74.0.3729.131,,2019-05-02 22:35:13,2019-05-02 22:35:14,0.491s,PASSED
+"setText(findTestObject(""Page_Spring Security Tutorial/input_Welcome_name""), ""nonExisting"")",Chrome 74.0.3729.131,,2019-05-02 22:35:14,2019-05-02 22:35:14,0.154s,PASSED
+"setEncryptedText(findTestObject(""Object Repository/Page_Spring Security Tutorial/input_Welcome_password (1)""), ""k7BhWEneXWQ="")",Chrome 74.0.3729.131,,2019-05-02 22:35:14,2019-05-02 22:35:14,0.104s,PASSED
+"click(findTestObject(""Object Repository/Page_Spring Security Tutorial/button_Login (1)""))",Chrome 74.0.3729.131,,2019-05-02 22:35:14,2019-05-02 22:35:14,0.280s,PASSED
+"click(findTestObject(""Object Repository/Page_Spring Security Tutorial/p_name or Password invalid please verify""))",Chrome 74.0.3729.131,,2019-05-02 22:35:14,2019-05-02 22:35:15,0.079s,PASSED
+,,,,,,
+Test Cases/LoginRegisteredUser,Chrome 74.0.3729.131,,2019-05-02 22:35:15,2019-05-02 22:35:21,6.096s,FAILED
+"openBrowser("""")",Chrome 74.0.3729.131,,2019-05-02 22:35:15,2019-05-02 22:35:20,4.742s,PASSED
+"navigateToUrl(""http://localhost:8080/login"")",Chrome 74.0.3729.131,,2019-05-02 22:35:20,2019-05-02 22:35:20,0.474s,PASSED
+"setText(findTestObject(""Page_Spring Security Tutorial/input_Welcome_name""), ""user2"")",Chrome 74.0.3729.131,,2019-05-02 22:35:20,2019-05-02 22:35:20,0.147s,PASSED
+"setEncryptedText(findTestObject(""Page_Spring Security Tutorial/input_Welcome_password""), ""jEDueeLlpJI="")",Chrome 74.0.3729.131,,2019-05-02 22:35:20,2019-05-02 22:35:20,0.136s,PASSED
+"click(findTestObject(""Page_Spring Security Tutorial/button_Login""))",Chrome 74.0.3729.131,,2019-05-02 22:35:20,2019-05-02 22:35:21,0.327s,PASSED
+assert succesUrl == getUrl(),Chrome 74.0.3729.131,,2019-05-02 22:35:21,2019-05-02 22:35:21,0.041s,FAILED
+,,,,,,
+Test Cases/advancedSearch,Chrome 74.0.3729.131,,2019-05-02 22:35:21,2019-05-02 22:35:27,6.524s,FAILED
+"openBrowser("""")",Chrome 74.0.3729.131,,2019-05-02 22:35:21,2019-05-02 22:35:26,4.720s,PASSED
+"navigateToUrl(""http://localhost:8080/login"")",Chrome 74.0.3729.131,,2019-05-02 22:35:26,2019-05-02 22:35:26,0.342s,PASSED
+"click(findTestObject(""Object Repository/a_HardForum""))",Chrome 74.0.3729.131,,2019-05-02 22:35:26,2019-05-02 22:35:27,0.865s,PASSED
+"click(findTestObject(""Object Repository/a_Advanced search""))",Chrome 74.0.3729.131,,2019-05-02 22:35:27,2019-05-02 22:35:27,0.350s,FAILED
+,,,,,,
+Test Cases/addPostNoMessage,Chrome 74.0.3729.131,,2019-05-02 22:35:27,2019-05-02 22:35:33,6.277s,ERROR
+"openBrowser("""")",Chrome 74.0.3729.131,,2019-05-02 22:35:27,2019-05-02 22:35:32,4.783s,PASSED
+"navigateToUrl(""http://localhost:8080/login"")",Chrome 74.0.3729.131,,2019-05-02 22:35:32,2019-05-02 22:35:33,0.949s,PASSED
+"setText(findTestObject(""Page_Spring Security Tutorial/input_Welcome_name (2)""), ""user2"")",Chrome 74.0.3729.131,,2019-05-02 22:35:33,2019-05-02 22:35:33,0.150s,PASSED
+"setEncryptedText(findTestObject(""Page_Spring Security Tutorial/input_Welcome_password (2)""), ""jEDueeLlpJI="")",Chrome 74.0.3729.131,,2019-05-02 22:35:33,2019-05-02 22:35:33,0.126s,PASSED
+"sendKeys(findTestObject(""Object Repository/input_Welcome_password (2) (3)""), Keys.chord(ENTER))",Chrome 74.0.3729.131,,2019-05-02 22:35:33,2019-05-02 22:35:33,0.011s,ERROR
+,,,,,,
+Test Cases/addSubForum,Chrome 74.0.3729.131,,2019-05-02 22:35:33,2019-05-02 22:35:40,6.460s,FAILED
+"openBrowser("""")",Chrome 74.0.3729.131,,2019-05-02 22:35:34,2019-05-02 22:35:39,4.712s,PASSED
+"navigateToUrl(""http://localhost:8080/login"")",Chrome 74.0.3729.131,,2019-05-02 22:35:39,2019-05-02 22:35:39,0.552s,PASSED
+"setText(findTestObject(""Object Repository/1/input_Welcome_name (1)""), ""user2"")",Chrome 74.0.3729.131,,2019-05-02 22:35:39,2019-05-02 22:35:39,0.146s,PASSED
+"setEncryptedText(findTestObject(""Object Repository/1/input_Welcome_password (1)""), ""jEDueeLlpJI="")",Chrome 74.0.3729.131,,2019-05-02 22:35:39,2019-05-02 22:35:39,0.116s,PASSED
+"click(findTestObject(""Object Repository/1/button_Login (1)""))",Chrome 74.0.3729.131,,2019-05-02 22:35:39,2019-05-02 22:35:40,0.300s,PASSED
+"setText(findTestObject(""Page_Spring Security Tutorial/input_Category_name""), categoryName)",Chrome 74.0.3729.131,,2019-05-02 22:35:40,2019-05-02 22:35:40,0.304s,FAILED
+,,,,,,
+Test Cases/deletePost,Chrome 74.0.3729.131,,2019-05-02 22:35:40,2019-05-02 22:36:18,38.379s,FAILED
+"openBrowser("""")",Chrome 74.0.3729.131,,2019-05-02 22:35:40,2019-05-02 22:35:45,4.658s,PASSED
+"navigateToUrl(""http://localhost:8080/login"")",Chrome 74.0.3729.131,,2019-05-02 22:35:45,2019-05-02 22:35:47,1.915s,PASSED
+"setText(findTestObject(""Object Repository/Page_Spring Security Tutorial/input_Welcome_name (5)""), ""user2"")",Chrome 74.0.3729.131,,2019-05-02 22:35:47,2019-05-02 22:35:47,0.146s,PASSED
+"setEncryptedText(findTestObject(""Object Repository/Page_Spring Security Tutorial/input_Welcome_password (5)""), ""jEDueeLlpJI="")",Chrome 74.0.3729.131,,2019-05-02 22:35:47,2019-05-02 22:35:47,0.138s,PASSED
+"click(findTestObject(""Object Repository/Page_Spring Security Tutorial/button_Login (2)""))",Chrome 74.0.3729.131,,2019-05-02 22:35:47,2019-05-02 22:35:47,0.316s,PASSED
+"click(findTestObject(""Object Repository/Page_Spring Security Tutorial/p_Le physique""))",Chrome 74.0.3729.131,,2019-05-02 22:35:47,2019-05-02 22:36:18,31.000s,FAILED
+,,,,,,
+Test Cases/deleteTopic,Chrome 74.0.3729.131,,2019-05-02 22:36:18,2019-05-02 22:36:55,37.040s,FAILED
+"openBrowser("""")",Chrome 74.0.3729.131,,2019-05-02 22:36:19,2019-05-02 22:36:23,4.863s,PASSED
+"navigateToUrl(""http://localhost:8080/login"")",Chrome 74.0.3729.131,,2019-05-02 22:36:23,2019-05-02 22:36:24,0.464s,PASSED
+"setText(findTestObject(""Object Repository/input_Welcome_name (5)""), ""user2"")",Chrome 74.0.3729.131,,2019-05-02 22:36:24,2019-05-02 22:36:24,0.148s,PASSED
+"setEncryptedText(findTestObject(""Object Repository/input_Welcome_password (5)""), ""jEDueeLlpJI="")",Chrome 74.0.3729.131,,2019-05-02 22:36:24,2019-05-02 22:36:24,0.102s,PASSED
+"click(findTestObject(""Object Repository/button_Login (2)""))",Chrome 74.0.3729.131,,2019-05-02 22:36:24,2019-05-02 22:36:24,0.297s,PASSED
+"click(findTestObject(""Object Repository/p_Le physique""))",Chrome 74.0.3729.131,,2019-05-02 22:36:24,2019-05-02 22:36:55,30.975s,FAILED
+,,,,,,
+Test Cases/LoginWrongPassword,Chrome 74.0.3729.131,,2019-05-02 22:36:55,2019-05-02 22:37:02,6.322s,PASSED
+"openBrowser("""")",Chrome 74.0.3729.131,,2019-05-02 22:36:56,2019-05-02 22:37:00,4.679s,PASSED
+"navigateToUrl(""http://localhost:8080/login"")",Chrome 74.0.3729.131,,2019-05-02 22:37:00,2019-05-02 22:37:01,0.793s,PASSED
+"setText(findTestObject(""Page_Spring Security Tutorial/input_Welcome_name""), ""user2"")",Chrome 74.0.3729.131,,2019-05-02 22:37:01,2019-05-02 22:37:01,0.136s,PASSED
+"setEncryptedText(findTestObject(""Page_Spring Security Tutorial/input_Welcome_password""), ""BMMEIUJfJqT7EwQg/H/oNQ=="")",Chrome 74.0.3729.131,,2019-05-02 22:37:01,2019-05-02 22:37:01,0.120s,PASSED
+"click(findTestObject(""Page_Spring Security Tutorial/button_Login""))",Chrome 74.0.3729.131,,2019-05-02 22:37:01,2019-05-02 22:37:02,0.289s,PASSED
+"click(findTestObject(""Page_Spring Security Tutorial/p_name or Password invalid please verify""))",Chrome 74.0.3729.131,,2019-05-02 22:37:02,2019-05-02 22:37:02,0.107s,PASSED
+"assert ""http://localhost:8080/login?error=true"" == getUrl()",Chrome 74.0.3729.131,,2019-05-02 22:37:02,2019-05-02 22:37:02,0.014s,PASSED
+,,,,,,
+Test Cases/modifyProfile,Chrome 74.0.3729.131,,2019-05-02 22:37:02,2019-05-02 22:37:02,0.799s,ERROR
+"navigateToUrl(""http://localhost:8080/login"")",Chrome 74.0.3729.131,,2019-05-02 22:37:02,2019-05-02 22:37:02,0.113s,PASSED
+"setText(findTestObject(""Object Repository/input_Welcome_name (9)""), ""user2"")",Chrome 74.0.3729.131,,2019-05-02 22:37:02,2019-05-02 22:37:02,0.145s,PASSED
+"setEncryptedText(findTestObject(""Object Repository/input_Welcome_password (9)""), ""jEDueeLlpJI="")",Chrome 74.0.3729.131,,2019-05-02 22:37:02,2019-05-02 22:37:02,0.121s,PASSED
+"sendKeys(findTestObject(""Object Repository/input_Welcome_password (9)""), Keys.chord(ENTER))",Chrome 74.0.3729.131,,2019-05-02 22:37:02,2019-05-02 22:37:02,0.003s,ERROR
+,,,,,,
+Test Cases/RegisterNewUser,Chrome 74.0.3729.131,,2019-05-02 22:37:02,2019-05-02 22:37:38,35.992s,FAILED
+"openBrowser("""")",Chrome 74.0.3729.131,,2019-05-02 22:37:03,2019-05-02 22:37:07,4.795s,PASSED
+"click(findTestObject(""Object Repository/Page_Spring Security Tutorial/button_Go To Registration Page""))",Chrome 74.0.3729.131,,2019-05-02 22:37:07,2019-05-02 22:37:38,31.005s,FAILED
+,,,,,,
+Test Cases/search,Chrome 74.0.3729.131,,2019-05-02 22:37:38,2019-05-02 22:37:45,6.319s,FAILED
+"openBrowser("""")",Chrome 74.0.3729.131,,2019-05-02 22:37:39,2019-05-02 22:37:43,4.654s,PASSED
+"navigateToUrl(""http://localhost:8080/forum"")",Chrome 74.0.3729.131,,2019-05-02 22:37:43,2019-05-02 22:37:45,1.112s,PASSED
+"setText(findTestObject(""Page_Insert title here/input_Advanced search_searchText""), ""testTopic"")",Chrome 74.0.3729.131,,2019-05-02 22:37:45,2019-05-02 22:37:45,0.296s,FAILED

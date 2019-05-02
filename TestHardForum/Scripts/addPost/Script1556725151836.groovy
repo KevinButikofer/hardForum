@@ -17,11 +17,13 @@ WebUI.openBrowser('')
 
 WebUI.navigateToUrl('http://localhost:8080/login')
 
-WebUI.setText(findTestObject('Object Repository/Page_Spring Security Tutorial/input_Welcome_name (2)'), 'testCase')
+WebUI.setText(findTestObject('Object Repository/Page_Spring Security Tutorial/input_Welcome_name (2)'), 'user2')
 
-WebUI.setEncryptedText(findTestObject('Object Repository/Page_Spring Security Tutorial/input_Welcome_password (2)'), 'k5M9B2M38/NbP4F7W5R/fg==')
+WebUI.setEncryptedText(findTestObject('Object Repository/Page_Spring Security Tutorial/input_Welcome_password (2)'), 'jEDueeLlpJI=')
 
-WebUI.sendKeys(findTestObject('Object Repository/Page_Spring Security Tutorial/input_Welcome_password (2)'), Keys.chord(
+WebUI.click(findTestObject('1/button_Login'))
+
+not_run: WebUI.sendKeys(findTestObject('Object Repository/Page_Spring Security Tutorial/input_Welcome_password (2)'), Keys.chord(
         Keys.ENTER))
 
 WebUI.click(findTestObject('Object Repository/Page_Spring Security Tutorial/a_Hardware        Le physique'))

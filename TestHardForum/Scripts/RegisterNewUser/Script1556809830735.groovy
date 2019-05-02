@@ -13,3 +13,18 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
+WebUI.openBrowser('')
+
+WebUI.click(findTestObject('Object Repository/Page_Spring Security Tutorial/button_Go To Registration Page'))
+
+WebUI.setText(findTestObject('Object Repository/Page_Registration Form/input_Registration Form_name (1)'), 'user1')
+
+WebUI.setText(findTestObject('Object Repository/Page_Registration Form/input_Registration Form_email (1)'), 'user1@mail.com')
+
+WebUI.setEncryptedText(findTestObject('Object Repository/Page_Registration Form/input_Registration Form_password (1)'), 
+    's0q99SWTf+E=')
+
+WebUI.click(findTestObject('Object Repository/Page_Registration Form/button_Register User (1)'))
+
+WebUI.click(findTestObject('Object Repository/Page_Registration Form/span_User has been registered successfully'))
+

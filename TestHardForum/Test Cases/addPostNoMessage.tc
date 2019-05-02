@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>addPostNoMessage</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>a499ea04-fd8e-4811-9c85-a03a29a69b97</testCaseGuid>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>b0fd35fa-7833-4073-913d-6ba502085595</id>
+      <masked>false</masked>
+      <name>url</name>
+   </variable>
+</TestCaseEntity>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>deletePost</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>b65f446b-7756-4009-ba37-8cd2ab059102</testCaseGuid>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>78c1a34d-98c2-4b5d-8b28-dce48dc05829</id>
+      <masked>false</masked>
+      <name>url</name>
+   </variable>
+</TestCaseEntity>

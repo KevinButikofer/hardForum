@@ -17,12 +17,14 @@ WebUI.openBrowser('')
 
 WebUI.navigateToUrl('http://localhost:8080/login')
 
-WebUI.setText(findTestObject('Object Repository/Page_Spring Security Tutorial/input_Welcome_name (3)'), 'testCase')
+WebUI.setText(findTestObject('Object Repository/Page_Spring Security Tutorial/input_Welcome_name (3)'), 'user2')
 
-WebUI.setEncryptedText(findTestObject('Object Repository/Page_Spring Security Tutorial/input_Welcome_password (3)'), 'k5M9B2M38/NbP4F7W5R/fg==')
+WebUI.setEncryptedText(findTestObject('Object Repository/Page_Spring Security Tutorial/input_Welcome_password (3)'), 'jEDueeLlpJI=')
 
-WebUI.sendKeys(findTestObject('Object Repository/Page_Spring Security Tutorial/input_Welcome_password (3)'), Keys.chord(
+not_run: WebUI.sendKeys(findTestObject('Object Repository/Page_Spring Security Tutorial/input_Welcome_password (3)'), Keys.chord(
         Keys.ENTER))
+
+WebUI.click(findTestObject('1/button_Login'))
 
 WebUI.click(findTestObject('Object Repository/Page_Spring Security Tutorial/div_Hardware'))
 

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>advancedSearch</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>5c3c1bfc-2a57-4913-98de-a08c51b348d2</testCaseGuid>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>a1d4085e-5261-42ac-8468-14a586e396e1</id>
+      <masked>false</masked>
+      <name>topicName</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>fe9a31b8-a5a6-443e-8aac-bd69cb78cc21</id>
+      <masked>false</masked>
+      <name>topicName2</name>
+   </variable>
+</TestCaseEntity>

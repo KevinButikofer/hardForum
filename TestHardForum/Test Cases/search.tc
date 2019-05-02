@@ -4,12 +4,26 @@
    <name>search</name>
    <tag></tag>
    <comment></comment>
-   <testCaseGuid>5c3c1bfc-2a57-4913-98de-a08c51b348d2</testCaseGuid>
+   <testCaseGuid>77ff2763-d273-4c12-b603-9f9bdafe4473</testCaseGuid>
    <variable>
-      <defaultValue>'search\r\n'</defaultValue>
+      <defaultValue>'15\r\n'</defaultValue>
       <description></description>
-      <id>258f7286-54f3-4353-84a0-4f338b03214f</id>
+      <id>4e67bc93-ce3c-483d-b4e7-89ae50976fc6</id>
       <masked>false</masked>
-      <name>searchUrl</name>
+      <name>Age</name>
+   </variable>
+   <variable>
+      <defaultValue>'My Signature'</defaultValue>
+      <description></description>
+      <id>cfe1e647-219f-4ad5-82d2-689b08c4079b</id>
+      <masked>false</masked>
+      <name>Signature</name>
+   </variable>
+   <variable>
+      <defaultValue>'My Bio'</defaultValue>
+      <description></description>
+      <id>4c54456c-9e71-44dd-9b8d-c54554076328</id>
+      <masked>false</masked>
+      <name>Bio</name>
    </variable>
 </TestCaseEntity>

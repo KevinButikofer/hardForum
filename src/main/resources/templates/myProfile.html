@@ -34,10 +34,10 @@
 						    <label for="imageFile">Choose a profile picture</label>
 						    <input type="file" class="form-control-file" id="imageFile" name="imageFile"  accept="image/png, image/jpeg">
 						  </div>
-						  
+						  <img class="imgForum pb-2" th:src="@{/{userId}/image(userId=${user.id})}" alt="user_Image"/>
 					   <button type="submit" class="btn btn-primary form-control">Submit</button>
 				   </form>
-				   <img th:src="@{/{userId}/image(userId=${user.id})}" alt="user_Image"/>
+				   
 				   <p th:text="${successMessage}"></p>
 						  
 				</div>
