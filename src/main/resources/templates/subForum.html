@@ -15,14 +15,16 @@
 		<div th:insert="fragments/header :: header"></div>
 		<div class= "float-right pr-5 pt-5" th:insert="fragments/aside :: aside"></div> 
 		
-		<div  class="container">
+		<div  class="container mainContent">
 		<div th:insert="fragments/breadCrumb :: breadCrumb"></div>
 		<h1 th:text="${categoryName}"></h1>
 		<div class="list-group">
 			     <div class="container">
 			    	<div class="row">
-				      <h5 class="mb-1 col-sm-8">Topic Name</h5><p class="col-sm-3" >Author</p>
+				      <h5 class="mb-1 col-sm-8">Topic Name</h5><p class="col-sm-2" >Author</p>
 				      <small class="col-sm-1">N Replies</small>
+				      <small class="col-sm-1">Updated</small>
+				      
 			      </div>
 		    	</div>
 	  	</div>
@@ -31,8 +33,10 @@
   			<a th:href="@{/forum/{subForum}/topic/{id}(subForum=${categoryName}, id=${topic.id})}" class="list-group-item list-group-item-action pl-0 pr-0 pt-2 pb-2">
 			    <div class="container">
 			    	<div class="row">
-					      <h5 class="mb-1 col-sm-8" th:text="${topic.name}"></h5><p class="col-sm-3" th:text="${topic.author.name}"></p>
+					      <h5 class="mb-1 col-sm-8" th:text="${topic.name}"></h5><p class="col-sm-2" th:text="${topic.author.name}"></p>
 					      <small class="col-sm-1" th:text="${topic.nbPostedMessage}"></small>
+					      <small class="col-sm-1" th:text="${{topic.updateDateTime}}"></small>
+					      
 			      	</div>
 		    	</div>
 	  		</a>
