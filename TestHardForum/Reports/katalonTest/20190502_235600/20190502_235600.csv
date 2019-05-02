@@ -1,0 +1,131 @@
+Suite/Test/Step Name,Browser,Description,Start time,End time,Duration,Status
+katalonTest,Firefox 66.0,,2019-05-02 23:56:04,2019-05-02 23:59:51,3m - 46.541s,FAILED
+,,,,,,
+Test Cases/addPost,Firefox 66.0,,2019-05-02 23:56:04,2019-05-02 23:56:16,11.831s,PASSED
+"openBrowser("""")",Firefox 66.0,,2019-05-02 23:56:05,2019-05-02 23:56:08,3.517s,PASSED
+"navigateToUrl(""http://localhost:8080/login"")",Firefox 66.0,,2019-05-02 23:56:08,2019-05-02 23:56:08,0.414s,PASSED
+"setText(findTestObject(""Page_Spring Security Tutorial/input_Welcome_name (2)""), ""kulisse6"")",Firefox 66.0,,2019-05-02 23:56:08,2019-05-02 23:56:09,0.107s,PASSED
+"setEncryptedText(findTestObject(""Page_Spring Security Tutorial/input_Welcome_password (2)""), ""3pybmnes8qQ="")",Firefox 66.0,,2019-05-02 23:56:09,2019-05-02 23:56:09,0.101s,PASSED
+"click(findTestObject(""1/button_Login""))",Firefox 66.0,,2019-05-02 23:56:09,2019-05-02 23:56:10,1.456s,PASSED
+"sendKeys(findTestObject(""Object Repository/input_Welcome_password (2) (4)""), Keys.chord(ENTER))",Firefox 66.0,,2019-05-02 23:56:10,2019-05-02 23:56:10,0.002s,NOT_RUN
+"click(findTestObject(""Object Repository/a_Hardware        Le physique (3)""))",Firefox 66.0,,2019-05-02 23:56:10,2019-05-02 23:56:11,1.369s,PASSED
+"setText(findTestObject(""Page_My subforum/input_Title_name""), ""testTopic"")",Firefox 66.0,,2019-05-02 23:56:11,2019-05-02 23:56:12,0.078s,PASSED
+"click(findTestObject(""Page_My subforum/p_Mon bon topic de test""))",Firefox 66.0,,2019-05-02 23:56:12,2019-05-02 23:56:12,0.263s,PASSED
+"setText(findTestObject(""Page_My subforum/div_Mon bon topic de test""), ""<p style="""">Mon bon topic de test</p>"")",Firefox 66.0,,2019-05-02 23:56:12,2019-05-02 23:56:12,0.106s,PASSED
+"click(findTestObject(""Page_My subforum/button_Submit""))",Firefox 66.0,,2019-05-02 23:56:12,2019-05-02 23:56:14,1.723s,PASSED
+"click(findTestObject(""Object Repository/a_testTopic (4)""))",Firefox 66.0,,2019-05-02 23:56:14,2019-05-02 23:56:15,0.993s,PASSED
+"navigateToUrl(""http://localhost:8080/logout"")",Firefox 66.0,,2019-05-02 23:56:15,2019-05-02 23:56:15,0.768s,PASSED
+closeBrowser(),Firefox 66.0,,2019-05-02 23:56:15,2019-05-02 23:56:16,0.655s,PASSED
+,,,,,,
+Test Cases/addPostNoMessage,Firefox 66.0,,2019-05-02 23:56:16,2019-05-02 23:56:55,38.939s,FAILED
+"openBrowser("""")",Firefox 66.0,,2019-05-02 23:56:16,2019-05-02 23:56:19,2.334s,PASSED
+"navigateToUrl(""http://localhost:8080/login"")",Firefox 66.0,,2019-05-02 23:56:19,2019-05-02 23:56:19,0.399s,PASSED
+"setText(findTestObject(""Page_Spring Security Tutorial/input_Welcome_name (2)""), ""kulisse6"")",Firefox 66.0,,2019-05-02 23:56:19,2019-05-02 23:56:19,0.076s,PASSED
+"setEncryptedText(findTestObject(""Page_Spring Security Tutorial/input_Welcome_password (2)""), ""3pybmnes8qQ="")",Firefox 66.0,,2019-05-02 23:56:19,2019-05-02 23:56:19,0.061s,PASSED
+"click(findTestObject(""1/button_Login""))",Firefox 66.0,,2019-05-02 23:56:19,2019-05-02 23:56:20,1.187s,PASSED
+"sendKeys(findTestObject(""Object Repository/input_Welcome_password (2) (3)""), Keys.chord(ENTER))",Firefox 66.0,,2019-05-02 23:56:20,2019-05-02 23:56:20,0.001s,NOT_RUN
+"click(findTestObject(""Object Repository/a_Hardware        Le physique (2)""))",Firefox 66.0,,2019-05-02 23:56:20,2019-05-02 23:56:22,1.161s,PASSED
+"setText(findTestObject(""Object Repository/input_Title_name""), ""testTopic"")",Firefox 66.0,,2019-05-02 23:56:22,2019-05-02 23:56:22,0.058s,PASSED
+"click(findTestObject(""Object Repository/p_Mon bon topic de test""))",Firefox 66.0,,2019-05-02 23:56:22,2019-05-02 23:56:22,0.248s,PASSED
+"setText(findTestObject(""Object Repository/div_Mon bon topic de test""), ""<p style="""">Mon bon topic de test</p>"")",Firefox 66.0,,2019-05-02 23:56:22,2019-05-02 23:56:22,0.106s,PASSED
+"click(findTestObject(""Object Repository/button_Submit (1)""))",Firefox 66.0,,2019-05-02 23:56:22,2019-05-02 23:56:23,1.182s,PASSED
+"click(findTestObject(""Object Repository/a_testTopic (3)""))",Firefox 66.0,,2019-05-02 23:56:23,2019-05-02 23:56:24,0.893s,PASSED
+"navigateToUrl(""http://localhost:8080/login"")",Firefox 66.0,,2019-05-02 23:56:24,2019-05-02 23:56:24,0.107s,PASSED
+"click(findTestObject(""Object Repository/div_HardForum      LoginAdvanced search   Search a topic                   Welcome     LoginORGo To Registration Page""))",Firefox 66.0,,2019-05-02 23:56:24,2019-05-02 23:56:24,0.245s,PASSED
+"setText(findTestObject(""Object Repository/input_Title_name""), ""testTopic"")",Firefox 66.0,,2019-05-02 23:56:24,2019-05-02 23:56:24,0.053s,PASSED
+url = getUrl(),Firefox 66.0,,2019-05-02 23:56:24,2019-05-02 23:56:24,0.016s,PASSED
+"click(findTestObject(""Object Repository/button_Submit (1)""))",Firefox 66.0,,2019-05-02 23:56:24,2019-05-02 23:56:55,30.586s,FAILED
+,,,,,,
+Test Cases/addSubForum,Firefox 66.0,,2019-05-02 23:56:55,2019-05-02 23:57:00,5.116s,FAILED
+"openBrowser("""")",Firefox 66.0,,2019-05-02 23:56:55,2019-05-02 23:56:58,2.941s,PASSED
+"navigateToUrl(""http://localhost:8080/login"")",Firefox 66.0,,2019-05-02 23:56:58,2019-05-02 23:56:59,0.565s,PASSED
+"setText(findTestObject(""Object Repository/1/input_Welcome_name (1)""), ""kulisse6"")",Firefox 66.0,,2019-05-02 23:56:59,2019-05-02 23:56:59,0.064s,PASSED
+"setEncryptedText(findTestObject(""Object Repository/1/input_Welcome_password (1)""), ""3pybmnes8qQ="")",Firefox 66.0,,2019-05-02 23:56:59,2019-05-02 23:56:59,0.042s,PASSED
+"click(findTestObject(""Object Repository/1/button_Login (1)""))",Firefox 66.0,,2019-05-02 23:56:59,2019-05-02 23:57:00,1.290s,PASSED
+"setText(findTestObject(""Page_Spring Security Tutorial/input_Category_name""), categoryName)",Firefox 66.0,,2019-05-02 23:57:00,2019-05-02 23:57:00,0.072s,FAILED
+,,,,,,
+Test Cases/addTopic,Firefox 66.0,,2019-05-02 23:57:00,2019-05-02 23:57:37,36.810s,FAILED
+"openBrowser("""")",Firefox 66.0,,2019-05-02 23:57:00,2019-05-02 23:57:03,3.046s,PASSED
+"navigateToUrl(""http://localhost:8080/login"")",Firefox 66.0,,2019-05-02 23:57:03,2019-05-02 23:57:04,0.333s,PASSED
+"setText(findTestObject(""Object Repository/Page_Spring Security Tutorial/input_Welcome_name (3)""), ""kulisse6"")",Firefox 66.0,,2019-05-02 23:57:04,2019-05-02 23:57:04,0.067s,PASSED
+"setEncryptedText(findTestObject(""Object Repository/Page_Spring Security Tutorial/input_Welcome_password (3)""), ""3pybmnes8qQ="")",Firefox 66.0,,2019-05-02 23:57:04,2019-05-02 23:57:04,0.046s,PASSED
+"sendKeys(findTestObject(""Object Repository/Page_Spring Security Tutorial/input_Welcome_password (3)""), Keys.chord(ENTER))",Firefox 66.0,,2019-05-02 23:57:04,2019-05-02 23:57:04,0.001s,NOT_RUN
+"click(findTestObject(""1/button_Login""))",Firefox 66.0,,2019-05-02 23:57:04,2019-05-02 23:57:05,1.248s,PASSED
+"click(findTestObject(""Object Repository/Page_Spring Security Tutorial/div_Hardware""))",Firefox 66.0,,2019-05-02 23:57:05,2019-05-02 23:57:06,1.278s,PASSED
+"click(findTestObject(""Object Repository/Page_My subforum/h5_testTopic""))",Firefox 66.0,,2019-05-02 23:57:06,2019-05-02 23:57:37,30.570s,FAILED
+,,,,,,
+Test Cases/advancedSearch,Firefox 66.0,,2019-05-02 23:57:37,2019-05-02 23:57:42,5.520s,FAILED
+"openBrowser("""")",Firefox 66.0,,2019-05-02 23:57:37,2019-05-02 23:57:40,3.081s,PASSED
+"navigateToUrl(""http://localhost:8080/login"")",Firefox 66.0,,2019-05-02 23:57:40,2019-05-02 23:57:41,0.474s,PASSED
+"click(findTestObject(""Object Repository/a_HardForum""))",Firefox 66.0,,2019-05-02 23:57:41,2019-05-02 23:57:42,1.310s,PASSED
+"click(findTestObject(""Object Repository/a_Advanced search""))",Firefox 66.0,,2019-05-02 23:57:42,2019-05-02 23:57:42,0.350s,PASSED
+"setText(findTestObject(""Object Repository/input_Author name_authorName""), ""kulisse6"")",Firefox 66.0,,2019-05-02 23:57:42,2019-05-02 23:57:42,0.066s,PASSED
+"setText(findTestObject(""Page_Advanced Search/input_Topic name_topicName""), topicName)",Firefox 66.0,,2019-05-02 23:57:42,2019-05-02 23:57:42,0.074s,FAILED
+,,,,,,
+Test Cases/alreadyRegisteredUser,Firefox 66.0,,2019-05-02 23:57:42,2019-05-02 23:57:47,4.790s,PASSED
+"openBrowser("""")",Firefox 66.0,,2019-05-02 23:57:43,2019-05-02 23:57:46,3.011s,PASSED
+"navigateToUrl(""http://localhost:8080/registration"")",Firefox 66.0,,2019-05-02 23:57:46,2019-05-02 23:57:46,0.394s,PASSED
+"setText(findTestObject(""Object Repository/Page_Registration Form/input_Registration Form_name""), ""testCase"")",Firefox 66.0,,2019-05-02 23:57:46,2019-05-02 23:57:46,0.063s,PASSED
+"setText(findTestObject(""Object Repository/Page_Registration Form/input_Registration Form_email""), ""test@mail.com"")",Firefox 66.0,,2019-05-02 23:57:46,2019-05-02 23:57:46,0.063s,PASSED
+"setEncryptedText(findTestObject(""Object Repository/Page_Registration Form/input_Registration Form_password""), ""k5M9B2M38/NbP4F7W5R/fg=="")",Firefox 66.0,,2019-05-02 23:57:46,2019-05-02 23:57:46,0.046s,PASSED
+"click(findTestObject(""Object Repository/Page_Registration Form/button_Register User""))",Firefox 66.0,,2019-05-02 23:57:46,2019-05-02 23:57:46,0.145s,PASSED
+"click(findTestObject(""Object Repository/Page_Registration Form/label_There is already a user registered with the name provided""))",Firefox 66.0,,2019-05-02 23:57:46,2019-05-02 23:57:47,0.229s,PASSED
+closeBrowser(),Firefox 66.0,,2019-05-02 23:57:47,2019-05-02 23:57:47,0.635s,PASSED
+,,,,,,
+Test Cases/deletePost,Firefox 66.0,,2019-05-02 23:57:47,2019-05-02 23:58:25,37.288s,FAILED
+"openBrowser("""")",Firefox 66.0,,2019-05-02 23:57:47,2019-05-02 23:57:50,2.327s,PASSED
+"navigateToUrl(""http://localhost:8080/login"")",Firefox 66.0,,2019-05-02 23:57:50,2019-05-02 23:57:50,0.387s,PASSED
+"setText(findTestObject(""Object Repository/Page_Spring Security Tutorial/input_Welcome_name (5)""), ""kulisse6"")",Firefox 66.0,,2019-05-02 23:57:50,2019-05-02 23:57:50,0.062s,PASSED
+"setEncryptedText(findTestObject(""Object Repository/Page_Spring Security Tutorial/input_Welcome_password (5)""), ""3pybmnes8qQ="")",Firefox 66.0,,2019-05-02 23:57:50,2019-05-02 23:57:50,0.046s,PASSED
+"click(findTestObject(""Object Repository/Page_Spring Security Tutorial/button_Login (2)""))",Firefox 66.0,,2019-05-02 23:57:50,2019-05-02 23:57:52,1.440s,PASSED
+"click(findTestObject(""Object Repository/Page_Spring Security Tutorial/p_Le physique""))",Firefox 66.0,,2019-05-02 23:57:52,2019-05-02 23:57:53,1.344s,PASSED
+"click(findTestObject(""Object Repository/Page_My subforum/a_dwake      10      5119 713 PM""))",Firefox 66.0,,2019-05-02 23:57:53,2019-05-02 23:57:54,0.888s,PASSED
+url = getUrl(),Firefox 66.0,,2019-05-02 23:57:54,2019-05-02 23:57:54,0.008s,PASSED
+"click(findTestObject(""Object Repository/Page_Spring Security Tutorial/input_at_btn btn-danger""))",Firefox 66.0,,2019-05-02 23:57:54,2019-05-02 23:58:25,30.611s,FAILED
+,,,,,,
+Test Cases/deleteTopic,Firefox 66.0,,2019-05-02 23:58:25,2019-05-02 23:58:59,34.536s,FAILED
+"openBrowser("""")",Firefox 66.0,,2019-05-02 23:58:25,2019-05-02 23:58:28,3.060s,PASSED
+"navigateToUrl(""http://localhost:8080/login"")",Firefox 66.0,,2019-05-02 23:58:28,2019-05-02 23:58:28,0.397s,PASSED
+"setText(findTestObject(""Object Repository/input_Welcome_name (5)""), ""user6"")",Firefox 66.0,,2019-05-02 23:58:28,2019-05-02 23:58:28,0.068s,PASSED
+"setEncryptedText(findTestObject(""Object Repository/input_Welcome_password (5)""), ""OfYSgXUfG6A="")",Firefox 66.0,,2019-05-02 23:58:28,2019-05-02 23:58:28,0.043s,PASSED
+"click(findTestObject(""Object Repository/button_Login (2)""))",Firefox 66.0,,2019-05-02 23:58:28,2019-05-02 23:58:29,0.286s,PASSED
+"click(findTestObject(""Object Repository/p_Le physique""))",Firefox 66.0,,2019-05-02 23:58:29,2019-05-02 23:58:59,30.534s,FAILED
+,,,,,,
+Test Cases/LoginNotRegistered,Firefox 66.0,,2019-05-02 23:58:59,2019-05-02 23:59:04,4.794s,PASSED
+"openBrowser("""")",Firefox 66.0,,2019-05-02 23:58:59,2019-05-02 23:59:02,2.950s,PASSED
+"navigateToUrl(""http://localhost:8080/login"")",Firefox 66.0,,2019-05-02 23:59:02,2019-05-02 23:59:03,0.419s,PASSED
+"setText(findTestObject(""Page_Spring Security Tutorial/input_Welcome_name""), ""nonExisting"")",Firefox 66.0,,2019-05-02 23:59:03,2019-05-02 23:59:03,0.074s,PASSED
+"setEncryptedText(findTestObject(""Object Repository/Page_Spring Security Tutorial/input_Welcome_password (1)""), ""k7BhWEneXWQ="")",Firefox 66.0,,2019-05-02 23:59:03,2019-05-02 23:59:03,0.037s,PASSED
+"click(findTestObject(""Object Repository/Page_Spring Security Tutorial/button_Login (1)""))",Firefox 66.0,,2019-05-02 23:59:03,2019-05-02 23:59:03,0.269s,PASSED
+"click(findTestObject(""Object Repository/Page_Spring Security Tutorial/p_name or Password invalid please verify""))",Firefox 66.0,,2019-05-02 23:59:03,2019-05-02 23:59:03,0.230s,PASSED
+closeBrowser(),Firefox 66.0,,2019-05-02 23:59:03,2019-05-02 23:59:04,0.684s,PASSED
+,,,,,,
+Test Cases/LoginRegisteredUser,Firefox 66.0,,2019-05-02 23:59:04,2019-05-02 23:59:07,3.361s,FAILED
+"openBrowser("""")",Firefox 66.0,,2019-05-02 23:59:04,2019-05-02 23:59:06,2.306s,PASSED
+"navigateToUrl(""http://localhost:8080/login"")",Firefox 66.0,,2019-05-02 23:59:06,2019-05-02 23:59:07,0.460s,PASSED
+"setText(findTestObject(""Page_Spring Security Tutorial/input_Welcome_name""), ""user6"")",Firefox 66.0,,2019-05-02 23:59:07,2019-05-02 23:59:07,0.061s,PASSED
+"setEncryptedText(findTestObject(""Page_Spring Security Tutorial/input_Welcome_password""), ""OfYSgXUfG6A="")",Firefox 66.0,,2019-05-02 23:59:07,2019-05-02 23:59:07,0.045s,PASSED
+"click(findTestObject(""Page_Spring Security Tutorial/button_Login""))",Firefox 66.0,,2019-05-02 23:59:07,2019-05-02 23:59:07,0.321s,PASSED
+assert succesUrl == getUrl(),Firefox 66.0,,2019-05-02 23:59:07,2019-05-02 23:59:07,0.015s,FAILED
+,,,,,,
+Test Cases/LoginWrongPassword,Firefox 66.0,,2019-05-02 23:59:07,2019-05-02 23:59:12,4.725s,PASSED
+"openBrowser("""")",Firefox 66.0,,2019-05-02 23:59:07,2019-05-02 23:59:10,2.950s,PASSED
+"navigateToUrl(""http://localhost:8080/login"")",Firefox 66.0,,2019-05-02 23:59:10,2019-05-02 23:59:11,0.388s,PASSED
+"setText(findTestObject(""Page_Spring Security Tutorial/input_Welcome_name""), ""user2"")",Firefox 66.0,,2019-05-02 23:59:11,2019-05-02 23:59:11,0.066s,PASSED
+"setEncryptedText(findTestObject(""Page_Spring Security Tutorial/input_Welcome_password""), ""BMMEIUJfJqT7EwQg/H/oNQ=="")",Firefox 66.0,,2019-05-02 23:59:11,2019-05-02 23:59:11,0.045s,PASSED
+"click(findTestObject(""Page_Spring Security Tutorial/button_Login""))",Firefox 66.0,,2019-05-02 23:59:11,2019-05-02 23:59:11,0.265s,PASSED
+"click(findTestObject(""Page_Spring Security Tutorial/p_name or Password invalid please verify""))",Firefox 66.0,,2019-05-02 23:59:11,2019-05-02 23:59:11,0.233s,PASSED
+"assert ""http://localhost:8080/login?error=true"" == getUrl()",Firefox 66.0,,2019-05-02 23:59:11,2019-05-02 23:59:11,0.012s,PASSED
+closeBrowser(),Firefox 66.0,,2019-05-02 23:59:11,2019-05-02 23:59:12,0.610s,PASSED
+,,,,,,
+Test Cases/modifyProfile,Firefox 66.0,,2019-05-02 23:59:12,2019-05-02 23:59:12,0.224s,FAILED
+"navigateToUrl(""http://localhost:8080/login"")",Firefox 66.0,,2019-05-02 23:59:12,2019-05-02 23:59:12,0.007s,FAILED
+,,,,,,
+Test Cases/RegisterNewUser,Firefox 66.0,,2019-05-02 23:59:12,2019-05-02 23:59:45,32.906s,FAILED
+"openBrowser("""")",Firefox 66.0,,2019-05-02 23:59:12,2019-05-02 23:59:15,2.302s,PASSED
+"click(findTestObject(""Object Repository/Page_Spring Security Tutorial/button_Go To Registration Page""))",Firefox 66.0,,2019-05-02 23:59:15,2019-05-02 23:59:45,30.480s,FAILED
+,,,,,,
+Test Cases/search,Firefox 66.0,,2019-05-02 23:59:45,2019-05-02 23:59:50,4.674s,FAILED
+"openBrowser("""")",Firefox 66.0,,2019-05-02 23:59:45,2019-05-02 23:59:48,3.031s,PASSED
+"navigateToUrl(""http://localhost:8080/forum"")",Firefox 66.0,,2019-05-02 23:59:48,2019-05-02 23:59:50,1.394s,PASSED
+"setText(findTestObject(""Page_Insert title here/input_Advanced search_searchText""), ""testTopic"")",Firefox 66.0,,2019-05-02 23:59:50,2019-05-02 23:59:50,0.062s,FAILED

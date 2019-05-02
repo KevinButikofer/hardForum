@@ -17,30 +17,27 @@ WebUI.openBrowser('')
 
 WebUI.navigateToUrl('http://localhost:8080/login')
 
-WebUI.setText(findTestObject('Object Repository/Page_Spring Security Tutorial/input_Welcome_name (3)'), 'user6')
+WebUI.setText(findTestObject('Page_Spring Security Tutorial/input_Welcome_name (3)'), 'kulisse8')
 
-WebUI.setEncryptedText(findTestObject('Object Repository/Page_Spring Security Tutorial/input_Welcome_password (3)'), 'OfYSgXUfG6A=')
+WebUI.setEncryptedText(findTestObject('Page_Spring Security Tutorial/input_Welcome_password (3)'), '3pybmnes8qQ=')
 
-not_run: WebUI.sendKeys(findTestObject('Object Repository/Page_Spring Security Tutorial/input_Welcome_password (3)'), Keys.chord(
-        Keys.ENTER))
+not_run: WebUI.sendKeys(findTestObject('Page_Spring Security Tutorial/input_Welcome_password (3)'), Keys.chord(Keys.ENTER))
 
 WebUI.click(findTestObject('1/button_Login'))
 
-WebUI.click(findTestObject('Object Repository/Page_Spring Security Tutorial/div_Hardware'))
+WebUI.click(findTestObject('Page_Spring Security Tutorial/div_Hardware'))
 
-WebUI.click(findTestObject('Object Repository/Page_My subforum/h5_testTopic'))
+WebUI.setText(findTestObject('Object Repository/Page_My subforum/input_Title_name'), 'title')
 
-WebUI.setText(findTestObject('Object Repository/Page_Spring Security Tutorial/input_Title_title'), 'Test Post')
+WebUI.click(findTestObject('Object Repository/Page_My subforum/p'))
 
-WebUI.click(findTestObject('Object Repository/Page_Spring Security Tutorial/p'))
+WebUI.setText(findTestObject('Object Repository/Page_My subforum/div_messageContent'), '<p style="">messageContent</p>')
 
-WebUI.setText(findTestObject('Object Repository/Page_Spring Security Tutorial/div_post content'), '<p style="">post content </p>')
+url = WebUI.getUrl()
 
-WebUI.setText(findTestObject('Object Repository/Page_Spring Security Tutorial/div_post content dwdwad'), '<h1 style="">post content dw</h1><p style="">dwad</p>')
+WebUI.click(findTestObject('Object Repository/Page_My subforum/button_Submit'))
 
-WebUI.click(findTestObject('Object Repository/Page_Spring Security Tutorial/button_Submit'))
-
-WebUI.click(findTestObject('Object Repository/Page_Spring Security Tutorial/h4_Test Post'))
+assert url != WebUI.getUrl()
 
 WebUI.navigateToUrl('http://localhost:8080/logout')
 

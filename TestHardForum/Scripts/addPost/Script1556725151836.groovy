@@ -17,9 +17,9 @@ WebUI.openBrowser('')
 
 WebUI.navigateToUrl('http://localhost:8080/login')
 
-WebUI.setText(findTestObject('Page_Spring Security Tutorial/input_Welcome_name (2)'), 'user6')
+WebUI.setText(findTestObject('Page_Spring Security Tutorial/input_Welcome_name (2)'), 'kulisse8')
 
-WebUI.setEncryptedText(findTestObject('Page_Spring Security Tutorial/input_Welcome_password (2)'), 'OfYSgXUfG6A=')
+WebUI.setEncryptedText(findTestObject('Page_Spring Security Tutorial/input_Welcome_password (2)'), '3pybmnes8qQ=')
 
 WebUI.click(findTestObject('1/button_Login'))
 

@@ -13,35 +13,41 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
+WebUI.openBrowser('')
+
 WebUI.navigateToUrl('http://localhost:8080/login')
 
-WebUI.setText(findTestObject('Object Repository/input_Welcome_name (9)'), 'user6')
+WebUI.setText(findTestObject('Object Repository/input_Welcome_name (9)'), 'kulisse8')
 
-WebUI.setEncryptedText(findTestObject('Object Repository/input_Welcome_password (9)'), 'OfYSgXUfG6A=')
+WebUI.setEncryptedText(findTestObject('Object Repository/input_Welcome_password (9)'), '3pybmnes8qQ=')
 
-WebUI.sendKeys(findTestObject('Object Repository/input_Welcome_password (9)'), Keys.chord(Keys.ENTER))
+WebUI.click(findTestObject('Page_Spring Security Tutorial/button_Login'))
 
 WebUI.click(findTestObject('Object Repository/a_My profile'))
 
-WebUI.setText(findTestObject('Page_Spring Security Tutorial/input_Age_age'), Age)
+WebUI.setText(findTestObject('Page_Spring Security Tutorial/input_Age_age'), '22')
 
-WebUI.setText(findTestObject('Page_Spring Security Tutorial/textarea_Bio_bio'), Bio)
+WebUI.setText(findTestObject('Page_Spring Security Tutorial/textarea_Bio_bio'), 'my bio')
 
-WebUI.setText(findTestObject('Page_Spring Security Tutorial/input_Signature_signature'), Signature)
+WebUI.setText(findTestObject('Page_Spring Security Tutorial/input_Signature_signature'), 'my signature')
 
-WebUI.getUrl()
+Age = '22'
 
-WebUI.click(findTestObject('Object Repository/button_Submit'))
+Bio = 'my bio'
 
-WebUI.click(findTestObject('Object Repository/p_Profile has been update successfully'))
+Signature = 'my signature'
+
+WebUI.click(findTestObject('Page_Spring Security Tutorial/button_Submit'))
 
 assert Age == WebUI.getText(findTestObject('Object Repository/input_Age_age'))
 
-assert Bio == WebUI.getText(findTestObject('textarea_Bio_bio'))
+assert Bio == WebUI.getText(findTestObject('Object Repository/textarea_Bio_bio'))
 
-assert Signature == WebUI.getText(findTestObject('input_Signature_signature'))
+assert Signature == WebUI.getText(findTestObject('Object Repository/input_Signature_signature'))
 
 WebUI.navigateToUrl('http://localhost:8080/logout')
 
 WebUI.closeBrowser()
+
+WebUI.setText(findTestObject('Page_Spring Security Tutorial/input_Signature_signature'), 'my signature')
 

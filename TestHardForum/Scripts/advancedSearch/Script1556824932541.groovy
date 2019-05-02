@@ -21,14 +21,14 @@ WebUI.click(findTestObject('Object Repository/a_HardForum'))
 
 WebUI.click(findTestObject('Object Repository/a_Advanced search'))
 
-WebUI.setText(findTestObject('Object Repository/input_Author name_authorName'), 'user2')
+WebUI.setText(findTestObject('Object Repository/input_Author name_authorName'), 'kulisse6')
 
-WebUI.setText(findTestObject('Page_Advanced Search/input_Topic name_topicName'), topicName)
+WebUI.setText(findTestObject('Object Repository/Page_Advanced Search/input_Topic name_topicName'), 'testTopic')
 
 WebUI.click(findTestObject('Object Repository/input_Subforum_btn btn-primary col-5'))
 
 WebUI.click(findTestObject('Object Repository/h5_testTopic'))
-
+topicName = "testTopic"
 topicName2 = WebUI.getText(findTestObject('Object Repository/a_testTopic'))
 
 assert topicName == topicName2

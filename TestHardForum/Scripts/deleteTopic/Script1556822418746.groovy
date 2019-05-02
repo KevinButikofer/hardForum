@@ -17,9 +17,9 @@ WebUI.openBrowser('')
 
 WebUI.navigateToUrl('http://localhost:8080/login')
 
-WebUI.setText(findTestObject('Object Repository/input_Welcome_name (5)'), 'user6')
+WebUI.setText(findTestObject('Object Repository/input_Welcome_name (5)'), 'kulisse8')
 
-WebUI.setEncryptedText(findTestObject('Object Repository/input_Welcome_password (5)'), 'OfYSgXUfG6A=')
+WebUI.setEncryptedText(findTestObject('Object Repository/input_Welcome_password (5)'), '3pybmnes8qQ=')
 
 WebUI.click(findTestObject('Object Repository/button_Login (2)'))
 

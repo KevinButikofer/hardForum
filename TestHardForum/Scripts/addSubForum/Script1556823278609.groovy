@@ -17,19 +17,19 @@ WebUI.openBrowser('')
 
 WebUI.navigateToUrl('http://localhost:8080/login')
 
-WebUI.setText(findTestObject('Object Repository/1/input_Welcome_name (1)'), 'user6')
+WebUI.setText(findTestObject('1/input_Welcome_name (1)'), 'kulisse8')
 
-WebUI.setEncryptedText(findTestObject('Object Repository/1/input_Welcome_password (1)'), 'OfYSgXUfG6A=')
+WebUI.setEncryptedText(findTestObject('1/input_Welcome_password (1)'), '3pybmnes8qQ=')
 
-WebUI.click(findTestObject('Object Repository/1/button_Login (1)'))
+WebUI.click(findTestObject('1/button_Login (1)'))
 
-WebUI.setText(findTestObject('Page_Spring Security Tutorial/input_Category_name'), categoryName)
+WebUI.setText(findTestObject('Object Repository/Page_Spring Security Tutorial/input_Category_name'), 'GPU')
 
-WebUI.setText(findTestObject('Object Repository/1/input_Description_description (1)'), 'Le ceveau du PC')
+WebUI.setText(findTestObject('Object Repository/Page_Spring Security Tutorial/input_Description_description'), 'testCase')
 
-WebUI.click(findTestObject('Object Repository/1/input_Description_btn btn-primary col-5'))
-
-assert WebUI.getUrl() == ('http://localhost/forum/' + categoryName)
+WebUI.click(findTestObject('Object Repository/Page_Spring Security Tutorial/input_Description_btn btn-primary col-5'))
+categoryName = "GPU"
+assert WebUI.getUrl() == (('http://localhost:8080/forum/' + categoryName) + '/page/1')
 
 WebUI.navigateToUrl('http://localhost:8080/logout')
 

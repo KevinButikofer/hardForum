@@ -17,11 +17,11 @@ WebUI.openBrowser('')
 
 WebUI.navigateToUrl('http://localhost:8080/forum')
 
-WebUI.setText(findTestObject('Page_Insert title here/input_Advanced search_searchText'), 'testTopic')
+WebUI.setText(findTestObject('Page_Spring Security Tutorial/input_Advanced search_searchText'), 'testTopic')
 
-WebUI.sendKeys(findTestObject('Page_Insert title here/input_Advanced search_searchText'), Keys.chord(Keys.ENTER))
+topicName = 'testTopic'
 
-topicName = WebUI.getText(findTestObject('Page_Insert title here/h5_testTopic'))
+WebUI.click(findTestObject('Page_Spring Security Tutorial/input_Advanced search_btn btn-outline-success  my-sm-0'))
 
 WebUI.click(findTestObject('Page_Insert title here/h5_testTopic'))
 

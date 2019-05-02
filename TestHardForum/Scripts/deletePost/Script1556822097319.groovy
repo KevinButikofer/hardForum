@@ -17,19 +17,27 @@ WebUI.openBrowser('')
 
 WebUI.navigateToUrl('http://localhost:8080/login')
 
-WebUI.setText(findTestObject('Object Repository/Page_Spring Security Tutorial/input_Welcome_name (5)'), 'user6')
+WebUI.setText(findTestObject('Object Repository/Page_Spring Security Tutorial/input_Welcome_name (5)'), 'kulisse4')
 
-WebUI.setEncryptedText(findTestObject('Object Repository/Page_Spring Security Tutorial/input_Welcome_password (5)'), 'OfYSgXUfG6A=')
+WebUI.setEncryptedText(findTestObject('Object Repository/Page_Spring Security Tutorial/input_Welcome_password (5)'), '3pybmnes8qQ=')
 
 WebUI.click(findTestObject('Object Repository/Page_Spring Security Tutorial/button_Login (2)'))
 
 WebUI.click(findTestObject('Object Repository/Page_Spring Security Tutorial/p_Le physique'))
 
-WebUI.click(findTestObject('Object Repository/Page_My subforum/a_dwake      10      5119 713 PM'))
+WebUI.click(findTestObject('Page_My subforum/a_dwake      10      5119 713 PM'))
 
 url = WebUI.getUrl()
 
-WebUI.click(findTestObject('Object Repository/Page_Spring Security Tutorial/input_at_btn btn-danger'))
+WebUI.setText(findTestObject('Object Repository/Page_Spring Security Tutorial/input_Title_title'), 'title')
+
+WebUI.click(findTestObject('Object Repository/Page_Spring Security Tutorial/p'))
+
+WebUI.setText(findTestObject('Object Repository/Page_Spring Security Tutorial/div_post'), '<p style="">post</p>')
+
+WebUI.click(findTestObject('Object Repository/Page_Spring Security Tutorial/button_Submit'))
+
+WebUI.click(findTestObject('Object Repository/Page_Spring Security Tutorial/input_title_btn btn-danger'))
 
 assert url == WebUI.getUrl()
 

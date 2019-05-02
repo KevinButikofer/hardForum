@@ -15,14 +15,16 @@ import internal.GlobalVariable as GlobalVariable
 
 WebUI.openBrowser('')
 
+WebUI.navigateToUrl('http://localhost:8080/login')
+
 WebUI.click(findTestObject('Object Repository/Page_Spring Security Tutorial/button_Go To Registration Page'))
 
-WebUI.setText(findTestObject('Object Repository/Page_Registration Form/input_Registration Form_name (1)'), 'user1')
+WebUI.setText(findTestObject('Object Repository/Page_Registration Form/input_Registration Form_name (1)'), 'kulisse11')
 
-WebUI.setText(findTestObject('Object Repository/Page_Registration Form/input_Registration Form_email (1)'), 'user1@mail.com')
+WebUI.setText(findTestObject('Object Repository/Page_Registration Form/input_Registration Form_email (1)'), 'kulisse11@mail.com')
 
 WebUI.setEncryptedText(findTestObject('Object Repository/Page_Registration Form/input_Registration Form_password (1)'), 
-    's0q99SWTf+E=')
+    '3pybmnes8qQ=')
 
 WebUI.click(findTestObject('Object Repository/Page_Registration Form/button_Register User (1)'))
 

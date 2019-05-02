@@ -8,21 +8,21 @@
    <variable>
       <defaultValue>'15\r\n'</defaultValue>
       <description></description>
-      <id>4e67bc93-ce3c-483d-b4e7-89ae50976fc6</id>
+      <id>325d2904-b094-488b-9a81-9d5b4a9c31ee</id>
       <masked>false</masked>
       <name>Age</name>
    </variable>
    <variable>
       <defaultValue>'My Signature'</defaultValue>
       <description></description>
-      <id>cfe1e647-219f-4ad5-82d2-689b08c4079b</id>
+      <id>99b6d443-bfdf-438d-a0e7-7563a91ff77f</id>
       <masked>false</masked>
       <name>Signature</name>
    </variable>
    <variable>
       <defaultValue>'My Bio'</defaultValue>
       <description></description>
-      <id>4c54456c-9e71-44dd-9b8d-c54554076328</id>
+      <id>1d4e1829-cb55-4eef-84e9-72ed63b02f56</id>
       <masked>false</masked>
       <name>Bio</name>
    </variable>
